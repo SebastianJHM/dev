@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formularios</title>
+    </head>
+    <body>
+        <!-- ETIQUETAS PARA UN FORMULARIO -->
+        <!-- 1. <form>: todos los campos que se desean enviar deben estar entre <form> y </form> -->
+        <!-- Atributos -->
+        <!-- action: espera la url absoluta o relativa que procesará la solicitud -->
+        <!-- method: recibirá el método de procesamiento de solicitud. En principio GET o POST -->
+        <!-- accept-charset: codificación de carácteres. No es frecuente el uso de este atributp -->
+        <!-- enctype: tipo de codificación. No es frecuente el uso de este atributp -->
+    
+        <!-- 2. <input />: todos los campos que se desean enviar deben estar entre <form> y </form> -->
+        <!-- Atributos -->
+        <!-- name: se usa en todos los elementos del formulario. Es el nombre que usará el servicio para procesar el valor del input -->
+        <!-- type: define en que se convertirá el control. -->
+        <!-- posibles types: text, checkbox, radio, file, password, hidden, button, submit, image, reset -->
+        <!-- disabled: deshabilita el campo para que no pueda ser utilizado -->
+        <!-- readonly: similar a disabled, pero el campo se puede copiar y pegar -->
+        <!-- value: será el valor que tome el input -->
+
+        <div>
+            <label for="input1">Input: TEXT</label>
+            <input type="text" name="" id="input1" maxlength="10" value="careperro">
+        </div>
+        <br>
+
+        <!-- En un mismo conjunto de checkbox, los elementos relacionados deben llevar nombre name -->
+        <!-- La casilla value es inprescindible, indica el valor que envía el formulario si se activa -->
+        <label for="">Input: CHECKBOX</label>
+        <div>
+            <div>
+                <input type="checkbox" name="options" id="check1" value="option1">
+                <label for="check1">option1</label>
+            </div>
+            <div>
+                <input type="checkbox" name="options" id="check2" value="option1">
+                <label for="check2">option2</label>
+            </div>
+            <div>
+                <input type="checkbox" name="options" id="check3" value="option1">
+                <label for="check3">option3</label>
+            </div>
+        </div>
+
+        <br>
+
+        <label for="">Input: RADIO</label>
+        <div>
+            <div>
+                <input type="radio" name="options" id="radio1" value="option1">
+                <label for="radio1">option1</label>
+            </div>
+            <div>
+                <input type="radio" name="options" id="radio2" value="option1">
+                <label for="radio2">option2</label>
+            </div>
+            <div>
+                <input type="radio" name="options" id="radio3" value="option1">
+                <label for="radio3">option3</label>
+            </div>
+        </div>
+        <!-- Todos los radio deben tener el mismo name para que sea una de tres opciones  -->
+        
+        <br>
+
+        <div>
+            <label for="f">Input: FILE</label><br>
+            <input type="file" name="" id="f" accept=".xlsx,.html">
+        </div>
+
+        <br>
+
+        <div>
+            <label for="pass">Input: PASSWORD</label><br>
+            <input type="password" name="" id="pass">
+            <!-- Tiene los mismos atributos que los inputs de tipo text -->
+        </div>
+
+        <br>
+
+        <div>
+            <label for="hide">Input: HIDDEN</label>
+            <input type="hidden" name="" value="">
+            <!-- Solo son posibles los tributos name y value ya que este campo no es visible para el usuario -->
+            <!-- El value se especificará como un valor del JavaScript -->
+        </div>
+
+        <br>
+
+        <div>
+            <label>Input: BUTTON</label><br>
+            <input type="button" value="Boton">
+        </div>
+        <br>
+
+        <div>
+            <label>Input: SUBMIT</label><br>
+            <input type="submit" value="Submit">
+            <!-- Envía el formulario con todo lo que seleccionó el usuario -->
+        </div>
+        <br>
+
+        <div>
+            <label>Input: RESET</label><br>
+            <input type="reset" value="Reset">
+            <!-- Resetea todos los elementos del formulario -->
+        </div>
+        <br>
+        
+        <!-- 3. <select>: permite seleccionar entre varias opciones -->
+        <!-- Atributos -->
+        <!-- multiple: indica si el select es múltiple o no -->
+        <!-- Etiquetas para select -->
+        <!-- option: declara una opción del select -->
+        <!-- optgroup: declara un grupo mas arriba del select -->
+        <div>
+            <div>
+                <label for="select1">Select: Forma 1</label>
+            </div>
+           <div>
+            <select name="" id="select1">
+                <option value="default">seleccionar...</option>
+                <option value="1">option 1</option>
+                <option value="2">option 2</option>
+                <option value="3">option 3</option>
+                <option value="4">option 4</option>
+            </select>
+           </div>
+        </div>
+        <br>
+
+        <div>
+            <div>
+                <label for="select2">Select: Forma 2</label>
+            </div>
+            <div>
+                <select name="" id="select2" multiple style="width: 200px;">
+                    <optgroup label="Group1">
+                        <option value="1">option 1</option>
+                        <option value="2">option 2</option>
+                        <option value="3">option 3</option>
+                    </optgroup>
+                    
+                    <optgroup label="Group2">
+                        <option value="4">option 4</option>
+                        <option value="5">option 5</option>
+                    </optgroup>
+                </select>
+            </div>
+        </div>
+
+        <!-- 4. <textarea>: permite ingresar textos de gran formato -->
+        <!-- Atributos -->
+        <!-- cols: número de columnas que se muestran en el input -->
+        <!-- rows: número de filas que se muestran en el input -->
+        <br>
+        <div>
+            <div>
+                <label for="tt">TextTarea</label>
+            </div>
+            <div>
+                <textarea name="" id="tt" cols="80" rows="8">Texto inicial........</textarea>
+            </div>
+        </div>
+        <br>
+
+        <!-- 5. <label>: relaciona un texto a un control-->
+        <!-- Atributos -->
+        <!-- for: debe tener el mismo valor que el id del elemento a relacionar -->
+        <span>LABELS</span>
+        <form>
+            <div>
+                <label for="formGroupExampleInput">Example label</label><br>
+                <input type="text" id="formGroupExampleInput" placeholder="Example input">
+            </div>
+            <div>
+                <label for="formGroupExampleInput2">Another label</label><br>
+                <input type="text" id="formGroupExampleInput2" placeholder="Another input">
+            </div>
+        </form>
+        <br>
+        <!-- 6. <fieldset>: separa dos secciones de un formulario-->
+        <!-- Atributos -->
+        <!-- for: debe tener el mismo valor que el id del elemento a relacionar -->
+        <!-- Etiquetas para select -->
+        <!-- legend: marca el título de una sección -->
+        <span>FIELDSETS</span>
+        <form action="" style="width: 300px;">
+            <fieldset>
+                <legend>PERFIL</legend>
+                Usuario: <input type="text" name="" id="" />
+                Contraseña: <input type="password" name="" id="">
+            </fieldset>
+            <fieldset>
+                <legend>TEMAS</legend>
+                <input type="checkbox" name="" id="">HTML
+                <input type="checkbox" name="" id="">CSS
+            </fieldset>
+        </form>
+        
+        
+
+    </body>
+</html>

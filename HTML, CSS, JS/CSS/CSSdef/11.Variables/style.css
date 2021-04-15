@@ -1,0 +1,85 @@
+/* ============== Inicialización CSS ================ */
+/* [box-sizing: border-box] lo hacemos para que el atributo width cubra el padding + border
+y no solo padding. [ margin: 0;] y [padding: 0;] para iniciar los margin y los padding a 0de todos los elementos*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Lo siguiente lo hacemos para que cuando demos un ancho de x rem eso sea
+equivalente a 10x px*/
+html {
+    font-size: 62.5%;
+}
+/* ================================================== */
+:root {
+    --primary-color: #003476;
+    --secundary-color: #b4d2f7;
+    --header-size: 4rem;
+    --font: 1.8rem;
+}
+/* Lo siguiente se hace para insertar las fuentes que se encuentran en la carpeta fonts en formatos .ttf */
+/* Los dos siguiente bloques se hacen de la forma tradicional. Se especifica la fuente y la forma que se usará para 
+llamarla en el resto de estilos */
+@font-face {
+    src: url("./fonts/Lato-Black.ttf") format("truetype");
+    font-family: Lato-Black;
+}
+@font-face {
+    src: url("./fonts/Lato-BoldItalic.ttf") format("truetype");
+    font-family: Lato-BoldItalic;
+}
+/* {https://stackoverflow.com/questions/24990554/how-to-include-a-font-ttf-using-css} ->
+Solo proporcionar el archivo .ttf para la fuente web no será lo suficientemente bueno para la compatibilidad 
+con varios navegadores. La mejor combinación posible en la actualidad es usar la combinación como la siguiente.
+En la página {https://transfonter.org/} podemos convertir de formato .ttf a .eot, .woff2, .woff y .svg.
+Adicionalmente, el archivo se descarga con un html de muestra y un css que nos dice como usar las fuentes. 
+Hay que añadir la direccion de las carpetas*/
+
+@font-face {
+    font-family: 'Lato';
+    src: url('./fonts/Lato-Regular-All/Lato-Regular.eot');
+    src: url('./fonts/Lato-Regular-All/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Lato-Regular-All/Lato-Regular.woff2') format('woff2'),
+        url('./fonts/Lato-Regular-All/Lato-Regular.woff') format('woff'),
+        url('./fonts/Lato-Regular-All/Lato-Regular.ttf') format('truetype'),
+        url('./fonts/Lato-Regular-All/Lato-Regular.svg#Lato-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+header {
+    width: 100vw;
+    height: 15vh;
+    background-color: var(--primary-color);
+}
+main {
+    width: 100vw;
+    height: 70vh;
+    font-size: var(--font);
+    /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
+}
+
+h1 {
+    font-family: Lato-Black;
+    color: white;
+}
+
+h2 {
+    font-size: var(--header-size);
+    color: var(--primary-color);
+    font-family: Lato-BoldItalic;
+}
+
+p {
+    font-family: Lato;
+}
+
+footer {
+    width: 100vw;
+    height: 15vh;
+    background-color: var(--secundary-color);
+}

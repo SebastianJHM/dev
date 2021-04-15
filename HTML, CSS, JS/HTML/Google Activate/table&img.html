@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<body>
+    <!-- <table>: encierrara la tabla -->
+    <!-- <tr>: table row. Inserta una nueva fila -->
+    <!-- <td>: table datacell. Inserta una dato en la celda. Se usan en el tbody y en el tfoot -->
+    <!-- <th>: table header cell. Se usa para insertar un valor de celda en el theader -->
+    <!-- <caption>: añade un título -->
+    <table>
+        <caption>Mi primera tabla</caption>
+        <thead>
+            <tr>
+                <th>Alumno</th>
+                <th>Nota</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tito</td>
+                <td>0.3</td>
+            </tr>
+            <tr>
+                <td>Pacho</td>
+                <td>1.8</td>
+            </tr>
+            <tr>
+                <td>Cachón</td>
+                <td>0.4</td>
+            </tr>
+            <tr>
+                <td>Mamamango</td>
+                <td>1.2</td>
+            </tr>
+            
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Media</th>
+                <td>1.1</td>
+            </tr>
+            <tr>
+                <th>Desv</th>
+                <td>0.5</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- Tabla combinada -->
+    <h4>Tabla con combinaciones</h4>
+    <table>
+        <thead>
+            <tr>
+                <th colspan=2>Ingresos</th>
+            </tr>
+            <tr>
+                <th colspan=2>2018</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan=2>Enero</td>
+                <td>1</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td colspan=2>Febrero</td>
+                <td>80</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- insetar imágen -->
+    <!-- <img src="Assets\bulldog-inglés.png" alt="bulldog"> -->
+
+    <!-- Mapas en una imagen: utilizados para resaltar la región de una imagen y asignarle un enlace o una función-->
+    <img src="Assets\workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+
+    <map name="workmap">
+        <!-- rect: coord(x1,y1,x2,y2) -->
+        <area shape="rect" coords="34,44,270,350" alt="Computer" href="forms.html" target="_blank">
+        <!-- circle: coord(x1,y1,r) -->
+        <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="https://es.wikipedia.org/wiki/Caf%C3%A9" target="_blank">
+        <!-- polygon: coord(x1,y1,x2,y2,x3,y3,...,xn,yn) -->
+        <area shape="poly" coords="290,172,300,160,333,172,340,250,290,250" alt="Phone" onclick="myFunction()" href="table&img.html">
+    </map>
+    
+    <script>
+        function myFunction() {
+          alert("You clicked the phone cup!");
+        }
+    </script>
+</body>
+</html>

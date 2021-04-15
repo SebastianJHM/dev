@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- La etiqueta figure sirve como contenedor para las imagenes en lugar
+        de usar div. <figcaption> le otorga una descripción a la imágen -->
+        <figure>
+            <img src="./assets/la-vaca.jpg" alt="La vaca y yo" height="200px">
+            <figcaption>La vaca, mi mai, chucho y yo</figcaption>
+        </figure>
+
+        <!-- Las imágenes que se usan en un proyecto son recomendables que se pasen a
+        formato .webp. Este formato hace que que se reduza mucho el peso de la imagen.
+        Lo máximo que se recomienda que tenga una imagen para la web son 70kb -->
+        <!-- Device Pixel Ratio es la relación que existe entre los pixeles reales que tiene
+        un dispositivo y los niveles disponibles para dibujar contenido
+        http://whatismyviewport.com/: en esta imagen vemos nuestr DPR
+        En los computadores el device pixel ratio es de 1. En un celular debe ser mayor a 2.4
+        Por esta razón se deben dar distintas versiones de la imágen según sea el DPR. Para un
+        celular es más eficiente pasarle una imágen de menos peso  -->
+        <!-- Para pasarle distintas imagenes se hbace lo siguiente -->
+        <figure>
+            <img srcset="
+            ./assets/sacred-cow-512.webp,
+            ./assets/sacred-cow-128.webp 2x" alt="la vaca">
+        </figure>
+        
+        <picture>
+            <source srcset="./assets/sacred-cow-128.webp" media="(max-width:700px)">
+            <img src="./assets/sacred-cow-512.webp" alt="">
+        </picture>
+    </body>
+</html>

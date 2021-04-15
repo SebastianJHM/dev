@@ -1,0 +1,67 @@
+<!-- TRUCO ATOM: Escribir html y pulsar TAB. Aparece lo siguiente: -->
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+   <meta charset="utf-8">
+   <title>Dibujando con canvas</title>
+ </head>
+ <style>
+   /*para darle estilo a un objeto se usa su id acompañado de #*/
+   #text-center{
+    text-align:left;/*text-align: da la dirección del texto. center, right o left*/
+    /*margin-left:auto;*/
+    /*margin-right:1000px;*/
+    /*border:5px solid #000000;*/
+    }
+    #dibujito{
+     /*text-align:center;*/
+     /*margin-left:auto;*/
+     /*margin-right:1000px;*/
+     border:0px solid #000000;
+     }
+ </style>
+ <body>
+   <h1>Dibujo en canvas</h1>
+
+   <!-- input: solo tine atributos que determinan si es una caja de texto o un botón -->
+   <!-- type: es el tipo de objeto que se debe insetar -->
+   <!-- value: es el valor que va dentro del objeto. En este caso la caja de texto no tiene valor
+        porque ese valor lo insertará el usuario -->
+   <!-- id: identificador con el que JAVASCRIPT encuentra una variable, en este
+            caso la etiqueta. "dibujito" es el identidicador de la etiqueteta-->
+   <p>Cuantas líneas quieres:
+     <input type="text" id="Texto_lineas" style='width:70px; height:20px' />
+     <input type="button" value="A darle!" id="Botoncito" style='width:70px; height:25px'/>
+   </p>
+
+   <!-- id: identificador con el que JAVASCRIPT encuentra una variable, en este
+       caso la etiqueta. "dibujito" es el identidicador de la etiqueteta-->
+   <!-- width: ancho en el cuadrado para dibujar -->
+   <!-- height: altura del cuadrado para dibujar -->
+   <!-- En un canvas la esquina superior izquierda corresponde al (0,0),
+        hacia la derecha el eje positivo de las x y hacia abajo el eje positivo de las y -->
+   <!-- style: maneja componentes de diseño del objeto -->
+   <!-- border: indica el ancho del borde y el color -->
+
+   <!-- <div>: selecciona un trozo del código html y le aplica el formato solo a ese código -->
+
+  <!-- <div style="text-align: center"> -->
+   <div id="text-center">
+     <!-- <canvas id="dibujito" width="300" height="300" style="border:1px solid #000000;text-align:center;"></canvas> -->
+     <canvas id="dibujito" width="300" height="300" ></canvas>
+   </div>
+   <script src="dibujo2.js"></script>
+   <p>Así queda tu dibujo</p>
+ </body>
+</html>

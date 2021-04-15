@@ -1,0 +1,214 @@
+/* ============== Inicialización CSS ================ */
+/* [box-sizing: border-box] lo hacemos para que el atributo width cubra el padding + border
+y no solo padding. [ margin: 0;] y [padding: 0;] para iniciar los margin y los padding a 0de todos los elementos*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Lo siguiente lo hacemos para que cuando demos un ancho de x rem eso sea
+equivalente a 10x px*/
+html {
+    font-size: 62.5%;
+}
+/* ================================================== */
+
+/* [justify-content]: alinea elementos horizontalmente y acepta los siguientes valores:
+
+flex-start: Alinea elementos al lado izquierdo del contenedor.
+flex-end: Alinea elementos al lado derecho del contenedor.
+center: Alinea elementos en el centro del contenedor.
+space-between: Muestra elementos con la misma distancia entre ellos.
+space-around: Muestra elementos con la misma separación alrededor de ellos. */
+
+/* [flex-direction] Esta propiedad CSS define la dirección de los elementos en el contenedor, y acepta los siguientes valores:
+
+row: Elementos son colocados en la misma dirección del texto.
+row-reverse: Elementos son colocados en la dirección opuesta al texto.
+column: Elementos se colocan de arriba hacia abajo.
+column-reverse: Elementos se colocan de abajo hacia arriba. */
+
+/* [align-items]: esta propiedad CSS alinea elementos verticalmente y acepta los siguientes valores
+
+flex-start: Alinea elementos a la parte superior del contenedor.
+flex-end: Alinea elementos a la parte inferior del contenedor.
+center: Alinea elementos en el centro (verticalmente hablando) del contenedor.
+baseline: Muestra elementos en la línea base del contenedor
+stretch: Elementos se estiran para ajustarse al contenedor. */
+
+/* [flex-wrap], la cual acepta los siguientes valores:
+
+nowrap: Cada elemento se ajusta en una sola línea.
+wrap: los elementos se envuelven alrededor de líneas adicionales.
+wrap-reverse: Los elementos se envuelven alrededor de líneas adicionales en reversa. */
+
+/* [align-content]: para establecer como múltiples líneas están separadas una de otra. Esta propiedad acepta los siguientes valores:
+
+flex-start: Las líneas se posicionan en la parte superior del contenedor.
+flex-end: Las líneas se posicionan en la parte inferior del contenedor.
+center: Las líneas se posicionan en el centro (verticalmente hablando) del contenedor.
+space-between: Las líneas se muestran con la misma distancia entre ellas.
+space-around: Las líneas se muestran con la misma separación alrededor de ellas.
+stretch: Las líneas se estiran para ajustarse al contenedor. */
+
+.container {
+    border: 0.3rem solid black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: flex-start; */
+    /* justify-content: space-evenly; */
+}
+
+.box {
+    height: 10rem;
+    width: 10rem;
+    font-size: 3rem;
+}
+
+.box1 {
+    background-color: blue;
+}
+.box2 {
+    background-color: blueviolet;
+}
+.box3 {
+    background-color: burlywood;
+}
+.box4 {
+    background-color: cadetblue;
+}
+.box5 {
+    background-color: coral;
+}
+.box6 {
+    background-color: salmon;
+}
+
+/* AJUSTAR LOS ELEMENTOS AL CONTENEDOR */
+.container2 {
+    margin-top: 5rem;
+    width: 90%;
+    border: 0.3rem solid black;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* [flex-grow]: inicialmente es´tá en 0. Cuando toma el valor de 1 hace que los elementos ocupen el ancho del divisor */
+.b {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: bold;
+    color: rgb(255, 251, 0);
+    font-size: 3rem;
+    flex-grow: 1; /*<---------------------------*/
+    margin: 1rem;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.b1 {
+    background-color: blue;
+}
+.b2 {
+    background-color: blueviolet;
+}
+.b3 {
+    background-color: burlywood;
+}
+.b4 {
+    background-color: cadetblue;
+}
+.b5 {
+    background-color: coral;
+}
+.b6 {
+    background-color: salmon;
+}
+
+/* AJUSTAR EL CONTENEDOR A LOS ELEMENTOS */
+.container3 {
+    margin-top: 5rem;
+    border: 0.3rem solid black;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+.c {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: bold;
+    color: rgb(255, 251, 0);
+    font-size: 3rem;
+    margin: 1rem;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15rem;
+}
+.c1 {
+    background-color: blue;
+}
+.c2 {
+    background-color: blueviolet;
+}
+.c3 {
+    background-color: burlywood;
+}
+.c4 {
+    background-color: cadetblue;
+}
+.c5 {
+    background-color: coral;
+}
+.c6 {
+    background-color: salmon;
+}
+
+/* AJUSTAR EL CONTENEDOR A LOS ELEMENTOS */
+.container4 {
+    margin-top: 5rem;
+    border: 0.3rem solid black;
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 90%;
+}
+.d {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: bold;
+    color: rgb(255, 251, 0);
+    font-size: 3rem;
+    margin: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 15rem;
+    max-width: 25rem;
+    height: 30rem;
+
+    flex-grow: 1;
+}
+.d1 {
+    background-color: blue;
+}
+.d2 {
+    background-color: blueviolet;
+}
+.d3 {
+    background-color: burlywood;
+}
+.d4 {
+    background-color: cadetblue;
+}
+.d5 {
+    background-color: coral;
+}
+.d6 {
+    background-color: salmon;
+}

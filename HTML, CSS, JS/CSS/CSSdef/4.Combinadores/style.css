@@ -1,0 +1,16 @@
+.adyacente h2 + p{
+    color: blueviolet;
+}
+
+
+.general h2 ~ p{
+    color: red;
+}
+
+.hijo div > p{
+    color: blue;
+}
+
+div.descendiente p{
+    color: rgb(255, 94, 0);
+}

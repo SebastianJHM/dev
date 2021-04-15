@@ -1,0 +1,37 @@
+/* la unidad de medida hace que se adapte el ancho al agrandar la pantalla */
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#cabecera, #pie{
+    text-align: center;
+    border: solid 1px;
+    box-sizing: border-box;
+}
+
+#menu, #contenido, #info{
+    border: solid 1px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#menu{
+    width: 10em;
+    position: absolute;
+}
+/* En este caso como el contenido queda flexible, se le pone position: relative. 
+Además es el tercero de los divisores */
+
+#contenido{
+    position: relative;
+    left: 10em;
+    margin-right: 35em;
+}
+
+#info{
+    width: 25em;
+    position: absolute;
+    right: 0;
+}

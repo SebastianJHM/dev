@@ -1,0 +1,12 @@
+name: VIGOR2021
+title: VIGOR2021
+username:
+account: presupuestomaximobico
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3577066
+bundleId: 4177400
+url: https://presupuestomaximobico.shinyapps.io/VIGOR2021/
+when: 1612383239.67928
+asMultiple: FALSE
+asStatic: FALSE

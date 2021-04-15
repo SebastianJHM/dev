@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Divisible</title>
+  </head>
+  <body>
+    <h1>Números</h1>
+    <script type="text/javascript">
+      var n = 100;
+      var x;
+      var b1;var b2;
+      for(var i=1;i<=n;i++){
+        b1 = divisible3(i);
+        b2 = divisible5(i);
+        if (b1 == true && b2 == true){
+          document.write(i + " d3 y d5 <br />");
+        }
+        if (b1 == true && b2 == false){
+          document.write(i +" d3 <br />");
+        }
+        if (b1 == false && b2 == true){
+          document.write(i + " d5 <br />");
+        }
+        if (b1 == false && b2 == false){
+          document.write(i + " <br />");
+        }
+
+      }
+
+      function divisible3(x){
+        if (x % 3 == 0){
+          return true;
+        }else{
+          return false;
+        }
+      }
+
+      function divisible5(x){
+        if (x % 5 == 0){
+          return true;
+        }else{
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

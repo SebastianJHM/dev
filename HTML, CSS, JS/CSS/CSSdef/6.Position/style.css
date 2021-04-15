@@ -1,0 +1,78 @@
+/* ============== Inicialización CSS ================ */
+/* [box-sizing: border-box] lo hacemos para que el atributo width cubra el padding + border
+y no solo padding. [ margin: 0;] y [padding: 0;] para iniciar los margin y los padding a 0de todos los elementos*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Lo siguiente lo hacemos para que cuando demos un ancho de x rem eso sea
+equivalente a 10x px*/
+html {
+    font-size: 62.5%;
+}
+ /* ================================================== */
+
+body{
+    height: 500vh;
+}
+
+.container {
+    border: 2px black dotted;
+    margin: 20px;
+    /* display: inline-block; */
+    display: inline-flex;
+}
+
+.box {
+    font-size: 18px;
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    margin: 5px;
+}
+
+#sticky .box {
+    display: flex;
+}
+
+.container#absolute {
+    margin-left: 300px;
+}
+
+.container#absolute #two {
+    background-color: rgb(55, 206, 55);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.container#relative #two {
+    background-color: rgb(230, 255, 88);
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+.container#fixed #two {
+    background-color: rgb(88, 119, 255);
+    position: fixed;
+    top: 500px;
+    left: 500px;
+}
+
+.container#sticky #two {
+    background-color: rgb(255, 88, 199);
+    position: sticky;
+    top: 10px;
+    left: 10px;
+}
+
+#myValue-a {
+    width: 600px;
+    font-size: 18px;
+    background-color: rgb(161, 60, 60);
+    color: rgb(255, 255, 255);
+}

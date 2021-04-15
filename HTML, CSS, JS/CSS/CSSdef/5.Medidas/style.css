@@ -1,0 +1,34 @@
+/* ============== Inicialización CSS ================ */
+/* [box-sizing: border-box] lo hacemos para que el atributo width cubra el padding + border
+y no solo padding. [ margin: 0;] y [padding: 0;] para iniciar los margin y los padding a 0de todos los elementos*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Lo siguiente lo hacemos para que cuando demos un ancho de x rem eso sea
+equivalente a 10x px*/
+html {
+    font-size: 62.5%;
+}
+ /* ================================================== */
+
+
+
+p {
+    font-size: 1.5rem;
+}
+ /* Las medidas vw(width) y vh(height) nos indicar el porcentaje del viewport que usaremos */
+main{
+    background-color: red;
+    width: 50vw;
+    height: 50vh;
+}
+
+section{
+    background-color: purple;
+    width: 30vw;
+    min-height: 40vh;
+    min-width: 300px;
+}

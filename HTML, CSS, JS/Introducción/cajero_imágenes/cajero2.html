@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Cajero automático</title>
+    <style media="screen">
+      /*para darle estilo a un objeto se usa su id acompañado de #. Si es class se hace con .class*/
+      #h1{
+        position:absolute;
+  		  left:10px;
+  		  top:3px;
+      }
+      #img{
+        position:absolute;
+  		  left:10px;
+  		  top:65px;
+      }
+      #p1{
+        position:absolute;
+  		  left:10px;
+  		  top:320px;
+      }
+      #resultado{
+        position:absolute;
+  		  left:10px;
+  		  top:370px;
+      }
+      #p2{
+        position:absolute;
+  		  left:400px;
+  		  top:70px;
+      }
+      #p3{
+        position:absolute;
+        left:400px;
+  		  top:120px;
+      }
+      #p4{
+        position:absolute;
+        left:400px;
+  		  top:170px;
+      }
+      #p5{
+        position:absolute;
+        left:400px;
+  		  top:220px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="h1">Cajero Automático</h1>
+
+    <p>
+      <!-- <img src="cajero.gif" width="100" height="100"/> -->
+      <img src="cajero.gif" id="img"/>
+    </p>
+
+    <p id="p1">Digita tu dinero:
+      <input type="number" id="numb" style='width:70px; height:20px;' />
+      <input type="button" id="extraer" value="Extraer" style='width:70px; height:25px;' />
+    </p>
+
+    <p id="resultado"></p>
+
+    <p id="p2">DINERO TOTAL:
+      <br />
+      <input type="text" id="actual" style='width:115px; height:17px;'">
+    </p>
+
+    <p id="p3">Billetes de 50:
+      <br />
+      <input type="text" id="b50" style='width:90px; height:17px;'>
+    </p>
+
+    <p id="p4">Billetes de 20:
+      <br />
+      <input type="text" id="b20" style='width:90px; height:17px;'>
+    </p>
+
+    <p id="p5">Billetes de 10:
+      <br />
+      <input type="text" id="b10" style='width:90px; height:17px;'>
+    </p>
+
+    <script src="cajero2.js" charset="utf-8"></script>
+  </body>
+</html>

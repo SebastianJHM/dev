@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- Estructura básica de un formulario -->
+        <!-- El atributos action indica la dirección a la que será enviada el formulario
+        Si se desea hacer un verificador de los campos del formulario. Lo correcto sería 
+        bloquear el envío desde javascript y después enviarlo desde JavaScript -->
+        <form action="">
+            <!-- La forma de asociar un label a un input es colocar en el atributo for del labeel el id del input -->
+            <label for="name">Nombre</label>
+            <input id="name">
+            <button>Enviar</button>
+        </form>
+        <!-- DIFERENCIAS ENTRE BUTTON -->
+        <h2>Diferencias entre buttons</h2>
+        <form action="">
+            <!-- A efectos visuales, estos dos botones son iguales. Un input[type=button] no envía el formulario,
+            mientras que el button de abajo si envía el formulario. El input de type button sirve para hacer una operación independiente al formulario dentro del formulario -->
+            <input>
+            <input type="button" value="ENVIAR">
+            <input type="submit" value="Input que si envía el formulario">
+            <button>ENVIAR</button>
+        </form>
+
+        <h2>Inputs de tipo fecha</h2>
+        <form action="">
+            <input type="date">
+            <!-- Los <input type="datetime-local"> no están habilitados en firefox -->
+            <!-- Se puede reemplazar por dos inputs, uno de tipo date y el otro de tipo time-->
+            <input type="datetime-local">
+            <input type="date">
+            <input type="time">
+
+            <input type="month">
+            <input type="week">
+        </form>
+
+        <h2>Inputs para moviles o celulares</h2>
+
+        <form action="">
+            <div>
+                <label for="">
+                    Busqueda
+                    <input type="search">
+                </label>
+            </div>
+            <div>
+                <label for="">
+                    télefono
+                    <input type="tel">
+                </label>
+            </div>
+            <div>
+                email
+                <label for="">
+                    <input type="email">
+                </label>
+            </div>
+            <div>
+                contraseña
+                <label for="">
+                    <input type="password">
+                </label>
+            </div>
+            <div>
+                url
+                <label for="">
+                    <input type="url">
+                </label>
+            </div>         
+            
+        </form>
+
+        <h2>Inputs extra</h2>
+        <form action="">
+            <input type="color">
+            <input type="number">
+            <input type="range" step="5" min="0" max="20">
+            <input type="reset"> <!-- resetea el formulario -->
+            <input type="hidden"> <!-- no muestra nada -->
+            <input type="text">
+        </form>
+
+        <!-- para que solo se escoja una de las opciones del radio deben tener el mismo name  -->
+        <!-- el radio con el atributo checked aparecerá seleccionado por defecto -->
+        <!-- el valor del aributo @value es el valor que será enviado por el formulario al servidor -->
+        <h2>Input radio</h2>
+        <form action="">
+            <label for="">
+                Masculino
+                <input type="radio" name="inputs-relacionados" value="masculino" checked>
+            </label>
+            <label for="">
+                Femenino
+                <input type="radio" name="inputs-relacionados"  value="femenino">
+            </label>
+            <label for="">
+                Desconocido
+                <input type="radio" name="inputs-relacionados" value="desconocido">
+            </label>
+        </form>
+
+
+        <h2>Inputs checkbox</h2>
+        <form action="">
+            <label for="">
+                HTML
+                <input type="checkbox" name="inputs-relacionados" value="html" checked>
+            </label>
+            <label for="">
+                CSS
+                <input type="checkbox" name="inputs-relacionados" value="css">
+            </label>
+            <label for="">
+                JavaScript
+                <input type="checkbox" name="inputs-relacionados" value="js">
+            </label>
+        </form>
+
+
+        <!-- La etiqueta value dentro de opcion es el valor que se enviaría al servidor -->
+        <!-- si se coloca la etiqaueta multiple se dejan escoger multiples opciones sino solo una-->
+        <h2>Select</h2>
+        <select name="lenguajes" multiple>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JAVASCRIPT</option>
+        </select>
+
+        <h2>Select agrupado</h2>
+        <select name="animales">
+            <optgroup label="4 patas">
+                <option value="perro">perro</option>
+                <option value="gato">gato</option>
+                <option value="hamster">hamster</option>
+                <option value="conejo">conejo</option>
+            </optgroup>
+            <optgroup label="aves">
+                <option value="loro">loro</option>
+                <option value="canario">canario</option>
+            </optgroup>
+            <optgroup label="otras">
+                <option value="serpiente">serpiente</option>
+                <option value="tarantula">tarantula</option>
+            </optgroup>
+        </select>
+
+        <!-- Los datalist, demas de ser un desplegable con la descripción de los elementos
+        filtran la información con lo que se escribe en el campo -->
+        <h2>Elementos seleccionables: datalist</h2>
+        <form action="">
+            <input type="list" list="pets">
+            <datalist id="pets">
+                <option value="perro">descripción perro</option>
+                <option value="gato">descripción gato</option>
+                <option value="hamster">descripción hamster</option>
+                <option value="conejo">descripción conejo</option>
+                <option value="loro">descripción loro</option>
+                <option value="canario">descripción canario</option>
+                <option value="serpiente">descripción serpiente</option>
+                <option value="tarantula">descripción tarantula</option>
+                <option value="lagarto">descripción lagarto</option>
+                <option value="lagartijo">descripción lagartijo</option>
+            </datalist>
+        </form>
+
+        <h2>Agrupar elementos de formulario</h2>
+        <form action="">
+            <fieldset>
+                <legend>Datos personales</legend>
+                <label for="name2">Nombre</label>
+                <input type="text" id="name2">
+                <label for="lastname">Apellido</label>
+                <input type="text" id="lastname">
+            </fieldset>
+        </form>
+
+        <h2>Otros elementos de formulario</h2>
+        <form action="">
+            <input type="file">
+
+            <label for="fuel">Combustible</label>
+            <meter id="fuel" min="0" max="100" value="50" low="25" high="75" optimum="50"></meter>
+
+            <label for="task"></label>
+            <progress id="task" max=100 value="75"></progress>
+            
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </form>
+
+    </body>
+</html>

@@ -1,0 +1,13 @@
+html {
+    font-size: 75%;
+    font-family:verdana; 
+}
+
+/* inherit sirve para heredar un propiedad que en principio no se debería heredar. Se hereda
+de la etiqueta de arriba que tenga la propiedad específicada. En este caso, h1 debría heredar de main
+pero main no tiene la propiedad de font-size definida, En ese caso seguiría body pero como tampoco 
+tiene la propiedad definida entonces sihuje html */
+
+h1{
+    font-size: inherit;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <style>
+        .borde1 {
+            background-color: aquamarine;
+            text-align: center;
+            height: 50px;
+        }
+
+        .borde2 {
+            height: 50px;
+            text-align: center;
+            background-color: olivedrab;
+        }
+
+        .borde3 {
+            height: 50px;
+            text-align: center;
+            background-color: orangered;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Bootsrap GRID -->
+    <!-- Containers provide a means to center and horizontally pad your site’s contents. Use .container for 
+    a responsive pixel width or .container-fluid for width: 100% across all viewport and device sizes. -->
+    <!-- Rows are wrappers for columns. Each column has horizontal padding (called a gutter) for controlling 
+    the space between them. This padding is then counteracted on the rows with negative margins. 
+    This way, all the content in your columns is visually aligned down the left side. -->
+    <!-- En el primer div se dividen las doce columnas de la fila en tres. Cuatro para cada divisor -->
+    <!-- En el segundo div un número de columna para cada divisor. En total debe sumar 12 -->
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col borde1"></div>
+            <div class="col borde2"></div>
+            <div class="col borde3"></div>
+        </div>
+        <div class="row">           
+            <div class="col-2 borde1"><p>Uno</p></div>
+            <div class="col-3 borde2"><p>Dos</p></div>
+            <div class="col-7 borde3"><p>Tres</p></div>
+        </div>
+    </div> -->
+
+    <!-- En esta sección adaptaremos  -->
+    <!-- En este caso se le da una configuración a cada tamaño de pantalla 
+    col(xs): extra-small
+    col-sm: small
+    col-md: medium
+    col-lg: large
+    col-xl: extra-large
+    Para cada uno de estas etiquetas se indica el total de columnas que de usar cada divisor -->
+
+    <!-- Para indicar las secciones en las que se ocultará un elemento tenemos en cuenta que la etiqueta 
+    d-*-none(*:(xs)-sm-md-lg-xl) ocultará de la medida que se le indique en adelante. Para indicar la medida desde
+    la que si se muestra utilizamos d-*-blocking(*:(xs)-sm-md-lg-xl) -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <h3>CABECERA</h3>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis quidem quibusdam delectus tempora
+                    reprehenderit beatae quis placeat asperiores, voluptatum quaerat dolores facilis similique aliquam
+                    qua cumque est a in doloribus?
+
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur sapiente quam illo adipisci
+                    suscipit delectus officiis deleniti. Dolor odit delectus nisi, vero sequi id quibusdam repellat
+                    sapiente minima! Perspiciatis, maxime!
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-sm-6  col-md-8  col-lg-4 col-xl-2 d-none d-sm-block borde1">
+                <p>Primer div</p>
+            </div>
+            <div class="col-12 col-sm-6  col-md-4  col-lg-4 col-xl-8  borde2">
+                <p>Segundo div</p>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-2 d-none d-lg-inline borde3">
+                <p>Tercer div</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h3>PIE DE PAGINA</h3>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis quidem quibusdam delectus tempora
+                    reprehenderit beatae quis placeat asperiores, voluptatum quaerat dolores facilis similique aliquam
+                    qua cumque est a in doloribus?
+
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur sapiente quam illo adipisci
+                    suscipit delectus officiis deleniti. Dolor odit delectus nisi, vero sequi id quibusdam repellat
+                    sapiente minima! Perspiciatis, maxime!
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

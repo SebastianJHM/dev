@@ -1,0 +1,24 @@
+#cabecera, #pie{
+    text-align: center;
+    border: solid 1px;
+    box-sizing: border-box;
+}
+#menu, #contenido, #info{
+    float: left;
+    margin: 0;
+    padding: 0;
+    border: solid 1px;
+    box-sizing: border-box;
+}
+#menu{
+    width: 20%;
+}
+#contenido{
+    width: 40%;
+}
+#info{
+    width: 40%;
+}
+#pie{
+    clear: both;
+}

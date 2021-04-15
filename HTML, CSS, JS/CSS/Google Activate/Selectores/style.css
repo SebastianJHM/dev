@@ -1,0 +1,11 @@
+ul.lista > li{
+    font-weight: bold;
+}
+
+img + span{
+    font-weight: bold;
+}
+
+[id~="cara"]{
+    font-weight: bold;
+}

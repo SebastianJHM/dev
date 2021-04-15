@@ -1,0 +1,3635 @@
+Problem:    Caso1Log2021
+Rows:       1016
+Columns:    855 (363 integer, 183 binary)
+Non-zeros:  3938
+Status:     INTEGER NON-OPTIMAL
+Objective:  FO = 1915020147 (MINimum)
+
+   No.   Row name        Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 FO                1.91502e+09                             
+     2 c1                          0            -0             = 
+     3 c2                          0            -0             = 
+     4 c3                          0            -0             = 
+     5 c4                          0            -0             = 
+     6 c5                          0            -0             = 
+     7 c6                          0            -0             = 
+     8 c7                          0            -0             = 
+     9 c8                          0            -0             = 
+    10 t1                          0            -0             = 
+    11 t2                          0            -0             = 
+    12 t3                          0            -0             = 
+    13 nv1[P_Car,Eu]
+                              0.6025            -0               
+    14 nv1[P_Car,Laf]
+                                   0            -0               
+    15 nv1[P_Car,Aox]
+                                   0            -0               
+    16 nv1[P_Car,L_Del]
+                                   0            -0               
+    17 nv1[P_Buen,Eu]
+                                   0            -0               
+    18 nv1[P_Buen,Laf]
+                                   0            -0               
+    19 nv1[P_Buen,Aox]
+                                   0            -0               
+    20 nv1[P_Buen,L_Del]
+                                   0            -0               
+    21 nv1[A_Dor,Eu]
+                                   0            -0               
+    22 nv1[A_Dor,Laf]
+                            0.925833            -0               
+    23 nv1[A_Dor,Aox]
+                                   0            -0               
+    24 nv1[A_Dor,L_Del]
+                                   0            -0               
+    25 nv1[Ecar,Eu]          5.52167            -0               
+    26 nv1[Ecar,Laf]
+                                   0            -0               
+    27 nv1[Ecar,Aox]
+                            0.626667            -0               
+    28 nv1[Ecar,L_Del]
+                                   0            -0               
+    29 nv1[Qui_Va,Eu]
+                            0.709167            -0               
+    30 nv1[Qui_Va,Laf]
+                             64.7408            -0               
+    31 nv1[Qui_Va,Aox]
+                            0.883333            -0               
+    32 nv1[Qui_Va,L_Del]
+                                   0            -0               
+    33 nv1[Discol_T,Eu]
+                                   0            -0               
+    34 nv1[Discol_T,Laf]
+                                   0            -0               
+    35 nv1[Discol_T,Aox]
+                            0.573333            -0               
+    36 nv1[Discol_T,L_Del]
+                                   0            -0               
+    37 nv2[Eu,B_Sib]
+                                   0            -0               
+    38 nv2[Eu,B_Man]
+                                   0            -0               
+    39 nv2[Eu,B_Buc]
+                                   0            -0               
+    40 nv2[Eu,B_Pop]
+                                   0            -0               
+    41 nv2[Eu,B_Ib]          4.83333            -0               
+    42 nv2[Laf,B_Sib]
+                                   0            -0               
+    43 nv2[Laf,B_Man]
+                                   0            -0               
+    44 nv2[Laf,B_Buc]
+                                   0            -0               
+    45 nv2[Laf,B_Pop]
+                            0.166667            -0               
+    46 nv2[Laf,B_Ib]
+                                 0.5            -0               
+    47 nv2[Aox,B_Sib]
+                                   0            -0               
+    48 nv2[Aox,B_Man]
+                                   0            -0               
+    49 nv2[Aox,B_Buc]
+                           0.0833333            -0               
+    50 nv2[Aox,B_Pop]
+                                   0            -0               
+    51 nv2[Aox,B_Ib]
+                                   0            -0               
+    52 nv2[L_Del,B_Sib]
+                                   0            -0               
+    53 nv2[L_Del,B_Man]
+                                   0            -0               
+    54 nv2[L_Del,B_Buc]
+                                   0            -0               
+    55 nv2[L_Del,B_Pop]
+                                   0            -0               
+    56 nv2[L_Del,B_Ib]
+                                   0            -0               
+    57 nv3[B_Sib,Caf_Cu]
+                                   0            -0               
+    58 nv3[B_Sib,CV_Dui]
+                                   0            -0               
+    59 nv3[B_Sib,Caf_Env]
+                                   0            -0               
+    60 nv3[B_Sib,San_Med]
+                                   0            -0               
+    61 nv3[B_Sib,Med_Nei]
+                                   0            -0               
+    62 nv3[B_Sib,Audi_Bog]
+                                   0            -0               
+    63 nv3[B_Sib,Hos_Nar]
+                                   0            -0               
+    64 nv3[B_Sib,Cli_Med]
+                                   0            -0               
+    65 nv3[B_Man,Caf_Cu]
+                                   0            -0               
+    66 nv3[B_Man,CV_Dui]
+                                   0            -0               
+    67 nv3[B_Man,Caf_Env]
+                                   0            -0               
+    68 nv3[B_Man,San_Med]
+                                   0            -0               
+    69 nv3[B_Man,Med_Nei]
+                                   0            -0               
+    70 nv3[B_Man,Audi_Bog]
+                                   0            -0               
+    71 nv3[B_Man,Hos_Nar]
+                                   0            -0               
+    72 nv3[B_Man,Cli_Med]
+                                   0            -0               
+    73 nv3[B_Buc,Caf_Cu]
+                            0.583333            -0               
+    74 nv3[B_Buc,CV_Dui]
+                           0.0833333            -0               
+    75 nv3[B_Buc,Caf_Env]
+                                   0            -0               
+    76 nv3[B_Buc,San_Med]
+                            0.416667            -0               
+    77 nv3[B_Buc,Med_Nei]
+                                   0            -0               
+    78 nv3[B_Buc,Audi_Bog]
+                                   0            -0               
+    79 nv3[B_Buc,Hos_Nar]
+                                   0            -0               
+    80 nv3[B_Buc,Cli_Med]
+                                   0            -0               
+    81 nv3[B_Pop,Caf_Cu]
+                                   0            -0               
+    82 nv3[B_Pop,CV_Dui]
+                                   0            -0               
+    83 nv3[B_Pop,Caf_Env]
+                                   0            -0               
+    84 nv3[B_Pop,San_Med]
+                                   5            -0               
+    85 nv3[B_Pop,Med_Nei]
+                                 0.5            -0               
+    86 nv3[B_Pop,Audi_Bog]
+                                   0            -0               
+    87 nv3[B_Pop,Hos_Nar]
+                            0.666667            -0               
+    88 nv3[B_Pop,Cli_Med]
+                                   0            -0               
+    89 nv3[B_Ib,Caf_Cu]
+                                   0            -0               
+    90 nv3[B_Ib,CV_Dui]
+                                   0            -0               
+    91 nv3[B_Ib,Caf_Env]
+                                0.75            -0               
+    92 nv3[B_Ib,San_Med]
+                                   5            -0               
+    93 nv3[B_Ib,Med_Nei]
+                                   0            -0               
+    94 nv3[B_Ib,Audi_Bog]
+                            0.166667            -0               
+    95 nv3[B_Ib,Hos_Nar]
+                                   0            -0               
+    96 nv3[B_Ib,Cli_Med]
+                             37572.4            -0               
+    97 v1                          0            -0             = 
+    98 v2                          0            -0             = 
+    99 v3                          0            -0             = 
+   100 r1[B_Sib]                   0                           1 
+   101 r1[B_Man]                   0                           1 
+   102 r1[B_Buc]                   0                          -0 
+   103 r1[B_Pop]                   1                           1 
+   104 r1[B_Ib]                    0                           1 
+   105 r2[B_Sib]                   0                          -0 
+   106 r2[B_Man]                   0                          -0 
+   107 r2[B_Buc]                   1                           1 
+   108 r2[B_Pop]                   0                           1 
+   109 r2[B_Ib]                    1                           1 
+   110 r3[B_Sib]                   0                           1 
+   111 r3[B_Man]                   0                           1 
+   112 r3[B_Buc]                   1                           1 
+   113 r3[B_Pop]                   1                           1 
+   114 r3[B_Ib]                    1                           1 
+   115 r4[B_Sib]                   0            -0             = 
+   116 r4[B_Man]                   0            -0             = 
+   117 r4[B_Buc]                   0            -0             = 
+   118 r4[B_Pop]                   0            -0             = 
+   119 r4[B_Ib]                    0            -0             = 
+   120 r5[P_Car,Eu]                0                          -0 
+   121 r5[P_Car,Laf]
+                                  -1                          -0 
+   122 r5[P_Car,Aox]
+                                  -1                          -0 
+   123 r5[P_Car,L_Del]
+                                   0                          -0 
+   124 r5[P_Buen,Eu]
+                                  -1                          -0 
+   125 r5[P_Buen,Laf]
+                                  -1                          -0 
+   126 r5[P_Buen,Aox]
+                                  -1                          -0 
+   127 r5[P_Buen,L_Del]
+                                   0                          -0 
+   128 r5[A_Dor,Eu]               -1                          -0 
+   129 r5[A_Dor,Laf]
+                                   0                          -0 
+   130 r5[A_Dor,Aox]
+                                  -1                          -0 
+   131 r5[A_Dor,L_Del]
+                                   0                          -0 
+   132 r5[Ecar,Eu]                 0                          -0 
+   133 r5[Ecar,Laf]               -1                          -0 
+   134 r5[Ecar,Aox]                0                          -0 
+   135 r5[Ecar,L_Del]
+                                   0                          -0 
+   136 r5[Qui_Va,Eu]
+                                   0                          -0 
+   137 r5[Qui_Va,Laf]
+                                   0                          -0 
+   138 r5[Qui_Va,Aox]
+                                   0                          -0 
+   139 r5[Qui_Va,L_Del]
+                                   0                          -0 
+   140 r5[Discol_T,Eu]
+                                  -1                          -0 
+   141 r5[Discol_T,Laf]
+                                  -1                          -0 
+   142 r5[Discol_T,Aox]
+                                   0                          -0 
+   143 r5[Discol_T,L_Del]
+                                   0                          -0 
+   144 r6[P_Car,Eu,Ana]
+                             -100000                          -0 
+   145 r6[P_Car,Eu,Ant]
+                             -100000                          -0 
+   146 r6[P_Car,Eu,Ane]
+                              -99523                          -0 
+   147 r6[P_Car,Eu,Exci]
+                             -100000                          -0 
+   148 r6[P_Car,Laf,Ana]
+                                   0                          -0 
+   149 r6[P_Car,Laf,Ant]
+                                   0                          -0 
+   150 r6[P_Car,Laf,Ane]
+                                   0                          -0 
+   151 r6[P_Car,Laf,Exci]
+                                   0                          -0 
+   152 r6[P_Car,Aox,Ana]
+                                   0                          -0 
+   153 r6[P_Car,Aox,Ant]
+                                   0                          -0 
+   154 r6[P_Car,Aox,Ane]
+                                   0                          -0 
+   155 r6[P_Car,Aox,Exci]
+                                   0                          -0 
+   156 r6[P_Car,L_Del,Ana]
+                                   0                          -0 
+   157 r6[P_Car,L_Del,Ant]
+                                   0                          -0 
+   158 r6[P_Car,L_Del,Ane]
+                                   0                          -0 
+   159 r6[P_Car,L_Del,Exci]
+                                   0                          -0 
+   160 r6[P_Buen,Eu,Ana]
+                                   0                          -0 
+   161 r6[P_Buen,Eu,Ant]
+                                   0                          -0 
+   162 r6[P_Buen,Eu,Ane]
+                                   0                          -0 
+   163 r6[P_Buen,Eu,Exci]
+                                   0                          -0 
+   164 r6[P_Buen,Laf,Ana]
+                                   0                          -0 
+   165 r6[P_Buen,Laf,Ant]
+                                   0                          -0 
+   166 r6[P_Buen,Laf,Ane]
+                                   0                          -0 
+   167 r6[P_Buen,Laf,Exci]
+                                   0                          -0 
+   168 r6[P_Buen,Aox,Ana]
+                                   0                          -0 
+   169 r6[P_Buen,Aox,Ant]
+                                   0                          -0 
+   170 r6[P_Buen,Aox,Ane]
+                                   0                          -0 
+   171 r6[P_Buen,Aox,Exci]
+                                   0                          -0 
+   172 r6[P_Buen,L_Del,Ana]
+                                   0                          -0 
+   173 r6[P_Buen,L_Del,Ant]
+                                   0                          -0 
+   174 r6[P_Buen,L_Del,Ane]
+                                   0                          -0 
+   175 r6[P_Buen,L_Del,Exci]
+                                   0                          -0 
+   176 r6[A_Dor,Eu,Ana]
+                                   0                          -0 
+   177 r6[A_Dor,Eu,Ant]
+                                   0                          -0 
+   178 r6[A_Dor,Eu,Ane]
+                                   0                          -0 
+   179 r6[A_Dor,Eu,Exci]
+                                   0                          -0 
+   180 r6[A_Dor,Laf,Ana]
+                              -97552                          -0 
+   181 r6[A_Dor,Laf,Ant]
+                             -100000                          -0 
+   182 r6[A_Dor,Laf,Ane]
+                              -99727                          -0 
+   183 r6[A_Dor,Laf,Exci]
+                              -97832                          -0 
+   184 r6[A_Dor,Aox,Ana]
+                                   0                          -0 
+   185 r6[A_Dor,Aox,Ant]
+                                   0                          -0 
+   186 r6[A_Dor,Aox,Ane]
+                                   0                          -0 
+   187 r6[A_Dor,Aox,Exci]
+                                   0                          -0 
+   188 r6[A_Dor,L_Del,Ana]
+                                   0                          -0 
+   189 r6[A_Dor,L_Del,Ant]
+                                   0                          -0 
+   190 r6[A_Dor,L_Del,Ane]
+                                   0                          -0 
+   191 r6[A_Dor,L_Del,Exci]
+                                   0                          -0 
+   192 r6[Ecar,Eu,Ana]
+                              -97669                          -0 
+   193 r6[Ecar,Eu,Ant]
+                              -99300                          -0 
+   194 r6[Ecar,Eu,Ane]
+                             -100000                          -0 
+   195 r6[Ecar,Eu,Exci]
+                              -92857                          -0 
+   196 r6[Ecar,Laf,Ana]
+                                   0                          -0 
+   197 r6[Ecar,Laf,Ant]
+                                   0                          -0 
+   198 r6[Ecar,Laf,Ane]
+                                   0                          -0 
+   199 r6[Ecar,Laf,Exci]
+                                   0                          -0 
+   200 r6[Ecar,Aox,Ana]
+                              -98351                          -0 
+   201 r6[Ecar,Aox,Ant]
+                             -100000                          -0 
+   202 r6[Ecar,Aox,Ane]
+                              -99880                          -0 
+   203 r6[Ecar,Aox,Exci]
+                              -97721                          -0 
+   204 r6[Ecar,L_Del,Ana]
+                                   0                          -0 
+   205 r6[Ecar,L_Del,Ant]
+                                   0                          -0 
+   206 r6[Ecar,L_Del,Ane]
+                                   0                          -0 
+   207 r6[Ecar,L_Del,Exci]
+                                   0                          -0 
+   208 r6[Qui_Va,Eu,Ana]
+                              -99671                          -0 
+   209 r6[Qui_Va,Eu,Ant]
+                             -100000                          -0 
+   210 r6[Qui_Va,Eu,Ane]
+                              -99980                          -0 
+   211 r6[Qui_Va,Eu,Exci]
+                             -100000                          -0 
+   212 r6[Qui_Va,Laf,Ana]
+                              -95869                          -0 
+   213 r6[Qui_Va,Laf,Ant]
+                              -98160                          -0 
+   214 r6[Qui_Va,Laf,Ane]
+                             -100000                          -0 
+   215 r6[Qui_Va,Laf,Exci]
+                              -88860                          -0 
+   216 r6[Qui_Va,Aox,Ana]
+                             -100000                          -0 
+   217 r6[Qui_Va,Aox,Ant]
+                             -100000                          -0 
+   218 r6[Qui_Va,Aox,Ane]
+                              -99860                          -0 
+   219 r6[Qui_Va,Aox,Exci]
+                             -100000                          -0 
+   220 r6[Qui_Va,L_Del,Ana]
+                                   0                          -0 
+   221 r6[Qui_Va,L_Del,Ant]
+                                   0                          -0 
+   222 r6[Qui_Va,L_Del,Ane]
+                                   0                          -0 
+   223 r6[Qui_Va,L_Del,Exci]
+                                   0                          -0 
+   224 r6[Discol_T,Eu,Ana]
+                                   0                          -0 
+   225 r6[Discol_T,Eu,Ant]
+                                   0                          -0 
+   226 r6[Discol_T,Eu,Ane]
+                                   0                          -0 
+   227 r6[Discol_T,Eu,Exci]
+                                   0                          -0 
+   228 r6[Discol_T,Laf,Ana]
+                                   0                          -0 
+   229 r6[Discol_T,Laf,Ant]
+                                   0                          -0 
+   230 r6[Discol_T,Laf,Ane]
+                                   0                          -0 
+   231 r6[Discol_T,Laf,Exci]
+                                   0                          -0 
+   232 r6[Discol_T,Aox,Ana]
+                              -96260                          -0 
+   233 r6[Discol_T,Aox,Ant]
+                              -98740                          -0 
+   234 r6[Discol_T,Aox,Ane]
+                              -99770                          -0 
+   235 r6[Discol_T,Aox,Exci]
+                              -90318                          -0 
+   236 r6[Discol_T,L_Del,Ana]
+                                   0                          -0 
+   237 r6[Discol_T,L_Del,Ant]
+                                   0                          -0 
+   238 r6[Discol_T,L_Del,Ane]
+                                   0                          -0 
+   239 r6[Discol_T,L_Del,Exci]
+                                   0                          -0 
+   240 r7[P_Car,Ana]
+                                   0                        4900 
+   241 r7[P_Car,Ant]
+                                   0                        2300 
+   242 r7[P_Car,Ane]
+                                 477                        2200 
+   243 r7[P_Car,Exci]
+                                   0                       12900 
+   244 r7[P_Buen,Ana]
+                                   0                        5000 
+   245 r7[P_Buen,Ant]
+                                   0                        1900 
+   246 r7[P_Buen,Ane]
+                                   0                        2100 
+   247 r7[P_Buen,Exci]
+                                   0                       13800 
+   248 r7[A_Dor,Ana]
+                                2448                        4500 
+   249 r7[A_Dor,Ant]
+                                   0                        1700 
+   250 r7[A_Dor,Ane]
+                                 273                        1300 
+   251 r7[A_Dor,Exci]
+                                2168                       10700 
+   252 r7[Ecar,Ana]             3980                        3980 
+   253 r7[Ecar,Ant]              700                        1530 
+   254 r7[Ecar,Ane]              120                         120 
+   255 r7[Ecar,Exci]
+                                9422                       13228 
+   256 r7[Qui_Va,Ana]
+                                4460                        4460 
+   257 r7[Qui_Va,Ant]
+                                1840                        1840 
+   258 r7[Qui_Va,Ane]
+                                 160                         160 
+   259 r7[Qui_Va,Exci]
+                               11140                       11140 
+   260 r7[Discol_T,Ana]
+                                3740                        3740 
+   261 r7[Discol_T,Ant]
+                                1260                        1700 
+   262 r7[Discol_T,Ane]
+                                 230                         230 
+   263 r7[Discol_T,Exci]
+                                9682                        9682 
+   264 r8[P_Car]                   1                           3 
+   265 r8[P_Buen]                  0                           3 
+   266 r8[A_Dor]                   1                           3 
+   267 r8[Ecar]                    2                           3 
+   268 r8[Qui_Va]                  3                           3 
+   269 r8[Discol_T]                1                           3 
+   270 r9[Eu]                  11000                       25000 
+   271 r9[Laf]                 22000                       22000 
+   272 r9[Aox]                 19100                       21000 
+   273 r9[L_Del]                   0                       25000 
+   274 r10[Eu,Ana]                 0            -0             = 
+   275 r10[Eu,Ant]                 0            -0             = 
+   276 r10[Eu,Ane]                 0            -0             = 
+   277 r10[Eu,Exci]                0            -0             = 
+   278 r10[Laf,Ana]                0            -0             = 
+   279 r10[Laf,Ant]                0            -0             = 
+   280 r10[Laf,Ane]                0            -0             = 
+   281 r10[Laf,Exci]
+                                   0            -0             = 
+   282 r10[Aox,Ana]                0            -0             = 
+   283 r10[Aox,Ant]                0            -0             = 
+   284 r10[Aox,Ane]                0            -0             = 
+   285 r10[Aox,Exci]
+                                   0            -0             = 
+   286 r10[L_Del,Ana]
+                                   0            -0             = 
+   287 r10[L_Del,Ant]
+                                   0            -0             = 
+   288 r10[L_Del,Ane]
+                                   0            -0             = 
+   289 r10[L_Del,Exci]
+                                   0            -0             = 
+   290 r11[Eu,Ana]                 0            -0             = 
+   291 r11[Eu,Ant]                 0            -0             = 
+   292 r11[Eu,Ane]                 0            -0             = 
+   293 r11[Eu,Exci]                0            -0             = 
+   294 r11[Laf,Ana]                0            -0             = 
+   295 r11[Laf,Ant]                0            -0             = 
+   296 r11[Laf,Ane]                0            -0             = 
+   297 r11[Laf,Exci]
+                                   0            -0             = 
+   298 r11[Aox,Ana]                0            -0             = 
+   299 r11[Aox,Ant]                0            -0             = 
+   300 r11[Aox,Ane]                0            -0             = 
+   301 r11[Aox,Exci]
+                                   0            -0             = 
+   302 r11[L_Del,Ana]
+                                   0            -0             = 
+   303 r11[L_Del,Ant]
+                                   0            -0             = 
+   304 r11[L_Del,Ane]
+                                   0            -0             = 
+   305 r11[L_Del,Exci]
+                                   0            -0             = 
+   306 r12[Eu,B_Sib]
+                                  -1                          -0 
+   307 r12[Eu,B_Man]
+                                  -1                          -0 
+   308 r12[Eu,B_Buc]
+                                  -1                          -0 
+   309 r12[Eu,B_Pop]
+                                  -1                          -0 
+   310 r12[Eu,B_Ib]                0                          -0 
+   311 r12[Laf,B_Sib]
+                                  -1                          -0 
+   312 r12[Laf,B_Man]
+                                  -1                          -0 
+   313 r12[Laf,B_Buc]
+                                  -1                          -0 
+   314 r12[Laf,B_Pop]
+                                   0                          -0 
+   315 r12[Laf,B_Ib]
+                                   0                          -0 
+   316 r12[Aox,B_Sib]
+                                  -1                          -0 
+   317 r12[Aox,B_Man]
+                                  -1                          -0 
+   318 r12[Aox,B_Buc]
+                                   0                          -0 
+   319 r12[Aox,B_Pop]
+                                  -1                          -0 
+   320 r12[Aox,B_Ib]
+                                  -1                          -0 
+   321 r12[L_Del,B_Sib]
+                                   0                          -0 
+   322 r12[L_Del,B_Man]
+                                   0                          -0 
+   323 r12[L_Del,B_Buc]
+                                   0                          -0 
+   324 r12[L_Del,B_Pop]
+                                   0                          -0 
+   325 r12[L_Del,B_Ib]
+                                   0                          -0 
+   326 r13[Eu,B_Sib]
+                                   0                          -0 
+   327 r13[Eu,B_Man]
+                                   0                          -0 
+   328 r13[Eu,B_Buc]
+                                  -1                          -0 
+   329 r13[Eu,B_Pop]
+                                  -1                          -0 
+   330 r13[Eu,B_Ib]                0                          -0 
+   331 r13[Laf,B_Sib]
+                                   0                          -0 
+   332 r13[Laf,B_Man]
+                                   0                          -0 
+   333 r13[Laf,B_Buc]
+                                  -1                          -0 
+   334 r13[Laf,B_Pop]
+                                   0                          -0 
+   335 r13[Laf,B_Ib]
+                                   0                          -0 
+   336 r13[Aox,B_Sib]
+                                   0                          -0 
+   337 r13[Aox,B_Man]
+                                   0                          -0 
+   338 r13[Aox,B_Buc]
+                                   0                          -0 
+   339 r13[Aox,B_Pop]
+                                  -1                          -0 
+   340 r13[Aox,B_Ib]
+                                  -1                          -0 
+   341 r13[L_Del,B_Sib]
+                                   0                          -0 
+   342 r13[L_Del,B_Man]
+                                   0                          -0 
+   343 r13[L_Del,B_Buc]
+                                  -1                          -0 
+   344 r13[L_Del,B_Pop]
+                                  -1                          -0 
+   345 r13[L_Del,B_Ib]
+                                  -1                          -0 
+   346 r14[Eu,B_Sib,Com]
+                                   0                          -0 
+   347 r14[Eu,B_Sib,Tab]
+                                   0                          -0 
+   348 r14[Eu,B_Sib,Cap]
+                                   0                          -0 
+   349 r14[Eu,B_Man,Com]
+                                   0                          -0 
+   350 r14[Eu,B_Man,Tab]
+                                   0                          -0 
+   351 r14[Eu,B_Man,Cap]
+                                   0                          -0 
+   352 r14[Eu,B_Buc,Com]
+                                   0                          -0 
+   353 r14[Eu,B_Buc,Tab]
+                                   0                          -0 
+   354 r14[Eu,B_Buc,Cap]
+                                   0                          -0 
+   355 r14[Eu,B_Pop,Com]
+                                   0                          -0 
+   356 r14[Eu,B_Pop,Tab]
+                                   0                          -0 
+   357 r14[Eu,B_Pop,Cap]
+                                   0                          -0 
+   358 r14[Eu,B_Ib,Com]
+                              -99600                          -0 
+   359 r14[Eu,B_Ib,Tab]
+                              -92900                          -0 
+   360 r14[Eu,B_Ib,Cap]
+                              -96500                          -0 
+   361 r14[Laf,B_Sib,Com]
+                                   0                          -0 
+   362 r14[Laf,B_Sib,Tab]
+                                   0                          -0 
+   363 r14[Laf,B_Sib,Cap]
+                                   0                          -0 
+   364 r14[Laf,B_Man,Com]
+                                   0                          -0 
+   365 r14[Laf,B_Man,Tab]
+                                   0                          -0 
+   366 r14[Laf,B_Man,Cap]
+                                   0                          -0 
+   367 r14[Laf,B_Buc,Com]
+                                   0                          -0 
+   368 r14[Laf,B_Buc,Tab]
+                                   0                          -0 
+   369 r14[Laf,B_Buc,Cap]
+                                   0                          -0 
+   370 r14[Laf,B_Pop,Com]
+                              -96200                          -0 
+   371 r14[Laf,B_Pop,Tab]
+                              -96100                          -0 
+   372 r14[Laf,B_Pop,Cap]
+                              -94700                          -0 
+   373 r14[Laf,B_Ib,Com]
+                              -94900                          -0 
+   374 r14[Laf,B_Ib,Tab]
+                             -100000                          -0 
+   375 r14[Laf,B_Ib,Cap]
+                              -96100                          -0 
+   376 r14[Aox,B_Sib,Com]
+                                   0                          -0 
+   377 r14[Aox,B_Sib,Tab]
+                                   0                          -0 
+   378 r14[Aox,B_Sib,Cap]
+                                   0                          -0 
+   379 r14[Aox,B_Man,Com]
+                                   0                          -0 
+   380 r14[Aox,B_Man,Tab]
+                                   0                          -0 
+   381 r14[Aox,B_Man,Cap]
+                                   0                          -0 
+   382 r14[Aox,B_Buc,Com]
+                              -94200                          -0 
+   383 r14[Aox,B_Buc,Tab]
+                              -93000                          -0 
+   384 r14[Aox,B_Buc,Cap]
+                              -93700                          -0 
+   385 r14[Aox,B_Pop,Com]
+                                   0                          -0 
+   386 r14[Aox,B_Pop,Tab]
+                                   0                          -0 
+   387 r14[Aox,B_Pop,Cap]
+                                   0                          -0 
+   388 r14[Aox,B_Ib,Com]
+                                   0                          -0 
+   389 r14[Aox,B_Ib,Tab]
+                                   0                          -0 
+   390 r14[Aox,B_Ib,Cap]
+                                   0                          -0 
+   391 r14[L_Del,B_Sib,Com]
+                                   0                          -0 
+   392 r14[L_Del,B_Sib,Tab]
+                                   0                          -0 
+   393 r14[L_Del,B_Sib,Cap]
+                                   0                          -0 
+   394 r14[L_Del,B_Man,Com]
+                                   0                          -0 
+   395 r14[L_Del,B_Man,Tab]
+                                   0                          -0 
+   396 r14[L_Del,B_Man,Cap]
+                                   0                          -0 
+   397 r14[L_Del,B_Buc,Com]
+                                   0                          -0 
+   398 r14[L_Del,B_Buc,Tab]
+                                   0                          -0 
+   399 r14[L_Del,B_Buc,Cap]
+                                   0                          -0 
+   400 r14[L_Del,B_Pop,Com]
+                                   0                          -0 
+   401 r14[L_Del,B_Pop,Tab]
+                                   0                          -0 
+   402 r14[L_Del,B_Pop,Cap]
+                                   0                          -0 
+   403 r14[L_Del,B_Ib,Com]
+                                   0                          -0 
+   404 r14[L_Del,B_Ib,Tab]
+                                   0                          -0 
+   405 r14[L_Del,B_Ib,Cap]
+                                   0                          -0 
+   406 r26[Eu,B_Sib]
+                                   0                          -0 
+   407 r26[Eu,B_Man]
+                                   0                          -0 
+   408 r26[Eu,B_Buc]
+                                   0                          -0 
+   409 r26[Eu,B_Pop]
+                                   0                          -0 
+   410 r26[Eu,B_Ib]           -10999                          -0 
+   411 r26[Laf,B_Sib]
+                                   0                          -0 
+   412 r26[Laf,B_Man]
+                                   0                          -0 
+   413 r26[Laf,B_Buc]
+                                   0                          -0 
+   414 r26[Laf,B_Pop]
+                              -12999                          -0 
+   415 r26[Laf,B_Ib]
+                               -8999                          -0 
+   416 r26[Aox,B_Sib]
+                                   0                          -0 
+   417 r26[Aox,B_Man]
+                                   0                          -0 
+   418 r26[Aox,B_Buc]
+                              -19099                          -0 
+   419 r26[Aox,B_Pop]
+                                   0                          -0 
+   420 r26[Aox,B_Ib]
+                                   0                          -0 
+   421 r26[L_Del,B_Sib]
+                                   0                          -0 
+   422 r26[L_Del,B_Man]
+                                   0                          -0 
+   423 r26[L_Del,B_Buc]
+                                   0                          -0 
+   424 r26[L_Del,B_Pop]
+                                   0                          -0 
+   425 r26[L_Del,B_Ib]
+                                   0                          -0 
+   426 r15[Eu,Com]                 0            -0             = 
+   427 r15[Eu,Tab]                 0            -0             = 
+   428 r15[Eu,Cap]                 0            -0             = 
+   429 r15[Laf,Com]                0            -0             = 
+   430 r15[Laf,Tab]                0            -0             = 
+   431 r15[Laf,Cap]                0            -0             = 
+   432 r15[Aox,Com]                0            -0             = 
+   433 r15[Aox,Tab]                0            -0             = 
+   434 r15[Aox,Cap]                0            -0             = 
+   435 r15[L_Del,Com]
+                                   0            -0             = 
+   436 r15[L_Del,Tab]
+                                   0            -0             = 
+   437 r15[L_Del,Cap]
+                                   0            -0             = 
+   438 r16[Eu,Com]                 0            -0             = 
+   439 r16[Eu,Tab]                 0            -0             = 
+   440 r16[Eu,Cap]                 0            -0             = 
+   441 r16[Laf,Com]                0            -0             = 
+   442 r16[Laf,Tab]                0            -0             = 
+   443 r16[Laf,Cap]                0            -0             = 
+   444 r16[Aox,Com]                0            -0             = 
+   445 r16[Aox,Tab]                0            -0             = 
+   446 r16[Aox,Cap]                0            -0             = 
+   447 r16[L_Del,Com]
+                                   0            -0             = 
+   448 r16[L_Del,Tab]
+                                   0            -0             = 
+   449 r16[L_Del,Cap]
+                                   0            -0             = 
+   450 r17[B_Sib,Caf_Cu,1]
+                                   0                          -0 
+   451 r17[B_Sib,Caf_Cu,2]
+                                   0                          -0 
+   452 r17[B_Sib,CV_Dui,1]
+                                   0                          -0 
+   453 r17[B_Sib,CV_Dui,2]
+                                   0                          -0 
+   454 r17[B_Sib,Caf_Env,1]
+                                   0                          -0 
+   455 r17[B_Sib,Caf_Env,2]
+                                   0                          -0 
+   456 r17[B_Sib,San_Med,1]
+                                   0                          -0 
+   457 r17[B_Sib,San_Med,2]
+                                   0                          -0 
+   458 r17[B_Sib,Med_Nei,1]
+                                   0                          -0 
+   459 r17[B_Sib,Med_Nei,2]
+                                   0                          -0 
+   460 r17[B_Sib,Audi_Bog,1]
+                                   0                          -0 
+   461 r17[B_Sib,Audi_Bog,2]
+                                   0                          -0 
+   462 r17[B_Sib,Hos_Nar,1]
+                                   0                          -0 
+   463 r17[B_Sib,Hos_Nar,2]
+                                   0                          -0 
+   464 r17[B_Sib,Cli_Med,1]
+                                   0                          -0 
+   465 r17[B_Sib,Cli_Med,2]
+                                   0                          -0 
+   466 r17[B_Man,Caf_Cu,1]
+                                   0                          -0 
+   467 r17[B_Man,Caf_Cu,2]
+                                   0                          -0 
+   468 r17[B_Man,CV_Dui,1]
+                                   0                          -0 
+   469 r17[B_Man,CV_Dui,2]
+                                   0                          -0 
+   470 r17[B_Man,Caf_Env,1]
+                                   0                          -0 
+   471 r17[B_Man,Caf_Env,2]
+                                   0                          -0 
+   472 r17[B_Man,San_Med,1]
+                                   0                          -0 
+   473 r17[B_Man,San_Med,2]
+                                   0                          -0 
+   474 r17[B_Man,Med_Nei,1]
+                                   0                          -0 
+   475 r17[B_Man,Med_Nei,2]
+                                   0                          -0 
+   476 r17[B_Man,Audi_Bog,1]
+                                   0                          -0 
+   477 r17[B_Man,Audi_Bog,2]
+                                   0                          -0 
+   478 r17[B_Man,Hos_Nar,1]
+                                   0                          -0 
+   479 r17[B_Man,Hos_Nar,2]
+                                   0                          -0 
+   480 r17[B_Man,Cli_Med,1]
+                                   0                          -0 
+   481 r17[B_Man,Cli_Med,2]
+                                   0                          -0 
+   482 r17[B_Buc,Caf_Cu,1]
+                                   0                          -0 
+   483 r17[B_Buc,Caf_Cu,2]
+                                   0                          -0 
+   484 r17[B_Buc,CV_Dui,1]
+                                   0                          -0 
+   485 r17[B_Buc,CV_Dui,2]
+                                   0                          -0 
+   486 r17[B_Buc,Caf_Env,1]
+                                   0                          -0 
+   487 r17[B_Buc,Caf_Env,2]
+                                  -1                          -0 
+   488 r17[B_Buc,San_Med,1]
+                                   0                          -0 
+   489 r17[B_Buc,San_Med,2]
+                                   0                          -0 
+   490 r17[B_Buc,Med_Nei,1]
+                                   0                          -0 
+   491 r17[B_Buc,Med_Nei,2]
+                                  -1                          -0 
+   492 r17[B_Buc,Audi_Bog,1]
+                                   0                          -0 
+   493 r17[B_Buc,Audi_Bog,2]
+                                  -1                          -0 
+   494 r17[B_Buc,Hos_Nar,1]
+                                   0                          -0 
+   495 r17[B_Buc,Hos_Nar,2]
+                                  -1                          -0 
+   496 r17[B_Buc,Cli_Med,1]
+                                   0                          -0 
+   497 r17[B_Buc,Cli_Med,2]
+                                  -1                          -0 
+   498 r17[B_Pop,Caf_Cu,1]
+                                  -1                          -0 
+   499 r17[B_Pop,Caf_Cu,2]
+                                   0                          -0 
+   500 r17[B_Pop,CV_Dui,1]
+                                  -1                          -0 
+   501 r17[B_Pop,CV_Dui,2]
+                                   0                          -0 
+   502 r17[B_Pop,Caf_Env,1]
+                                  -1                          -0 
+   503 r17[B_Pop,Caf_Env,2]
+                                   0                          -0 
+   504 r17[B_Pop,San_Med,1]
+                                  -1                          -0 
+   505 r17[B_Pop,San_Med,2]
+                                   0                          -0 
+   506 r17[B_Pop,Med_Nei,1]
+                                   0                          -0 
+   507 r17[B_Pop,Med_Nei,2]
+                                   0                          -0 
+   508 r17[B_Pop,Audi_Bog,1]
+                                  -1                          -0 
+   509 r17[B_Pop,Audi_Bog,2]
+                                   0                          -0 
+   510 r17[B_Pop,Hos_Nar,1]
+                                   0                          -0 
+   511 r17[B_Pop,Hos_Nar,2]
+                                   0                          -0 
+   512 r17[B_Pop,Cli_Med,1]
+                                  -1                          -0 
+   513 r17[B_Pop,Cli_Med,2]
+                                   0                          -0 
+   514 r17[B_Ib,Caf_Cu,1]
+                                   0                          -0 
+   515 r17[B_Ib,Caf_Cu,2]
+                                  -1                          -0 
+   516 r17[B_Ib,CV_Dui,1]
+                                   0                          -0 
+   517 r17[B_Ib,CV_Dui,2]
+                                  -1                          -0 
+   518 r17[B_Ib,Caf_Env,1]
+                                   0                          -0 
+   519 r17[B_Ib,Caf_Env,2]
+                                   0                          -0 
+   520 r17[B_Ib,San_Med,1]
+                                   0                          -0 
+   521 r17[B_Ib,San_Med,2]
+                                  -1                          -0 
+   522 r17[B_Ib,Med_Nei,1]
+                                   0                          -0 
+   523 r17[B_Ib,Med_Nei,2]
+                                  -1                          -0 
+   524 r17[B_Ib,Audi_Bog,1]
+                                   0                          -0 
+   525 r17[B_Ib,Audi_Bog,2]
+                                   0                          -0 
+   526 r17[B_Ib,Hos_Nar,1]
+                                   0                          -0 
+   527 r17[B_Ib,Hos_Nar,2]
+                                  -1                          -0 
+   528 r17[B_Ib,Cli_Med,1]
+                                   0                          -0 
+   529 r17[B_Ib,Cli_Med,2]
+                                   0                          -0 
+   530 r18[B_Sib,Caf_Cu,Com,1]
+                                   0                          -0 
+   531 r18[B_Sib,Caf_Cu,Com,2]
+                                   0                          -0 
+   532 r18[B_Sib,Caf_Cu,Tab,1]
+                                   0                          -0 
+   533 r18[B_Sib,Caf_Cu,Tab,2]
+                                   0                          -0 
+   534 r18[B_Sib,Caf_Cu,Cap,1]
+                                   0                          -0 
+   535 r18[B_Sib,Caf_Cu,Cap,2]
+                                   0                          -0 
+   536 r18[B_Sib,CV_Dui,Com,1]
+                                   0                          -0 
+   537 r18[B_Sib,CV_Dui,Com,2]
+                                   0                          -0 
+   538 r18[B_Sib,CV_Dui,Tab,1]
+                                   0                          -0 
+   539 r18[B_Sib,CV_Dui,Tab,2]
+                                   0                          -0 
+   540 r18[B_Sib,CV_Dui,Cap,1]
+                                   0                          -0 
+   541 r18[B_Sib,CV_Dui,Cap,2]
+                                   0                          -0 
+   542 r18[B_Sib,Caf_Env,Com,1]
+                                   0                          -0 
+   543 r18[B_Sib,Caf_Env,Com,2]
+                                   0                          -0 
+   544 r18[B_Sib,Caf_Env,Tab,1]
+                                   0                          -0 
+   545 r18[B_Sib,Caf_Env,Tab,2]
+                                   0                          -0 
+   546 r18[B_Sib,Caf_Env,Cap,1]
+                                   0                          -0 
+   547 r18[B_Sib,Caf_Env,Cap,2]
+                                   0                          -0 
+   548 r18[B_Sib,San_Med,Com,1]
+                                   0                          -0 
+   549 r18[B_Sib,San_Med,Com,2]
+                                   0                          -0 
+   550 r18[B_Sib,San_Med,Tab,1]
+                                   0                          -0 
+   551 r18[B_Sib,San_Med,Tab,2]
+                                   0                          -0 
+   552 r18[B_Sib,San_Med,Cap,1]
+                                   0                          -0 
+   553 r18[B_Sib,San_Med,Cap,2]
+                                   0                          -0 
+   554 r18[B_Sib,Med_Nei,Com,1]
+                                   0                          -0 
+   555 r18[B_Sib,Med_Nei,Com,2]
+                                   0                          -0 
+   556 r18[B_Sib,Med_Nei,Tab,1]
+                                   0                          -0 
+   557 r18[B_Sib,Med_Nei,Tab,2]
+                                   0                          -0 
+   558 r18[B_Sib,Med_Nei,Cap,1]
+                                   0                          -0 
+   559 r18[B_Sib,Med_Nei,Cap,2]
+                                   0                          -0 
+   560 r18[B_Sib,Audi_Bog,Com,1]
+                                   0                          -0 
+   561 r18[B_Sib,Audi_Bog,Com,2]
+                                   0                          -0 
+   562 r18[B_Sib,Audi_Bog,Tab,1]
+                                   0                          -0 
+   563 r18[B_Sib,Audi_Bog,Tab,2]
+                                   0                          -0 
+   564 r18[B_Sib,Audi_Bog,Cap,1]
+                                   0                          -0 
+   565 r18[B_Sib,Audi_Bog,Cap,2]
+                                   0                          -0 
+   566 r18[B_Sib,Hos_Nar,Com,1]
+                                   0                          -0 
+   567 r18[B_Sib,Hos_Nar,Com,2]
+                                   0                          -0 
+   568 r18[B_Sib,Hos_Nar,Tab,1]
+                                   0                          -0 
+   569 r18[B_Sib,Hos_Nar,Tab,2]
+                                   0                          -0 
+   570 r18[B_Sib,Hos_Nar,Cap,1]
+                                   0                          -0 
+   571 r18[B_Sib,Hos_Nar,Cap,2]
+                                   0                          -0 
+   572 r18[B_Sib,Cli_Med,Com,1]
+                                   0                          -0 
+   573 r18[B_Sib,Cli_Med,Com,2]
+                                   0                          -0 
+   574 r18[B_Sib,Cli_Med,Tab,1]
+                                   0                          -0 
+   575 r18[B_Sib,Cli_Med,Tab,2]
+                                   0                          -0 
+   576 r18[B_Sib,Cli_Med,Cap,1]
+                                   0                          -0 
+   577 r18[B_Sib,Cli_Med,Cap,2]
+                                   0                          -0 
+   578 r18[B_Man,Caf_Cu,Com,1]
+                                   0                          -0 
+   579 r18[B_Man,Caf_Cu,Com,2]
+                                   0                          -0 
+   580 r18[B_Man,Caf_Cu,Tab,1]
+                                   0                          -0 
+   581 r18[B_Man,Caf_Cu,Tab,2]
+                                   0                          -0 
+   582 r18[B_Man,Caf_Cu,Cap,1]
+                                   0                          -0 
+   583 r18[B_Man,Caf_Cu,Cap,2]
+                                   0                          -0 
+   584 r18[B_Man,CV_Dui,Com,1]
+                                   0                          -0 
+   585 r18[B_Man,CV_Dui,Com,2]
+                                   0                          -0 
+   586 r18[B_Man,CV_Dui,Tab,1]
+                                   0                          -0 
+   587 r18[B_Man,CV_Dui,Tab,2]
+                                   0                          -0 
+   588 r18[B_Man,CV_Dui,Cap,1]
+                                   0                          -0 
+   589 r18[B_Man,CV_Dui,Cap,2]
+                                   0                          -0 
+   590 r18[B_Man,Caf_Env,Com,1]
+                                   0                          -0 
+   591 r18[B_Man,Caf_Env,Com,2]
+                                   0                          -0 
+   592 r18[B_Man,Caf_Env,Tab,1]
+                                   0                          -0 
+   593 r18[B_Man,Caf_Env,Tab,2]
+                                   0                          -0 
+   594 r18[B_Man,Caf_Env,Cap,1]
+                                   0                          -0 
+   595 r18[B_Man,Caf_Env,Cap,2]
+                                   0                          -0 
+   596 r18[B_Man,San_Med,Com,1]
+                                   0                          -0 
+   597 r18[B_Man,San_Med,Com,2]
+                                   0                          -0 
+   598 r18[B_Man,San_Med,Tab,1]
+                                   0                          -0 
+   599 r18[B_Man,San_Med,Tab,2]
+                                   0                          -0 
+   600 r18[B_Man,San_Med,Cap,1]
+                                   0                          -0 
+   601 r18[B_Man,San_Med,Cap,2]
+                                   0                          -0 
+   602 r18[B_Man,Med_Nei,Com,1]
+                                   0                          -0 
+   603 r18[B_Man,Med_Nei,Com,2]
+                                   0                          -0 
+   604 r18[B_Man,Med_Nei,Tab,1]
+                                   0                          -0 
+   605 r18[B_Man,Med_Nei,Tab,2]
+                                   0                          -0 
+   606 r18[B_Man,Med_Nei,Cap,1]
+                                   0                          -0 
+   607 r18[B_Man,Med_Nei,Cap,2]
+                                   0                          -0 
+   608 r18[B_Man,Audi_Bog,Com,1]
+                                   0                          -0 
+   609 r18[B_Man,Audi_Bog,Com,2]
+                                   0                          -0 
+   610 r18[B_Man,Audi_Bog,Tab,1]
+                                   0                          -0 
+   611 r18[B_Man,Audi_Bog,Tab,2]
+                                   0                          -0 
+   612 r18[B_Man,Audi_Bog,Cap,1]
+                                   0                          -0 
+   613 r18[B_Man,Audi_Bog,Cap,2]
+                                   0                          -0 
+   614 r18[B_Man,Hos_Nar,Com,1]
+                                   0                          -0 
+   615 r18[B_Man,Hos_Nar,Com,2]
+                                   0                          -0 
+   616 r18[B_Man,Hos_Nar,Tab,1]
+                                   0                          -0 
+   617 r18[B_Man,Hos_Nar,Tab,2]
+                                   0                          -0 
+   618 r18[B_Man,Hos_Nar,Cap,1]
+                                   0                          -0 
+   619 r18[B_Man,Hos_Nar,Cap,2]
+                                   0                          -0 
+   620 r18[B_Man,Cli_Med,Com,1]
+                                   0                          -0 
+   621 r18[B_Man,Cli_Med,Com,2]
+                                   0                          -0 
+   622 r18[B_Man,Cli_Med,Tab,1]
+                                   0                          -0 
+   623 r18[B_Man,Cli_Med,Tab,2]
+                                   0                          -0 
+   624 r18[B_Man,Cli_Med,Cap,1]
+                                   0                          -0 
+   625 r18[B_Man,Cli_Med,Cap,2]
+                                   0                          -0 
+   626 r18[B_Buc,Caf_Cu,Com,1]
+                                   0                          -0 
+   627 r18[B_Buc,Caf_Cu,Com,2]
+                              -98000                          -0 
+   628 r18[B_Buc,Caf_Cu,Tab,1]
+                                   0                          -0 
+   629 r18[B_Buc,Caf_Cu,Tab,2]
+                              -97600                          -0 
+   630 r18[B_Buc,Caf_Cu,Cap,1]
+                                   0                          -0 
+   631 r18[B_Buc,Caf_Cu,Cap,2]
+                              -97900                          -0 
+   632 r18[B_Buc,CV_Dui,Com,1]
+                                   0                          -0 
+   633 r18[B_Buc,CV_Dui,Com,2]
+                              -98300                          -0 
+   634 r18[B_Buc,CV_Dui,Tab,1]
+                                   0                          -0 
+   635 r18[B_Buc,CV_Dui,Tab,2]
+                              -97900                          -0 
+   636 r18[B_Buc,CV_Dui,Cap,1]
+                                   0                          -0 
+   637 r18[B_Buc,CV_Dui,Cap,2]
+                              -97900                          -0 
+   638 r18[B_Buc,Caf_Env,Com,1]
+                                   0                          -0 
+   639 r18[B_Buc,Caf_Env,Com,2]
+                                   0                          -0 
+   640 r18[B_Buc,Caf_Env,Tab,1]
+                                   0                          -0 
+   641 r18[B_Buc,Caf_Env,Tab,2]
+                                   0                          -0 
+   642 r18[B_Buc,Caf_Env,Cap,1]
+                                   0                          -0 
+   643 r18[B_Buc,Caf_Env,Cap,2]
+                                   0                          -0 
+   644 r18[B_Buc,San_Med,Com,1]
+                                   0                          -0 
+   645 r18[B_Buc,San_Med,Com,2]
+                              -97900                          -0 
+   646 r18[B_Buc,San_Med,Tab,1]
+                                   0                          -0 
+   647 r18[B_Buc,San_Med,Tab,2]
+                              -97500                          -0 
+   648 r18[B_Buc,San_Med,Cap,1]
+                                   0                          -0 
+   649 r18[B_Buc,San_Med,Cap,2]
+                              -97900                          -0 
+   650 r18[B_Buc,Med_Nei,Com,1]
+                                   0                          -0 
+   651 r18[B_Buc,Med_Nei,Com,2]
+                                   0                          -0 
+   652 r18[B_Buc,Med_Nei,Tab,1]
+                                   0                          -0 
+   653 r18[B_Buc,Med_Nei,Tab,2]
+                                   0                          -0 
+   654 r18[B_Buc,Med_Nei,Cap,1]
+                                   0                          -0 
+   655 r18[B_Buc,Med_Nei,Cap,2]
+                                   0                          -0 
+   656 r18[B_Buc,Audi_Bog,Com,1]
+                                   0                          -0 
+   657 r18[B_Buc,Audi_Bog,Com,2]
+                                   0                          -0 
+   658 r18[B_Buc,Audi_Bog,Tab,1]
+                                   0                          -0 
+   659 r18[B_Buc,Audi_Bog,Tab,2]
+                                   0                          -0 
+   660 r18[B_Buc,Audi_Bog,Cap,1]
+                                   0                          -0 
+   661 r18[B_Buc,Audi_Bog,Cap,2]
+                                   0                          -0 
+   662 r18[B_Buc,Hos_Nar,Com,1]
+                                   0                          -0 
+   663 r18[B_Buc,Hos_Nar,Com,2]
+                                   0                          -0 
+   664 r18[B_Buc,Hos_Nar,Tab,1]
+                                   0                          -0 
+   665 r18[B_Buc,Hos_Nar,Tab,2]
+                                   0                          -0 
+   666 r18[B_Buc,Hos_Nar,Cap,1]
+                                   0                          -0 
+   667 r18[B_Buc,Hos_Nar,Cap,2]
+                                   0                          -0 
+   668 r18[B_Buc,Cli_Med,Com,1]
+                                   0                          -0 
+   669 r18[B_Buc,Cli_Med,Com,2]
+                                   0                          -0 
+   670 r18[B_Buc,Cli_Med,Tab,1]
+                                   0                          -0 
+   671 r18[B_Buc,Cli_Med,Tab,2]
+                                   0                          -0 
+   672 r18[B_Buc,Cli_Med,Cap,1]
+                                   0                          -0 
+   673 r18[B_Buc,Cli_Med,Cap,2]
+                                   0                          -0 
+   674 r18[B_Pop,Caf_Cu,Com,1]
+                                   0                          -0 
+   675 r18[B_Pop,Caf_Cu,Com,2]
+                                   0                          -0 
+   676 r18[B_Pop,Caf_Cu,Tab,1]
+                                   0                          -0 
+   677 r18[B_Pop,Caf_Cu,Tab,2]
+                                   0                          -0 
+   678 r18[B_Pop,Caf_Cu,Cap,1]
+                                   0                          -0 
+   679 r18[B_Pop,Caf_Cu,Cap,2]
+                                   0                          -0 
+   680 r18[B_Pop,CV_Dui,Com,1]
+                                   0                          -0 
+   681 r18[B_Pop,CV_Dui,Com,2]
+                                   0                          -0 
+   682 r18[B_Pop,CV_Dui,Tab,1]
+                                   0                          -0 
+   683 r18[B_Pop,CV_Dui,Tab,2]
+                                   0                          -0 
+   684 r18[B_Pop,CV_Dui,Cap,1]
+                                   0                          -0 
+   685 r18[B_Pop,CV_Dui,Cap,2]
+                                   0                          -0 
+   686 r18[B_Pop,Caf_Env,Com,1]
+                                   0                          -0 
+   687 r18[B_Pop,Caf_Env,Com,2]
+                                   0                          -0 
+   688 r18[B_Pop,Caf_Env,Tab,1]
+                                   0                          -0 
+   689 r18[B_Pop,Caf_Env,Tab,2]
+                                   0                          -0 
+   690 r18[B_Pop,Caf_Env,Cap,1]
+                                   0                          -0 
+   691 r18[B_Pop,Caf_Env,Cap,2]
+                                   0                          -0 
+   692 r18[B_Pop,San_Med,Com,1]
+                                   0                          -0 
+   693 r18[B_Pop,San_Med,Com,2]
+                                   0                          -0 
+   694 r18[B_Pop,San_Med,Tab,1]
+                                   0                          -0 
+   695 r18[B_Pop,San_Med,Tab,2]
+                                   0                          -0 
+   696 r18[B_Pop,San_Med,Cap,1]
+                                   0                          -0 
+   697 r18[B_Pop,San_Med,Cap,2]
+                                   0                          -0 
+   698 r18[B_Pop,Med_Nei,Com,1]
+                              -98100                          -0 
+   699 r18[B_Pop,Med_Nei,Com,2]
+                          0.00138225                          -0 
+   700 r18[B_Pop,Med_Nei,Tab,1]
+                              -98200                          -0 
+   701 r18[B_Pop,Med_Nei,Tab,2]
+                          0.00138225                          -0 
+   702 r18[B_Pop,Med_Nei,Cap,1]
+                              -97100                          -0 
+   703 r18[B_Pop,Med_Nei,Cap,2]
+                          0.00138225                          -0 
+   704 r18[B_Pop,Audi_Bog,Com,1]
+                                   0                          -0 
+   705 r18[B_Pop,Audi_Bog,Com,2]
+                                   0                          -0 
+   706 r18[B_Pop,Audi_Bog,Tab,1]
+                                   0                          -0 
+   707 r18[B_Pop,Audi_Bog,Tab,2]
+                                   0                          -0 
+   708 r18[B_Pop,Audi_Bog,Cap,1]
+                                   0                          -0 
+   709 r18[B_Pop,Audi_Bog,Cap,2]
+                                   0                          -0 
+   710 r18[B_Pop,Hos_Nar,Com,1]
+                              -98100                          -0 
+   711 r18[B_Pop,Hos_Nar,Com,2]
+                          0.00138225                          -0 
+   712 r18[B_Pop,Hos_Nar,Tab,1]
+                              -97900                          -0 
+   713 r18[B_Pop,Hos_Nar,Tab,2]
+                          0.00138225                          -0 
+   714 r18[B_Pop,Hos_Nar,Cap,1]
+                              -97600                          -0 
+   715 r18[B_Pop,Hos_Nar,Cap,2]
+                          0.00138225                          -0 
+   716 r18[B_Pop,Cli_Med,Com,1]
+                                   0                          -0 
+   717 r18[B_Pop,Cli_Med,Com,2]
+                                   0                          -0 
+   718 r18[B_Pop,Cli_Med,Tab,1]
+                                   0                          -0 
+   719 r18[B_Pop,Cli_Med,Tab,2]
+                                   0                          -0 
+   720 r18[B_Pop,Cli_Med,Cap,1]
+                                   0                          -0 
+   721 r18[B_Pop,Cli_Med,Cap,2]
+                                   0                          -0 
+   722 r18[B_Ib,Caf_Cu,Com,1]
+                                   0                          -0 
+   723 r18[B_Ib,Caf_Cu,Com,2]
+                                   0                          -0 
+   724 r18[B_Ib,Caf_Cu,Tab,1]
+                                   0                          -0 
+   725 r18[B_Ib,Caf_Cu,Tab,2]
+                                   0                          -0 
+   726 r18[B_Ib,Caf_Cu,Cap,1]
+                                   0                          -0 
+   727 r18[B_Ib,Caf_Cu,Cap,2]
+                                   0                          -0 
+   728 r18[B_Ib,CV_Dui,Com,1]
+                                   0                          -0 
+   729 r18[B_Ib,CV_Dui,Com,2]
+                                   0                          -0 
+   730 r18[B_Ib,CV_Dui,Tab,1]
+                                   0                          -0 
+   731 r18[B_Ib,CV_Dui,Tab,2]
+                                   0                          -0 
+   732 r18[B_Ib,CV_Dui,Cap,1]
+                                   0                          -0 
+   733 r18[B_Ib,CV_Dui,Cap,2]
+                                   0                          -0 
+   734 r18[B_Ib,Caf_Env,Com,1]
+                                   0                          -0 
+   735 r18[B_Ib,Caf_Env,Com,2]
+                              -98300                          -0 
+   736 r18[B_Ib,Caf_Env,Tab,1]
+                                   0                          -0 
+   737 r18[B_Ib,Caf_Env,Tab,2]
+                              -97500                          -0 
+   738 r18[B_Ib,Caf_Env,Cap,1]
+                                   0                          -0 
+   739 r18[B_Ib,Caf_Env,Cap,2]
+                              -97900                          -0 
+   740 r18[B_Ib,San_Med,Com,1]
+                                   0                          -0 
+   741 r18[B_Ib,San_Med,Com,2]
+                                   0                          -0 
+   742 r18[B_Ib,San_Med,Tab,1]
+                                   0                          -0 
+   743 r18[B_Ib,San_Med,Tab,2]
+                                   0                          -0 
+   744 r18[B_Ib,San_Med,Cap,1]
+                                   0                          -0 
+   745 r18[B_Ib,San_Med,Cap,2]
+                                   0                          -0 
+   746 r18[B_Ib,Med_Nei,Com,1]
+                                   0                          -0 
+   747 r18[B_Ib,Med_Nei,Com,2]
+                                   0                          -0 
+   748 r18[B_Ib,Med_Nei,Tab,1]
+                                   0                          -0 
+   749 r18[B_Ib,Med_Nei,Tab,2]
+                                   0                          -0 
+   750 r18[B_Ib,Med_Nei,Cap,1]
+                                   0                          -0 
+   751 r18[B_Ib,Med_Nei,Cap,2]
+                                   0                          -0 
+   752 r18[B_Ib,Audi_Bog,Com,1]
+                                   0                          -0 
+   753 r18[B_Ib,Audi_Bog,Com,2]
+                              -98100                          -0 
+   754 r18[B_Ib,Audi_Bog,Tab,1]
+                                   0                          -0 
+   755 r18[B_Ib,Audi_Bog,Tab,2]
+                              -97800                          -0 
+   756 r18[B_Ib,Audi_Bog,Cap,1]
+                                   0                          -0 
+   757 r18[B_Ib,Audi_Bog,Cap,2]
+                              -97100                          -0 
+   758 r18[B_Ib,Hos_Nar,Com,1]
+                                   0                          -0 
+   759 r18[B_Ib,Hos_Nar,Com,2]
+                                   0                          -0 
+   760 r18[B_Ib,Hos_Nar,Tab,1]
+                                   0                          -0 
+   761 r18[B_Ib,Hos_Nar,Tab,2]
+                                   0                          -0 
+   762 r18[B_Ib,Hos_Nar,Cap,1]
+                                   0                          -0 
+   763 r18[B_Ib,Hos_Nar,Cap,2]
+                                   0                          -0 
+   764 r18[B_Ib,Cli_Med,Com,1]
+                                   0                          -0 
+   765 r18[B_Ib,Cli_Med,Com,2]
+                              -98100                          -0 
+   766 r18[B_Ib,Cli_Med,Tab,1]
+                                   0                          -0 
+   767 r18[B_Ib,Cli_Med,Tab,2]
+                              -97600                          -0 
+   768 r18[B_Ib,Cli_Med,Cap,1]
+                                   0                          -0 
+   769 r18[B_Ib,Cli_Med,Cap,2]
+                              -97600                          -0 
+   770 r19[B_Sib,Caf_Cu]
+                                   0            -0             = 
+   771 r19[B_Sib,CV_Dui]
+                                   0            -0             = 
+   772 r19[B_Sib,Caf_Env]
+                                   0            -0             = 
+   773 r19[B_Sib,San_Med]
+                                   0            -0             = 
+   774 r19[B_Sib,Med_Nei]
+                                   0            -0             = 
+   775 r19[B_Sib,Audi_Bog]
+                                   0            -0             = 
+   776 r19[B_Sib,Hos_Nar]
+                                   0            -0             = 
+   777 r19[B_Sib,Cli_Med]
+                                   0            -0             = 
+   778 r19[B_Man,Caf_Cu]
+                                   0            -0             = 
+   779 r19[B_Man,CV_Dui]
+                                   0            -0             = 
+   780 r19[B_Man,Caf_Env]
+                                   0            -0             = 
+   781 r19[B_Man,San_Med]
+                                   0            -0             = 
+   782 r19[B_Man,Med_Nei]
+                                   0            -0             = 
+   783 r19[B_Man,Audi_Bog]
+                                   0            -0             = 
+   784 r19[B_Man,Hos_Nar]
+                                   0            -0             = 
+   785 r19[B_Man,Cli_Med]
+                                   0            -0             = 
+   786 r19[B_Buc,Caf_Cu]
+                                   0            -0             = 
+   787 r19[B_Buc,CV_Dui]
+                                   0            -0             = 
+   788 r19[B_Buc,Caf_Env]
+                                   0            -0             = 
+   789 r19[B_Buc,San_Med]
+                                   0            -0             = 
+   790 r19[B_Buc,Med_Nei]
+                                   0            -0             = 
+   791 r19[B_Buc,Audi_Bog]
+                                   0            -0             = 
+   792 r19[B_Buc,Hos_Nar]
+                                   0            -0             = 
+   793 r19[B_Buc,Cli_Med]
+                                   0            -0             = 
+   794 r19[B_Pop,Caf_Cu]
+                                   0            -0             = 
+   795 r19[B_Pop,CV_Dui]
+                                   0            -0             = 
+   796 r19[B_Pop,Caf_Env]
+                                   0            -0             = 
+   797 r19[B_Pop,San_Med]
+                                   0            -0             = 
+   798 r19[B_Pop,Med_Nei]
+                                   0            -0             = 
+   799 r19[B_Pop,Audi_Bog]
+                                   0            -0             = 
+   800 r19[B_Pop,Hos_Nar]
+                                   0            -0             = 
+   801 r19[B_Pop,Cli_Med]
+                                   0            -0             = 
+   802 r19[B_Ib,Caf_Cu]
+                                   0            -0             = 
+   803 r19[B_Ib,CV_Dui]
+                                   0            -0             = 
+   804 r19[B_Ib,Caf_Env]
+                                   0            -0             = 
+   805 r19[B_Ib,San_Med]
+                                   0            -0             = 
+   806 r19[B_Ib,Med_Nei]
+                                   0            -0             = 
+   807 r19[B_Ib,Audi_Bog]
+                                   0            -0             = 
+   808 r19[B_Ib,Hos_Nar]
+                                   0            -0             = 
+   809 r19[B_Ib,Cli_Med]
+                                   0            -0             = 
+   810 r20[B_Sib,Caf_Cu,Com]
+                                   0            -0             = 
+   811 r20[B_Sib,Caf_Cu,Tab]
+                                   0            -0             = 
+   812 r20[B_Sib,Caf_Cu,Cap]
+                                   0            -0             = 
+   813 r20[B_Sib,CV_Dui,Com]
+                                   0            -0             = 
+   814 r20[B_Sib,CV_Dui,Tab]
+                                   0            -0             = 
+   815 r20[B_Sib,CV_Dui,Cap]
+                                   0            -0             = 
+   816 r20[B_Sib,Caf_Env,Com]
+                                   0            -0             = 
+   817 r20[B_Sib,Caf_Env,Tab]
+                                   0            -0             = 
+   818 r20[B_Sib,Caf_Env,Cap]
+                                   0            -0             = 
+   819 r20[B_Sib,San_Med,Com]
+                                   0            -0             = 
+   820 r20[B_Sib,San_Med,Tab]
+                                   0            -0             = 
+   821 r20[B_Sib,San_Med,Cap]
+                                   0            -0             = 
+   822 r20[B_Sib,Med_Nei,Com]
+                                   0            -0             = 
+   823 r20[B_Sib,Med_Nei,Tab]
+                                   0            -0             = 
+   824 r20[B_Sib,Med_Nei,Cap]
+                                   0            -0             = 
+   825 r20[B_Sib,Audi_Bog,Com]
+                                   0            -0             = 
+   826 r20[B_Sib,Audi_Bog,Tab]
+                                   0            -0             = 
+   827 r20[B_Sib,Audi_Bog,Cap]
+                                   0            -0             = 
+   828 r20[B_Sib,Hos_Nar,Com]
+                                   0            -0             = 
+   829 r20[B_Sib,Hos_Nar,Tab]
+                                   0            -0             = 
+   830 r20[B_Sib,Hos_Nar,Cap]
+                                   0            -0             = 
+   831 r20[B_Sib,Cli_Med,Com]
+                                   0            -0             = 
+   832 r20[B_Sib,Cli_Med,Tab]
+                                   0            -0             = 
+   833 r20[B_Sib,Cli_Med,Cap]
+                                   0            -0             = 
+   834 r20[B_Man,Caf_Cu,Com]
+                                   0            -0             = 
+   835 r20[B_Man,Caf_Cu,Tab]
+                                   0            -0             = 
+   836 r20[B_Man,Caf_Cu,Cap]
+                                   0            -0             = 
+   837 r20[B_Man,CV_Dui,Com]
+                                   0            -0             = 
+   838 r20[B_Man,CV_Dui,Tab]
+                                   0            -0             = 
+   839 r20[B_Man,CV_Dui,Cap]
+                                   0            -0             = 
+   840 r20[B_Man,Caf_Env,Com]
+                                   0            -0             = 
+   841 r20[B_Man,Caf_Env,Tab]
+                                   0            -0             = 
+   842 r20[B_Man,Caf_Env,Cap]
+                                   0            -0             = 
+   843 r20[B_Man,San_Med,Com]
+                                   0            -0             = 
+   844 r20[B_Man,San_Med,Tab]
+                                   0            -0             = 
+   845 r20[B_Man,San_Med,Cap]
+                                   0            -0             = 
+   846 r20[B_Man,Med_Nei,Com]
+                                   0            -0             = 
+   847 r20[B_Man,Med_Nei,Tab]
+                                   0            -0             = 
+   848 r20[B_Man,Med_Nei,Cap]
+                                   0            -0             = 
+   849 r20[B_Man,Audi_Bog,Com]
+                                   0            -0             = 
+   850 r20[B_Man,Audi_Bog,Tab]
+                                   0            -0             = 
+   851 r20[B_Man,Audi_Bog,Cap]
+                                   0            -0             = 
+   852 r20[B_Man,Hos_Nar,Com]
+                                   0            -0             = 
+   853 r20[B_Man,Hos_Nar,Tab]
+                                   0            -0             = 
+   854 r20[B_Man,Hos_Nar,Cap]
+                                   0            -0             = 
+   855 r20[B_Man,Cli_Med,Com]
+                                   0            -0             = 
+   856 r20[B_Man,Cli_Med,Tab]
+                                   0            -0             = 
+   857 r20[B_Man,Cli_Med,Cap]
+                                   0            -0             = 
+   858 r20[B_Buc,Caf_Cu,Com]
+                                   0            -0             = 
+   859 r20[B_Buc,Caf_Cu,Tab]
+                                   0            -0             = 
+   860 r20[B_Buc,Caf_Cu,Cap]
+                                   0            -0             = 
+   861 r20[B_Buc,CV_Dui,Com]
+                                   0            -0             = 
+   862 r20[B_Buc,CV_Dui,Tab]
+                                   0            -0             = 
+   863 r20[B_Buc,CV_Dui,Cap]
+                                   0            -0             = 
+   864 r20[B_Buc,Caf_Env,Com]
+                                   0            -0             = 
+   865 r20[B_Buc,Caf_Env,Tab]
+                                   0            -0             = 
+   866 r20[B_Buc,Caf_Env,Cap]
+                                   0            -0             = 
+   867 r20[B_Buc,San_Med,Com]
+                                   0            -0             = 
+   868 r20[B_Buc,San_Med,Tab]
+                                   0            -0             = 
+   869 r20[B_Buc,San_Med,Cap]
+                                   0            -0             = 
+   870 r20[B_Buc,Med_Nei,Com]
+                                   0            -0             = 
+   871 r20[B_Buc,Med_Nei,Tab]
+                                   0            -0             = 
+   872 r20[B_Buc,Med_Nei,Cap]
+                                   0            -0             = 
+   873 r20[B_Buc,Audi_Bog,Com]
+                                   0            -0             = 
+   874 r20[B_Buc,Audi_Bog,Tab]
+                                   0            -0             = 
+   875 r20[B_Buc,Audi_Bog,Cap]
+                                   0            -0             = 
+   876 r20[B_Buc,Hos_Nar,Com]
+                                   0            -0             = 
+   877 r20[B_Buc,Hos_Nar,Tab]
+                                   0            -0             = 
+   878 r20[B_Buc,Hos_Nar,Cap]
+                                   0            -0             = 
+   879 r20[B_Buc,Cli_Med,Com]
+                                   0            -0             = 
+   880 r20[B_Buc,Cli_Med,Tab]
+                                   0            -0             = 
+   881 r20[B_Buc,Cli_Med,Cap]
+                                   0            -0             = 
+   882 r20[B_Pop,Caf_Cu,Com]
+                                   0            -0             = 
+   883 r20[B_Pop,Caf_Cu,Tab]
+                                   0            -0             = 
+   884 r20[B_Pop,Caf_Cu,Cap]
+                                   0            -0             = 
+   885 r20[B_Pop,CV_Dui,Com]
+                                   0            -0             = 
+   886 r20[B_Pop,CV_Dui,Tab]
+                                   0            -0             = 
+   887 r20[B_Pop,CV_Dui,Cap]
+                                   0            -0             = 
+   888 r20[B_Pop,Caf_Env,Com]
+                                   0            -0             = 
+   889 r20[B_Pop,Caf_Env,Tab]
+                                   0            -0             = 
+   890 r20[B_Pop,Caf_Env,Cap]
+                                   0            -0             = 
+   891 r20[B_Pop,San_Med,Com]
+                                   0            -0             = 
+   892 r20[B_Pop,San_Med,Tab]
+                                   0            -0             = 
+   893 r20[B_Pop,San_Med,Cap]
+                                   0            -0             = 
+   894 r20[B_Pop,Med_Nei,Com]
+                                   0            -0             = 
+   895 r20[B_Pop,Med_Nei,Tab]
+                                   0            -0             = 
+   896 r20[B_Pop,Med_Nei,Cap]
+                                   0            -0             = 
+   897 r20[B_Pop,Audi_Bog,Com]
+                                   0            -0             = 
+   898 r20[B_Pop,Audi_Bog,Tab]
+                                   0            -0             = 
+   899 r20[B_Pop,Audi_Bog,Cap]
+                                   0            -0             = 
+   900 r20[B_Pop,Hos_Nar,Com]
+                                   0            -0             = 
+   901 r20[B_Pop,Hos_Nar,Tab]
+                                   0            -0             = 
+   902 r20[B_Pop,Hos_Nar,Cap]
+                                   0            -0             = 
+   903 r20[B_Pop,Cli_Med,Com]
+                                   0            -0             = 
+   904 r20[B_Pop,Cli_Med,Tab]
+                                   0            -0             = 
+   905 r20[B_Pop,Cli_Med,Cap]
+                                   0            -0             = 
+   906 r20[B_Ib,Caf_Cu,Com]
+                                   0            -0             = 
+   907 r20[B_Ib,Caf_Cu,Tab]
+                                   0            -0             = 
+   908 r20[B_Ib,Caf_Cu,Cap]
+                                   0            -0             = 
+   909 r20[B_Ib,CV_Dui,Com]
+                                   0            -0             = 
+   910 r20[B_Ib,CV_Dui,Tab]
+                                   0            -0             = 
+   911 r20[B_Ib,CV_Dui,Cap]
+                                   0            -0             = 
+   912 r20[B_Ib,Caf_Env,Com]
+                                   0            -0             = 
+   913 r20[B_Ib,Caf_Env,Tab]
+                                   0            -0             = 
+   914 r20[B_Ib,Caf_Env,Cap]
+                                   0            -0             = 
+   915 r20[B_Ib,San_Med,Com]
+                                   0            -0             = 
+   916 r20[B_Ib,San_Med,Tab]
+                                   0            -0             = 
+   917 r20[B_Ib,San_Med,Cap]
+                                   0            -0             = 
+   918 r20[B_Ib,Med_Nei,Com]
+                                   0            -0             = 
+   919 r20[B_Ib,Med_Nei,Tab]
+                                   0            -0             = 
+   920 r20[B_Ib,Med_Nei,Cap]
+                                   0            -0             = 
+   921 r20[B_Ib,Audi_Bog,Com]
+                                   0            -0             = 
+   922 r20[B_Ib,Audi_Bog,Tab]
+                                   0            -0             = 
+   923 r20[B_Ib,Audi_Bog,Cap]
+                                   0            -0             = 
+   924 r20[B_Ib,Hos_Nar,Com]
+                                   0            -0             = 
+   925 r20[B_Ib,Hos_Nar,Tab]
+                                   0            -0             = 
+   926 r20[B_Ib,Hos_Nar,Cap]
+                                   0            -0             = 
+   927 r20[B_Ib,Cli_Med,Com]
+                                   0            -0             = 
+   928 r20[B_Ib,Cli_Med,Tab]
+                                   0            -0             = 
+   929 r20[B_Ib,Cli_Med,Cap]
+                                   0            -0             = 
+   930 r21[B_Sib,1]                0                       18000 
+   931 r21[B_Sib,2]                0                       25500 
+   932 r21[B_Man,1]                0                       18000 
+   933 r21[B_Man,2]                0                       25500 
+   934 r21[B_Buc,1]                0                       18000 
+   935 r21[B_Buc,2]            19100                       25500 
+   936 r21[B_Pop,1]            13000                       18000 
+   937 r21[B_Pop,2]       0.00829353                       25500 
+   938 r21[B_Ib,1]                 0                       18000 
+   939 r21[B_Ib,2]             20000                       25500 
+   940 r22[Caf_Cu]                 1             1             = 
+   941 r22[CV_Dui]                 1             1             = 
+   942 r22[Caf_Env]                1             1             = 
+   943 r22[San_Med]                1             1             = 
+   944 r22[Med_Nei]                1             1             = 
+   945 r22[Audi_Bog]
+                                   1             1             = 
+   946 r22[Hos_Nar]                1             1             = 
+   947 r22[Cli_Med]                1             1             = 
+   948 r23[Caf_Cu,Com]
+                                2000          2000               
+   949 r23[Caf_Cu,Tab]
+                                2400          2400               
+   950 r23[Caf_Cu,Cap]
+                                2100          2100               
+   951 r23[CV_Dui,Com]
+                                1700          1700               
+   952 r23[CV_Dui,Tab]
+                                2100          2100               
+   953 r23[CV_Dui,Cap]
+                                2100          2100               
+   954 r23[Caf_Env,Com]
+                                1700          1700               
+   955 r23[Caf_Env,Tab]
+                                2500          2500               
+   956 r23[Caf_Env,Cap]
+                                2100          2100               
+   957 r23[San_Med,Com]
+                                2100          2100               
+   958 r23[San_Med,Tab]
+                                2500          2500               
+   959 r23[San_Med,Cap]
+                                2100          2100               
+   960 r23[Med_Nei,Com]
+                                1900          1900               
+   961 r23[Med_Nei,Tab]
+                                1800          1800               
+   962 r23[Med_Nei,Cap]
+                                2900          2900               
+   963 r23[Audi_Bog,Com]
+                                1900          1900               
+   964 r23[Audi_Bog,Tab]
+                                2200          2200               
+   965 r23[Audi_Bog,Cap]
+                                2900          2900               
+   966 r23[Hos_Nar,Com]
+                                1900          1900               
+   967 r23[Hos_Nar,Tab]
+                                2100          2100               
+   968 r23[Hos_Nar,Cap]
+                                2400          2400               
+   969 r23[Cli_Med,Com]
+                                1900          1900               
+   970 r23[Cli_Med,Tab]
+                                2400          2400               
+   971 r23[Cli_Med,Cap]
+                                2400          2400               
+   972 r24[B_Sib,Com]
+                                   0            -0             = 
+   973 r24[B_Sib,Tab]
+                                   0            -0             = 
+   974 r24[B_Sib,Cap]
+                                   0            -0             = 
+   975 r24[B_Man,Com]
+                                   0            -0             = 
+   976 r24[B_Man,Tab]
+                                   0            -0             = 
+   977 r24[B_Man,Cap]
+                                   0            -0             = 
+   978 r24[B_Buc,Com]
+                                   0            -0             = 
+   979 r24[B_Buc,Tab]
+                                   0            -0             = 
+   980 r24[B_Buc,Cap]
+                                   0            -0             = 
+   981 r24[B_Pop,Com]
+                                   0            -0             = 
+   982 r24[B_Pop,Tab]
+                                   0            -0             = 
+   983 r24[B_Pop,Cap]
+                                   0            -0             = 
+   984 r24[B_Ib,Com]
+                                   0            -0             = 
+   985 r24[B_Ib,Tab]
+                                   0            -0             = 
+   986 r24[B_Ib,Cap]
+                                   0            -0             = 
+   987 r25[B_Sib,Com,1]
+                                   0            -0             = 
+   988 r25[B_Sib,Com,2]
+                                   0            -0             = 
+   989 r25[B_Sib,Tab,1]
+                                   0            -0             = 
+   990 r25[B_Sib,Tab,2]
+                                   0            -0             = 
+   991 r25[B_Sib,Cap,1]
+                                   0            -0             = 
+   992 r25[B_Sib,Cap,2]
+                                   0            -0             = 
+   993 r25[B_Man,Com,1]
+                                   0            -0             = 
+   994 r25[B_Man,Com,2]
+                                   0            -0             = 
+   995 r25[B_Man,Tab,1]
+                                   0            -0             = 
+   996 r25[B_Man,Tab,2]
+                                   0            -0             = 
+   997 r25[B_Man,Cap,1]
+                                   0            -0             = 
+   998 r25[B_Man,Cap,2]
+                                   0            -0             = 
+   999 r25[B_Buc,Com,1]
+                                   0            -0             = 
+  1000 r25[B_Buc,Com,2]
+                                   0            -0             = 
+  1001 r25[B_Buc,Tab,1]
+                                   0            -0             = 
+  1002 r25[B_Buc,Tab,2]
+                                   0            -0             = 
+  1003 r25[B_Buc,Cap,1]
+                                   0            -0             = 
+  1004 r25[B_Buc,Cap,2]
+                                   0            -0             = 
+  1005 r25[B_Pop,Com,1]
+                                   0            -0             = 
+  1006 r25[B_Pop,Com,2]
+                                   0            -0             = 
+  1007 r25[B_Pop,Tab,1]
+                                   0            -0             = 
+  1008 r25[B_Pop,Tab,2]
+                                   0            -0             = 
+  1009 r25[B_Pop,Cap,1]
+                                   0            -0             = 
+  1010 r25[B_Pop,Cap,2]
+                                   0            -0             = 
+  1011 r25[B_Ib,Com,1]
+                                   0            -0             = 
+  1012 r25[B_Ib,Com,2]
+                                   0            -0             = 
+  1013 r25[B_Ib,Tab,1]
+                                   0            -0             = 
+  1014 r25[B_Ib,Tab,2]
+                                   0            -0             = 
+  1015 r25[B_Ib,Cap,1]
+                                   0            -0             = 
+  1016 r25[B_Ib,Cap,2]
+                                   0            -0             = 
+
+   No. Column name       Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 x_CD_T[B_Sib,1]
+                    *              0             0             1 
+     2 x_CD_T[B_Sib,2]
+                    *              0             0             1 
+     3 x_CD_T[B_Man,1]
+                    *              0             0             1 
+     4 x_CD_T[B_Man,2]
+                    *              0             0             1 
+     5 x_CD_T[B_Buc,1]
+                    *              0             0             1 
+     6 x_CD_T[B_Buc,2]
+                    *              1             0             1 
+     7 x_CD_T[B_Pop,1]
+                    *              1             0             1 
+     8 x_CD_T[B_Pop,2]
+                    *              0             0             1 
+     9 x_CD_T[B_Ib,1]
+                    *              0             0             1 
+    10 x_CD_T[B_Ib,2]
+                    *              1             0             1 
+    11 x_CD[B_Sib]  *              0             0             1 
+    12 x_CD[B_Man]  *              0             0             1 
+    13 x_CD[B_Buc]  *              1             0             1 
+    14 x_CD[B_Pop]  *              1             0             1 
+    15 x_CD[B_Ib]   *              1             0             1 
+    16 x_LAB[Eu]    *              1             0             1 
+    17 x_LAB[Laf]   *              1             0             1 
+    18 x_LAB[Aox]   *              1             0             1 
+    19 x_LAB[L_Del] *              0             0             1 
+    20 z_PROV_LAB[P_Car,Eu]
+                    *              1             0             1 
+    21 z_PROV_LAB[P_Car,Laf]
+                    *              0             0             1 
+    22 z_PROV_LAB[P_Car,Aox]
+                    *              0             0             1 
+    23 z_PROV_LAB[P_Car,L_Del]
+                    *              0             0             1 
+    24 z_PROV_LAB[P_Buen,Eu]
+                    *              0             0             1 
+    25 z_PROV_LAB[P_Buen,Laf]
+                    *              0             0             1 
+    26 z_PROV_LAB[P_Buen,Aox]
+                    *              0             0             1 
+    27 z_PROV_LAB[P_Buen,L_Del]
+                    *              0             0             1 
+    28 z_PROV_LAB[A_Dor,Eu]
+                    *              0             0             1 
+    29 z_PROV_LAB[A_Dor,Laf]
+                    *              1             0             1 
+    30 z_PROV_LAB[A_Dor,Aox]
+                    *              0             0             1 
+    31 z_PROV_LAB[A_Dor,L_Del]
+                    *              0             0             1 
+    32 z_PROV_LAB[Ecar,Eu]
+                    *              1             0             1 
+    33 z_PROV_LAB[Ecar,Laf]
+                    *              0             0             1 
+    34 z_PROV_LAB[Ecar,Aox]
+                    *              1             0             1 
+    35 z_PROV_LAB[Ecar,L_Del]
+                    *              0             0             1 
+    36 z_PROV_LAB[Qui_Va,Eu]
+                    *              1             0             1 
+    37 z_PROV_LAB[Qui_Va,Laf]
+                    *              1             0             1 
+    38 z_PROV_LAB[Qui_Va,Aox]
+                    *              1             0             1 
+    39 z_PROV_LAB[Qui_Va,L_Del]
+                    *              0             0             1 
+    40 z_PROV_LAB[Discol_T,Eu]
+                    *              0             0             1 
+    41 z_PROV_LAB[Discol_T,Laf]
+                    *              0             0             1 
+    42 z_PROV_LAB[Discol_T,Aox]
+                    *              1             0             1 
+    43 z_PROV_LAB[Discol_T,L_Del]
+                    *              0             0             1 
+    44 y_PROV_LAB[P_Car,Eu,Ana]
+                    *              0             0               
+    45 y_PROV_LAB[P_Car,Laf,Ana]
+                    *              0             0               
+    46 y_PROV_LAB[P_Car,Aox,Ana]
+                    *              0             0               
+    47 y_PROV_LAB[P_Car,L_Del,Ana]
+                    *              0             0               
+    48 y_PROV_LAB[P_Car,Eu,Ant]
+                    *              0             0               
+    49 y_PROV_LAB[P_Car,Laf,Ant]
+                    *              0             0               
+    50 y_PROV_LAB[P_Car,Aox,Ant]
+                    *              0             0               
+    51 y_PROV_LAB[P_Car,L_Del,Ant]
+                    *              0             0               
+    52 y_PROV_LAB[P_Car,Eu,Ane]
+                    *            477             0               
+    53 y_PROV_LAB[P_Car,Laf,Ane]
+                    *              0             0               
+    54 y_PROV_LAB[P_Car,Aox,Ane]
+                    *              0             0               
+    55 y_PROV_LAB[P_Car,L_Del,Ane]
+                    *              0             0               
+    56 y_PROV_LAB[P_Car,Eu,Exci]
+                    *              0             0               
+    57 y_PROV_LAB[P_Car,Laf,Exci]
+                    *              0             0               
+    58 y_PROV_LAB[P_Car,Aox,Exci]
+                    *              0             0               
+    59 y_PROV_LAB[P_Car,L_Del,Exci]
+                    *              0             0               
+    60 y_PROV_LAB[P_Buen,Eu,Ana]
+                    *              0             0               
+    61 y_PROV_LAB[P_Buen,Laf,Ana]
+                    *              0             0               
+    62 y_PROV_LAB[P_Buen,Aox,Ana]
+                    *              0             0               
+    63 y_PROV_LAB[P_Buen,L_Del,Ana]
+                    *              0             0               
+    64 y_PROV_LAB[P_Buen,Eu,Ant]
+                    *              0             0               
+    65 y_PROV_LAB[P_Buen,Laf,Ant]
+                    *              0             0               
+    66 y_PROV_LAB[P_Buen,Aox,Ant]
+                    *              0             0               
+    67 y_PROV_LAB[P_Buen,L_Del,Ant]
+                    *              0             0               
+    68 y_PROV_LAB[P_Buen,Eu,Ane]
+                    *              0             0               
+    69 y_PROV_LAB[P_Buen,Laf,Ane]
+                    *              0             0               
+    70 y_PROV_LAB[P_Buen,Aox,Ane]
+                    *              0             0               
+    71 y_PROV_LAB[P_Buen,L_Del,Ane]
+                    *              0             0               
+    72 y_PROV_LAB[P_Buen,Eu,Exci]
+                    *              0             0               
+    73 y_PROV_LAB[P_Buen,Laf,Exci]
+                    *              0             0               
+    74 y_PROV_LAB[P_Buen,Aox,Exci]
+                    *              0             0               
+    75 y_PROV_LAB[P_Buen,L_Del,Exci]
+                    *              0             0               
+    76 y_PROV_LAB[A_Dor,Eu,Ana]
+                    *              0             0               
+    77 y_PROV_LAB[A_Dor,Laf,Ana]
+                    *           2448             0               
+    78 y_PROV_LAB[A_Dor,Aox,Ana]
+                    *              0             0               
+    79 y_PROV_LAB[A_Dor,L_Del,Ana]
+                    *              0             0               
+    80 y_PROV_LAB[A_Dor,Eu,Ant]
+                    *              0             0               
+    81 y_PROV_LAB[A_Dor,Laf,Ant]
+                    *              0             0               
+    82 y_PROV_LAB[A_Dor,Aox,Ant]
+                    *              0             0               
+    83 y_PROV_LAB[A_Dor,L_Del,Ant]
+                    *              0             0               
+    84 y_PROV_LAB[A_Dor,Eu,Ane]
+                    *              0             0               
+    85 y_PROV_LAB[A_Dor,Laf,Ane]
+                    *            273             0               
+    86 y_PROV_LAB[A_Dor,Aox,Ane]
+                    *              0             0               
+    87 y_PROV_LAB[A_Dor,L_Del,Ane]
+                    *              0             0               
+    88 y_PROV_LAB[A_Dor,Eu,Exci]
+                    *              0             0               
+    89 y_PROV_LAB[A_Dor,Laf,Exci]
+                    *           2168             0               
+    90 y_PROV_LAB[A_Dor,Aox,Exci]
+                    *              0             0               
+    91 y_PROV_LAB[A_Dor,L_Del,Exci]
+                    *              0             0               
+    92 y_PROV_LAB[Ecar,Eu,Ana]
+                    *           2331             0               
+    93 y_PROV_LAB[Ecar,Laf,Ana]
+                    *              0             0               
+    94 y_PROV_LAB[Ecar,Aox,Ana]
+                    *           1649             0               
+    95 y_PROV_LAB[Ecar,L_Del,Ana]
+                    *              0             0               
+    96 y_PROV_LAB[Ecar,Eu,Ant]
+                    *            700             0               
+    97 y_PROV_LAB[Ecar,Laf,Ant]
+                    *              0             0               
+    98 y_PROV_LAB[Ecar,Aox,Ant]
+                    *              0             0               
+    99 y_PROV_LAB[Ecar,L_Del,Ant]
+                    *              0             0               
+   100 y_PROV_LAB[Ecar,Eu,Ane]
+                    *              0             0               
+   101 y_PROV_LAB[Ecar,Laf,Ane]
+                    *              0             0               
+   102 y_PROV_LAB[Ecar,Aox,Ane]
+                    *            120             0               
+   103 y_PROV_LAB[Ecar,L_Del,Ane]
+                    *              0             0               
+   104 y_PROV_LAB[Ecar,Eu,Exci]
+                    *           7143             0               
+   105 y_PROV_LAB[Ecar,Laf,Exci]
+                    *              0             0               
+   106 y_PROV_LAB[Ecar,Aox,Exci]
+                    *           2279             0               
+   107 y_PROV_LAB[Ecar,L_Del,Exci]
+                    *              0             0               
+   108 y_PROV_LAB[Qui_Va,Eu,Ana]
+                    *            329             0               
+   109 y_PROV_LAB[Qui_Va,Laf,Ana]
+                    *           4131             0               
+   110 y_PROV_LAB[Qui_Va,Aox,Ana]
+                    *              0             0               
+   111 y_PROV_LAB[Qui_Va,L_Del,Ana]
+                    *              0             0               
+   112 y_PROV_LAB[Qui_Va,Eu,Ant]
+                    *              0             0               
+   113 y_PROV_LAB[Qui_Va,Laf,Ant]
+                    *           1840             0               
+   114 y_PROV_LAB[Qui_Va,Aox,Ant]
+                    *              0             0               
+   115 y_PROV_LAB[Qui_Va,L_Del,Ant]
+                    *              0             0               
+   116 y_PROV_LAB[Qui_Va,Eu,Ane]
+                    *             20             0               
+   117 y_PROV_LAB[Qui_Va,Laf,Ane]
+                    *              0             0               
+   118 y_PROV_LAB[Qui_Va,Aox,Ane]
+                    *            140             0               
+   119 y_PROV_LAB[Qui_Va,L_Del,Ane]
+                    *              0             0               
+   120 y_PROV_LAB[Qui_Va,Eu,Exci]
+                    *              0             0               
+   121 y_PROV_LAB[Qui_Va,Laf,Exci]
+                    *          11140             0               
+   122 y_PROV_LAB[Qui_Va,Aox,Exci]
+                    *              0             0               
+   123 y_PROV_LAB[Qui_Va,L_Del,Exci]
+                    *              0             0               
+   124 y_PROV_LAB[Discol_T,Eu,Ana]
+                    *              0             0               
+   125 y_PROV_LAB[Discol_T,Laf,Ana]
+                    *              0             0               
+   126 y_PROV_LAB[Discol_T,Aox,Ana]
+                    *           3740             0               
+   127 y_PROV_LAB[Discol_T,L_Del,Ana]
+                    *              0             0               
+   128 y_PROV_LAB[Discol_T,Eu,Ant]
+                    *              0             0               
+   129 y_PROV_LAB[Discol_T,Laf,Ant]
+                    *              0             0               
+   130 y_PROV_LAB[Discol_T,Aox,Ant]
+                    *           1260             0               
+   131 y_PROV_LAB[Discol_T,L_Del,Ant]
+                    *              0             0               
+   132 y_PROV_LAB[Discol_T,Eu,Ane]
+                    *              0             0               
+   133 y_PROV_LAB[Discol_T,Laf,Ane]
+                    *              0             0               
+   134 y_PROV_LAB[Discol_T,Aox,Ane]
+                    *            230             0               
+   135 y_PROV_LAB[Discol_T,L_Del,Ane]
+                    *              0             0               
+   136 y_PROV_LAB[Discol_T,Eu,Exci]
+                    *              0             0               
+   137 y_PROV_LAB[Discol_T,Laf,Exci]
+                    *              0             0               
+   138 y_PROV_LAB[Discol_T,Aox,Exci]
+                    *           9682             0               
+   139 y_PROV_LAB[Discol_T,L_Del,Exci]
+                    *              0             0               
+   140 z_LAB_CD[Eu,B_Sib]
+                    *              0             0             1 
+   141 z_LAB_CD[Eu,B_Man]
+                    *              0             0             1 
+   142 z_LAB_CD[Eu,B_Buc]
+                    *              0             0             1 
+   143 z_LAB_CD[Eu,B_Pop]
+                    *              0             0             1 
+   144 z_LAB_CD[Eu,B_Ib]
+                    *              1             0             1 
+   145 z_LAB_CD[Laf,B_Sib]
+                    *              0             0             1 
+   146 z_LAB_CD[Laf,B_Man]
+                    *              0             0             1 
+   147 z_LAB_CD[Laf,B_Buc]
+                    *              0             0             1 
+   148 z_LAB_CD[Laf,B_Pop]
+                    *              1             0             1 
+   149 z_LAB_CD[Laf,B_Ib]
+                    *              1             0             1 
+   150 z_LAB_CD[Aox,B_Sib]
+                    *              0             0             1 
+   151 z_LAB_CD[Aox,B_Man]
+                    *              0             0             1 
+   152 z_LAB_CD[Aox,B_Buc]
+                    *              1             0             1 
+   153 z_LAB_CD[Aox,B_Pop]
+                    *              0             0             1 
+   154 z_LAB_CD[Aox,B_Ib]
+                    *              0             0             1 
+   155 z_LAB_CD[L_Del,B_Sib]
+                    *              0             0             1 
+   156 z_LAB_CD[L_Del,B_Man]
+                    *              0             0             1 
+   157 z_LAB_CD[L_Del,B_Buc]
+                    *              0             0             1 
+   158 z_LAB_CD[L_Del,B_Pop]
+                    *              0             0             1 
+   159 z_LAB_CD[L_Del,B_Ib]
+                    *              0             0             1 
+   160 y_LAB_CD[Eu,B_Sib,Com]
+                                   0             0               
+   161 y_LAB_CD[Eu,B_Sib,Tab]
+                                   0             0               
+   162 y_LAB_CD[Eu,B_Sib,Cap]
+                                   0             0               
+   163 y_LAB_CD[Eu,B_Man,Com]
+                                   0             0               
+   164 y_LAB_CD[Eu,B_Man,Tab]
+                                   0             0               
+   165 y_LAB_CD[Eu,B_Man,Cap]
+                                   0             0               
+   166 y_LAB_CD[Eu,B_Buc,Com]
+                                   0             0               
+   167 y_LAB_CD[Eu,B_Buc,Tab]
+                                   0             0               
+   168 y_LAB_CD[Eu,B_Buc,Cap]
+                                   0             0               
+   169 y_LAB_CD[Eu,B_Pop,Com]
+                                   0             0               
+   170 y_LAB_CD[Eu,B_Pop,Tab]
+                                   0             0               
+   171 y_LAB_CD[Eu,B_Pop,Cap]
+                                   0             0               
+   172 y_LAB_CD[Eu,B_Ib,Com]
+                                 400             0               
+   173 y_LAB_CD[Eu,B_Ib,Tab]
+                                7100             0               
+   174 y_LAB_CD[Eu,B_Ib,Cap]
+                                3500             0               
+   175 y_LAB_CD[Laf,B_Sib,Com]
+                                   0             0               
+   176 y_LAB_CD[Laf,B_Sib,Tab]
+                                   0             0               
+   177 y_LAB_CD[Laf,B_Sib,Cap]
+                                   0             0               
+   178 y_LAB_CD[Laf,B_Man,Com]
+                                   0             0               
+   179 y_LAB_CD[Laf,B_Man,Tab]
+                                   0             0               
+   180 y_LAB_CD[Laf,B_Man,Cap]
+                                   0             0               
+   181 y_LAB_CD[Laf,B_Buc,Com]
+                                   0             0               
+   182 y_LAB_CD[Laf,B_Buc,Tab]
+                                   0             0               
+   183 y_LAB_CD[Laf,B_Buc,Cap]
+                                   0             0               
+   184 y_LAB_CD[Laf,B_Pop,Com]
+                                3800             0               
+   185 y_LAB_CD[Laf,B_Pop,Tab]
+                                3900             0               
+   186 y_LAB_CD[Laf,B_Pop,Cap]
+                                5300             0               
+   187 y_LAB_CD[Laf,B_Ib,Com]
+                                5100             0               
+   188 y_LAB_CD[Laf,B_Ib,Tab]
+                                   0             0               
+   189 y_LAB_CD[Laf,B_Ib,Cap]
+                                3900             0               
+   190 y_LAB_CD[Aox,B_Sib,Com]
+                                   0             0               
+   191 y_LAB_CD[Aox,B_Sib,Tab]
+                                   0             0               
+   192 y_LAB_CD[Aox,B_Sib,Cap]
+                                   0             0               
+   193 y_LAB_CD[Aox,B_Man,Com]
+                                   0             0               
+   194 y_LAB_CD[Aox,B_Man,Tab]
+                                   0             0               
+   195 y_LAB_CD[Aox,B_Man,Cap]
+                                   0             0               
+   196 y_LAB_CD[Aox,B_Buc,Com]
+                                5800             0               
+   197 y_LAB_CD[Aox,B_Buc,Tab]
+                                7000             0               
+   198 y_LAB_CD[Aox,B_Buc,Cap]
+                                6300             0               
+   199 y_LAB_CD[Aox,B_Pop,Com]
+                                   0             0               
+   200 y_LAB_CD[Aox,B_Pop,Tab]
+                                   0             0               
+   201 y_LAB_CD[Aox,B_Pop,Cap]
+                                   0             0               
+   202 y_LAB_CD[Aox,B_Ib,Com]
+                                   0             0               
+   203 y_LAB_CD[Aox,B_Ib,Tab]
+                                   0             0               
+   204 y_LAB_CD[Aox,B_Ib,Cap]
+                                   0             0               
+   205 y_LAB_CD[L_Del,B_Sib,Com]
+                                   0             0               
+   206 y_LAB_CD[L_Del,B_Sib,Tab]
+                                   0             0               
+   207 y_LAB_CD[L_Del,B_Sib,Cap]
+                                   0             0               
+   208 y_LAB_CD[L_Del,B_Man,Com]
+                                   0             0               
+   209 y_LAB_CD[L_Del,B_Man,Tab]
+                                   0             0               
+   210 y_LAB_CD[L_Del,B_Man,Cap]
+                                   0             0               
+   211 y_LAB_CD[L_Del,B_Buc,Com]
+                                   0             0               
+   212 y_LAB_CD[L_Del,B_Buc,Tab]
+                                   0             0               
+   213 y_LAB_CD[L_Del,B_Buc,Cap]
+                                   0             0               
+   214 y_LAB_CD[L_Del,B_Pop,Com]
+                                   0             0               
+   215 y_LAB_CD[L_Del,B_Pop,Tab]
+                                   0             0               
+   216 y_LAB_CD[L_Del,B_Pop,Cap]
+                                   0             0               
+   217 y_LAB_CD[L_Del,B_Ib,Com]
+                                   0             0               
+   218 y_LAB_CD[L_Del,B_Ib,Tab]
+                                   0             0               
+   219 y_LAB_CD[L_Del,B_Ib,Cap]
+                                   0             0               
+   220 pro_LAB[Eu,Com]
+                                 400             0               
+   221 pro_LAB[Eu,Tab]
+                                7100             0               
+   222 pro_LAB[Eu,Cap]
+                                3500             0               
+   223 pro_LAB[Laf,Com]
+                                8900             0               
+   224 pro_LAB[Laf,Tab]
+                                3900             0               
+   225 pro_LAB[Laf,Cap]
+                                9200             0               
+   226 pro_LAB[Aox,Com]
+                                5800             0               
+   227 pro_LAB[Aox,Tab]
+                                7000             0               
+   228 pro_LAB[Aox,Cap]
+                                6300             0               
+   229 pro_LAB[L_Del,Com]
+                                   0             0               
+   230 pro_LAB[L_Del,Tab]
+                                   0             0               
+   231 pro_LAB[L_Del,Cap]
+                                   0             0               
+   232 rec_LAB[Eu,Ana]
+                                2660             0               
+   233 rec_LAB[Eu,Ant]
+                                 700             0               
+   234 rec_LAB[Eu,Ane]
+                                 497             0               
+   235 rec_LAB[Eu,Exci]
+                                7143             0               
+   236 rec_LAB[Laf,Ana]
+                                6579             0               
+   237 rec_LAB[Laf,Ant]
+                                1840             0               
+   238 rec_LAB[Laf,Ane]
+                                 273             0               
+   239 rec_LAB[Laf,Exci]
+                               13308             0               
+   240 rec_LAB[Aox,Ana]
+                                5389             0               
+   241 rec_LAB[Aox,Ant]
+                                1260             0               
+   242 rec_LAB[Aox,Ane]
+                                 490             0               
+   243 rec_LAB[Aox,Exci]
+                               11961             0               
+   244 rec_LAB[L_Del,Ana]
+                                   0             0               
+   245 rec_LAB[L_Del,Ant]
+                                   0             0               
+   246 rec_LAB[L_Del,Ane]
+                                   0             0               
+   247 rec_LAB[L_Del,Exci]
+                                   0             0               
+   248 z_CD_CLI_T[B_Sib,Caf_Cu,1]
+                    *              0             0             1 
+   249 z_CD_CLI_T[B_Sib,Caf_Cu,2]
+                    *              0             0             1 
+   250 z_CD_CLI_T[B_Sib,CV_Dui,1]
+                    *              0             0             1 
+   251 z_CD_CLI_T[B_Sib,CV_Dui,2]
+                    *              0             0             1 
+   252 z_CD_CLI_T[B_Sib,Caf_Env,1]
+                    *              0             0             1 
+   253 z_CD_CLI_T[B_Sib,Caf_Env,2]
+                    *              0             0             1 
+   254 z_CD_CLI_T[B_Sib,San_Med,1]
+                    *              0             0             1 
+   255 z_CD_CLI_T[B_Sib,San_Med,2]
+                    *              0             0             1 
+   256 z_CD_CLI_T[B_Sib,Med_Nei,1]
+                    *              0             0             1 
+   257 z_CD_CLI_T[B_Sib,Med_Nei,2]
+                    *              0             0             1 
+   258 z_CD_CLI_T[B_Sib,Audi_Bog,1]
+                    *              0             0             1 
+   259 z_CD_CLI_T[B_Sib,Audi_Bog,2]
+                    *              0             0             1 
+   260 z_CD_CLI_T[B_Sib,Hos_Nar,1]
+                    *              0             0             1 
+   261 z_CD_CLI_T[B_Sib,Hos_Nar,2]
+                    *              0             0             1 
+   262 z_CD_CLI_T[B_Sib,Cli_Med,1]
+                    *              0             0             1 
+   263 z_CD_CLI_T[B_Sib,Cli_Med,2]
+                    *              0             0             1 
+   264 z_CD_CLI_T[B_Man,Caf_Cu,1]
+                    *              0             0             1 
+   265 z_CD_CLI_T[B_Man,Caf_Cu,2]
+                    *              0             0             1 
+   266 z_CD_CLI_T[B_Man,CV_Dui,1]
+                    *              0             0             1 
+   267 z_CD_CLI_T[B_Man,CV_Dui,2]
+                    *              0             0             1 
+   268 z_CD_CLI_T[B_Man,Caf_Env,1]
+                    *              0             0             1 
+   269 z_CD_CLI_T[B_Man,Caf_Env,2]
+                    *              0             0             1 
+   270 z_CD_CLI_T[B_Man,San_Med,1]
+                    *              0             0             1 
+   271 z_CD_CLI_T[B_Man,San_Med,2]
+                    *              0             0             1 
+   272 z_CD_CLI_T[B_Man,Med_Nei,1]
+                    *              0             0             1 
+   273 z_CD_CLI_T[B_Man,Med_Nei,2]
+                    *              0             0             1 
+   274 z_CD_CLI_T[B_Man,Audi_Bog,1]
+                    *              0             0             1 
+   275 z_CD_CLI_T[B_Man,Audi_Bog,2]
+                    *              0             0             1 
+   276 z_CD_CLI_T[B_Man,Hos_Nar,1]
+                    *              0             0             1 
+   277 z_CD_CLI_T[B_Man,Hos_Nar,2]
+                    *              0             0             1 
+   278 z_CD_CLI_T[B_Man,Cli_Med,1]
+                    *              0             0             1 
+   279 z_CD_CLI_T[B_Man,Cli_Med,2]
+                    *              0             0             1 
+   280 z_CD_CLI_T[B_Buc,Caf_Cu,1]
+                    *              0             0             1 
+   281 z_CD_CLI_T[B_Buc,Caf_Cu,2]
+                    *              1             0             1 
+   282 z_CD_CLI_T[B_Buc,CV_Dui,1]
+                    *              0             0             1 
+   283 z_CD_CLI_T[B_Buc,CV_Dui,2]
+                    *              1             0             1 
+   284 z_CD_CLI_T[B_Buc,Caf_Env,1]
+                    *              0             0             1 
+   285 z_CD_CLI_T[B_Buc,Caf_Env,2]
+                    *              0             0             1 
+   286 z_CD_CLI_T[B_Buc,San_Med,1]
+                    *              0             0             1 
+   287 z_CD_CLI_T[B_Buc,San_Med,2]
+                    *              1             0             1 
+   288 z_CD_CLI_T[B_Buc,Med_Nei,1]
+                    *              0             0             1 
+   289 z_CD_CLI_T[B_Buc,Med_Nei,2]
+                    *              0             0             1 
+   290 z_CD_CLI_T[B_Buc,Audi_Bog,1]
+                    *              0             0             1 
+   291 z_CD_CLI_T[B_Buc,Audi_Bog,2]
+                    *              0             0             1 
+   292 z_CD_CLI_T[B_Buc,Hos_Nar,1]
+                    *              0             0             1 
+   293 z_CD_CLI_T[B_Buc,Hos_Nar,2]
+                    *              0             0             1 
+   294 z_CD_CLI_T[B_Buc,Cli_Med,1]
+                    *              0             0             1 
+   295 z_CD_CLI_T[B_Buc,Cli_Med,2]
+                    *              0             0             1 
+   296 z_CD_CLI_T[B_Pop,Caf_Cu,1]
+                    *              0             0             1 
+   297 z_CD_CLI_T[B_Pop,Caf_Cu,2]
+                    *              0             0             1 
+   298 z_CD_CLI_T[B_Pop,CV_Dui,1]
+                    *              0             0             1 
+   299 z_CD_CLI_T[B_Pop,CV_Dui,2]
+                    *              0             0             1 
+   300 z_CD_CLI_T[B_Pop,Caf_Env,1]
+                    *              0             0             1 
+   301 z_CD_CLI_T[B_Pop,Caf_Env,2]
+                    *              0             0             1 
+   302 z_CD_CLI_T[B_Pop,San_Med,1]
+                    *              0             0             1 
+   303 z_CD_CLI_T[B_Pop,San_Med,2]
+                    *              0             0             1 
+   304 z_CD_CLI_T[B_Pop,Med_Nei,1]
+                    *              1             0             1 
+   305 z_CD_CLI_T[B_Pop,Med_Nei,2]
+                    *              0             0             1 
+   306 z_CD_CLI_T[B_Pop,Audi_Bog,1]
+                    *              0             0             1 
+   307 z_CD_CLI_T[B_Pop,Audi_Bog,2]
+                    *              0             0             1 
+   308 z_CD_CLI_T[B_Pop,Hos_Nar,1]
+                    *              1             0             1 
+   309 z_CD_CLI_T[B_Pop,Hos_Nar,2]
+                    *              0             0             1 
+   310 z_CD_CLI_T[B_Pop,Cli_Med,1]
+                    *              0             0             1 
+   311 z_CD_CLI_T[B_Pop,Cli_Med,2]
+                    *              0             0             1 
+   312 z_CD_CLI_T[B_Ib,Caf_Cu,1]
+                    *              0             0             1 
+   313 z_CD_CLI_T[B_Ib,Caf_Cu,2]
+                    *              0             0             1 
+   314 z_CD_CLI_T[B_Ib,CV_Dui,1]
+                    *              0             0             1 
+   315 z_CD_CLI_T[B_Ib,CV_Dui,2]
+                    *              0             0             1 
+   316 z_CD_CLI_T[B_Ib,Caf_Env,1]
+                    *              0             0             1 
+   317 z_CD_CLI_T[B_Ib,Caf_Env,2]
+                    *              1             0             1 
+   318 z_CD_CLI_T[B_Ib,San_Med,1]
+                    *              0             0             1 
+   319 z_CD_CLI_T[B_Ib,San_Med,2]
+                    *              0             0             1 
+   320 z_CD_CLI_T[B_Ib,Med_Nei,1]
+                    *              0             0             1 
+   321 z_CD_CLI_T[B_Ib,Med_Nei,2]
+                    *              0             0             1 
+   322 z_CD_CLI_T[B_Ib,Audi_Bog,1]
+                    *              0             0             1 
+   323 z_CD_CLI_T[B_Ib,Audi_Bog,2]
+                    *              1             0             1 
+   324 z_CD_CLI_T[B_Ib,Hos_Nar,1]
+                    *              0             0             1 
+   325 z_CD_CLI_T[B_Ib,Hos_Nar,2]
+                    *              0             0             1 
+   326 z_CD_CLI_T[B_Ib,Cli_Med,1]
+                    *              0             0             1 
+   327 z_CD_CLI_T[B_Ib,Cli_Med,2]
+                    *              1             0             1 
+   328 z_CD_CLI[B_Sib,Caf_Cu]
+                    *              0             0             1 
+   329 z_CD_CLI[B_Sib,CV_Dui]
+                    *              0             0             1 
+   330 z_CD_CLI[B_Sib,Caf_Env]
+                    *              0             0             1 
+   331 z_CD_CLI[B_Sib,San_Med]
+                    *              0             0             1 
+   332 z_CD_CLI[B_Sib,Med_Nei]
+                    *              0             0             1 
+   333 z_CD_CLI[B_Sib,Audi_Bog]
+                    *              0             0             1 
+   334 z_CD_CLI[B_Sib,Hos_Nar]
+                    *              0             0             1 
+   335 z_CD_CLI[B_Sib,Cli_Med]
+                    *              0             0             1 
+   336 z_CD_CLI[B_Man,Caf_Cu]
+                    *              0             0             1 
+   337 z_CD_CLI[B_Man,CV_Dui]
+                    *              0             0             1 
+   338 z_CD_CLI[B_Man,Caf_Env]
+                    *              0             0             1 
+   339 z_CD_CLI[B_Man,San_Med]
+                    *              0             0             1 
+   340 z_CD_CLI[B_Man,Med_Nei]
+                    *              0             0             1 
+   341 z_CD_CLI[B_Man,Audi_Bog]
+                    *              0             0             1 
+   342 z_CD_CLI[B_Man,Hos_Nar]
+                    *              0             0             1 
+   343 z_CD_CLI[B_Man,Cli_Med]
+                    *              0             0             1 
+   344 z_CD_CLI[B_Buc,Caf_Cu]
+                    *              1             0             1 
+   345 z_CD_CLI[B_Buc,CV_Dui]
+                    *              1             0             1 
+   346 z_CD_CLI[B_Buc,Caf_Env]
+                    *              0             0             1 
+   347 z_CD_CLI[B_Buc,San_Med]
+                    *              1             0             1 
+   348 z_CD_CLI[B_Buc,Med_Nei]
+                    *              0             0             1 
+   349 z_CD_CLI[B_Buc,Audi_Bog]
+                    *              0             0             1 
+   350 z_CD_CLI[B_Buc,Hos_Nar]
+                    *              0             0             1 
+   351 z_CD_CLI[B_Buc,Cli_Med]
+                    *              0             0             1 
+   352 z_CD_CLI[B_Pop,Caf_Cu]
+                    *              0             0             1 
+   353 z_CD_CLI[B_Pop,CV_Dui]
+                    *              0             0             1 
+   354 z_CD_CLI[B_Pop,Caf_Env]
+                    *              0             0             1 
+   355 z_CD_CLI[B_Pop,San_Med]
+                    *              0             0             1 
+   356 z_CD_CLI[B_Pop,Med_Nei]
+                    *              1             0             1 
+   357 z_CD_CLI[B_Pop,Audi_Bog]
+                    *              0             0             1 
+   358 z_CD_CLI[B_Pop,Hos_Nar]
+                    *              1             0             1 
+   359 z_CD_CLI[B_Pop,Cli_Med]
+                    *              0             0             1 
+   360 z_CD_CLI[B_Ib,Caf_Cu]
+                    *              0             0             1 
+   361 z_CD_CLI[B_Ib,CV_Dui]
+                    *              0             0             1 
+   362 z_CD_CLI[B_Ib,Caf_Env]
+                    *              1             0             1 
+   363 z_CD_CLI[B_Ib,San_Med]
+                    *              0             0             1 
+   364 z_CD_CLI[B_Ib,Med_Nei]
+                    *              0             0             1 
+   365 z_CD_CLI[B_Ib,Audi_Bog]
+                    *              1             0             1 
+   366 z_CD_CLI[B_Ib,Hos_Nar]
+                    *              0             0             1 
+   367 z_CD_CLI[B_Ib,Cli_Med]
+                    *              1             0             1 
+   368 y_CD_CLI_T[B_Sib,Caf_Cu,Com,1]
+                                   0             0               
+   369 y_CD_CLI_T[B_Sib,Caf_Cu,Com,2]
+                                   0             0               
+   370 y_CD_CLI_T[B_Sib,Caf_Cu,Tab,1]
+                                   0             0               
+   371 y_CD_CLI_T[B_Sib,Caf_Cu,Tab,2]
+                                   0             0               
+   372 y_CD_CLI_T[B_Sib,Caf_Cu,Cap,1]
+                                   0             0               
+   373 y_CD_CLI_T[B_Sib,Caf_Cu,Cap,2]
+                                   0             0               
+   374 y_CD_CLI_T[B_Sib,CV_Dui,Com,1]
+                                   0             0               
+   375 y_CD_CLI_T[B_Sib,CV_Dui,Com,2]
+                                   0             0               
+   376 y_CD_CLI_T[B_Sib,CV_Dui,Tab,1]
+                                   0             0               
+   377 y_CD_CLI_T[B_Sib,CV_Dui,Tab,2]
+                                   0             0               
+   378 y_CD_CLI_T[B_Sib,CV_Dui,Cap,1]
+                                   0             0               
+   379 y_CD_CLI_T[B_Sib,CV_Dui,Cap,2]
+                                   0             0               
+   380 y_CD_CLI_T[B_Sib,Caf_Env,Com,1]
+                                   0             0               
+   381 y_CD_CLI_T[B_Sib,Caf_Env,Com,2]
+                                   0             0               
+   382 y_CD_CLI_T[B_Sib,Caf_Env,Tab,1]
+                                   0             0               
+   383 y_CD_CLI_T[B_Sib,Caf_Env,Tab,2]
+                                   0             0               
+   384 y_CD_CLI_T[B_Sib,Caf_Env,Cap,1]
+                                   0             0               
+   385 y_CD_CLI_T[B_Sib,Caf_Env,Cap,2]
+                                   0             0               
+   386 y_CD_CLI_T[B_Sib,San_Med,Com,1]
+                                   0             0               
+   387 y_CD_CLI_T[B_Sib,San_Med,Com,2]
+                                   0             0               
+   388 y_CD_CLI_T[B_Sib,San_Med,Tab,1]
+                                   0             0               
+   389 y_CD_CLI_T[B_Sib,San_Med,Tab,2]
+                                   0             0               
+   390 y_CD_CLI_T[B_Sib,San_Med,Cap,1]
+                                   0             0               
+   391 y_CD_CLI_T[B_Sib,San_Med,Cap,2]
+                                   0             0               
+   392 y_CD_CLI_T[B_Sib,Med_Nei,Com,1]
+                                   0             0               
+   393 y_CD_CLI_T[B_Sib,Med_Nei,Com,2]
+                                   0             0               
+   394 y_CD_CLI_T[B_Sib,Med_Nei,Tab,1]
+                                   0             0               
+   395 y_CD_CLI_T[B_Sib,Med_Nei,Tab,2]
+                                   0             0               
+   396 y_CD_CLI_T[B_Sib,Med_Nei,Cap,1]
+                                   0             0               
+   397 y_CD_CLI_T[B_Sib,Med_Nei,Cap,2]
+                                   0             0               
+   398 y_CD_CLI_T[B_Sib,Audi_Bog,Com,1]
+                                   0             0               
+   399 y_CD_CLI_T[B_Sib,Audi_Bog,Com,2]
+                                   0             0               
+   400 y_CD_CLI_T[B_Sib,Audi_Bog,Tab,1]
+                                   0             0               
+   401 y_CD_CLI_T[B_Sib,Audi_Bog,Tab,2]
+                                   0             0               
+   402 y_CD_CLI_T[B_Sib,Audi_Bog,Cap,1]
+                                   0             0               
+   403 y_CD_CLI_T[B_Sib,Audi_Bog,Cap,2]
+                                   0             0               
+   404 y_CD_CLI_T[B_Sib,Hos_Nar,Com,1]
+                                   0             0               
+   405 y_CD_CLI_T[B_Sib,Hos_Nar,Com,2]
+                                   0             0               
+   406 y_CD_CLI_T[B_Sib,Hos_Nar,Tab,1]
+                                   0             0               
+   407 y_CD_CLI_T[B_Sib,Hos_Nar,Tab,2]
+                                   0             0               
+   408 y_CD_CLI_T[B_Sib,Hos_Nar,Cap,1]
+                                   0             0               
+   409 y_CD_CLI_T[B_Sib,Hos_Nar,Cap,2]
+                                   0             0               
+   410 y_CD_CLI_T[B_Sib,Cli_Med,Com,1]
+                                   0             0               
+   411 y_CD_CLI_T[B_Sib,Cli_Med,Com,2]
+                                   0             0               
+   412 y_CD_CLI_T[B_Sib,Cli_Med,Tab,1]
+                                   0             0               
+   413 y_CD_CLI_T[B_Sib,Cli_Med,Tab,2]
+                                   0             0               
+   414 y_CD_CLI_T[B_Sib,Cli_Med,Cap,1]
+                                   0             0               
+   415 y_CD_CLI_T[B_Sib,Cli_Med,Cap,2]
+                                   0             0               
+   416 y_CD_CLI_T[B_Man,Caf_Cu,Com,1]
+                                   0             0               
+   417 y_CD_CLI_T[B_Man,Caf_Cu,Com,2]
+                                   0             0               
+   418 y_CD_CLI_T[B_Man,Caf_Cu,Tab,1]
+                                   0             0               
+   419 y_CD_CLI_T[B_Man,Caf_Cu,Tab,2]
+                                   0             0               
+   420 y_CD_CLI_T[B_Man,Caf_Cu,Cap,1]
+                                   0             0               
+   421 y_CD_CLI_T[B_Man,Caf_Cu,Cap,2]
+                                   0             0               
+   422 y_CD_CLI_T[B_Man,CV_Dui,Com,1]
+                                   0             0               
+   423 y_CD_CLI_T[B_Man,CV_Dui,Com,2]
+                                   0             0               
+   424 y_CD_CLI_T[B_Man,CV_Dui,Tab,1]
+                                   0             0               
+   425 y_CD_CLI_T[B_Man,CV_Dui,Tab,2]
+                                   0             0               
+   426 y_CD_CLI_T[B_Man,CV_Dui,Cap,1]
+                                   0             0               
+   427 y_CD_CLI_T[B_Man,CV_Dui,Cap,2]
+                                   0             0               
+   428 y_CD_CLI_T[B_Man,Caf_Env,Com,1]
+                                   0             0               
+   429 y_CD_CLI_T[B_Man,Caf_Env,Com,2]
+                                   0             0               
+   430 y_CD_CLI_T[B_Man,Caf_Env,Tab,1]
+                                   0             0               
+   431 y_CD_CLI_T[B_Man,Caf_Env,Tab,2]
+                                   0             0               
+   432 y_CD_CLI_T[B_Man,Caf_Env,Cap,1]
+                                   0             0               
+   433 y_CD_CLI_T[B_Man,Caf_Env,Cap,2]
+                                   0             0               
+   434 y_CD_CLI_T[B_Man,San_Med,Com,1]
+                                   0             0               
+   435 y_CD_CLI_T[B_Man,San_Med,Com,2]
+                                   0             0               
+   436 y_CD_CLI_T[B_Man,San_Med,Tab,1]
+                                   0             0               
+   437 y_CD_CLI_T[B_Man,San_Med,Tab,2]
+                                   0             0               
+   438 y_CD_CLI_T[B_Man,San_Med,Cap,1]
+                                   0             0               
+   439 y_CD_CLI_T[B_Man,San_Med,Cap,2]
+                                   0             0               
+   440 y_CD_CLI_T[B_Man,Med_Nei,Com,1]
+                                   0             0               
+   441 y_CD_CLI_T[B_Man,Med_Nei,Com,2]
+                                   0             0               
+   442 y_CD_CLI_T[B_Man,Med_Nei,Tab,1]
+                                   0             0               
+   443 y_CD_CLI_T[B_Man,Med_Nei,Tab,2]
+                                   0             0               
+   444 y_CD_CLI_T[B_Man,Med_Nei,Cap,1]
+                                   0             0               
+   445 y_CD_CLI_T[B_Man,Med_Nei,Cap,2]
+                                   0             0               
+   446 y_CD_CLI_T[B_Man,Audi_Bog,Com,1]
+                                   0             0               
+   447 y_CD_CLI_T[B_Man,Audi_Bog,Com,2]
+                                   0             0               
+   448 y_CD_CLI_T[B_Man,Audi_Bog,Tab,1]
+                                   0             0               
+   449 y_CD_CLI_T[B_Man,Audi_Bog,Tab,2]
+                                   0             0               
+   450 y_CD_CLI_T[B_Man,Audi_Bog,Cap,1]
+                                   0             0               
+   451 y_CD_CLI_T[B_Man,Audi_Bog,Cap,2]
+                                   0             0               
+   452 y_CD_CLI_T[B_Man,Hos_Nar,Com,1]
+                                   0             0               
+   453 y_CD_CLI_T[B_Man,Hos_Nar,Com,2]
+                                   0             0               
+   454 y_CD_CLI_T[B_Man,Hos_Nar,Tab,1]
+                                   0             0               
+   455 y_CD_CLI_T[B_Man,Hos_Nar,Tab,2]
+                                   0             0               
+   456 y_CD_CLI_T[B_Man,Hos_Nar,Cap,1]
+                                   0             0               
+   457 y_CD_CLI_T[B_Man,Hos_Nar,Cap,2]
+                                   0             0               
+   458 y_CD_CLI_T[B_Man,Cli_Med,Com,1]
+                                   0             0               
+   459 y_CD_CLI_T[B_Man,Cli_Med,Com,2]
+                                   0             0               
+   460 y_CD_CLI_T[B_Man,Cli_Med,Tab,1]
+                                   0             0               
+   461 y_CD_CLI_T[B_Man,Cli_Med,Tab,2]
+                                   0             0               
+   462 y_CD_CLI_T[B_Man,Cli_Med,Cap,1]
+                                   0             0               
+   463 y_CD_CLI_T[B_Man,Cli_Med,Cap,2]
+                                   0             0               
+   464 y_CD_CLI_T[B_Buc,Caf_Cu,Com,1]
+                                   0             0               
+   465 y_CD_CLI_T[B_Buc,Caf_Cu,Com,2]
+                                2000             0               
+   466 y_CD_CLI_T[B_Buc,Caf_Cu,Tab,1]
+                                   0             0               
+   467 y_CD_CLI_T[B_Buc,Caf_Cu,Tab,2]
+                                2400             0               
+   468 y_CD_CLI_T[B_Buc,Caf_Cu,Cap,1]
+                                   0             0               
+   469 y_CD_CLI_T[B_Buc,Caf_Cu,Cap,2]
+                                2100             0               
+   470 y_CD_CLI_T[B_Buc,CV_Dui,Com,1]
+                                   0             0               
+   471 y_CD_CLI_T[B_Buc,CV_Dui,Com,2]
+                                1700             0               
+   472 y_CD_CLI_T[B_Buc,CV_Dui,Tab,1]
+                                   0             0               
+   473 y_CD_CLI_T[B_Buc,CV_Dui,Tab,2]
+                                2100             0               
+   474 y_CD_CLI_T[B_Buc,CV_Dui,Cap,1]
+                                   0             0               
+   475 y_CD_CLI_T[B_Buc,CV_Dui,Cap,2]
+                                2100             0               
+   476 y_CD_CLI_T[B_Buc,Caf_Env,Com,1]
+                                   0             0               
+   477 y_CD_CLI_T[B_Buc,Caf_Env,Com,2]
+                                   0             0               
+   478 y_CD_CLI_T[B_Buc,Caf_Env,Tab,1]
+                                   0             0               
+   479 y_CD_CLI_T[B_Buc,Caf_Env,Tab,2]
+                                   0             0               
+   480 y_CD_CLI_T[B_Buc,Caf_Env,Cap,1]
+                                   0             0               
+   481 y_CD_CLI_T[B_Buc,Caf_Env,Cap,2]
+                                   0             0               
+   482 y_CD_CLI_T[B_Buc,San_Med,Com,1]
+                                   0             0               
+   483 y_CD_CLI_T[B_Buc,San_Med,Com,2]
+                                2100             0               
+   484 y_CD_CLI_T[B_Buc,San_Med,Tab,1]
+                                   0             0               
+   485 y_CD_CLI_T[B_Buc,San_Med,Tab,2]
+                                2500             0               
+   486 y_CD_CLI_T[B_Buc,San_Med,Cap,1]
+                                   0             0               
+   487 y_CD_CLI_T[B_Buc,San_Med,Cap,2]
+                                2100             0               
+   488 y_CD_CLI_T[B_Buc,Med_Nei,Com,1]
+                                   0             0               
+   489 y_CD_CLI_T[B_Buc,Med_Nei,Com,2]
+                                   0             0               
+   490 y_CD_CLI_T[B_Buc,Med_Nei,Tab,1]
+                                   0             0               
+   491 y_CD_CLI_T[B_Buc,Med_Nei,Tab,2]
+                                   0             0               
+   492 y_CD_CLI_T[B_Buc,Med_Nei,Cap,1]
+                                   0             0               
+   493 y_CD_CLI_T[B_Buc,Med_Nei,Cap,2]
+                                   0             0               
+   494 y_CD_CLI_T[B_Buc,Audi_Bog,Com,1]
+                                   0             0               
+   495 y_CD_CLI_T[B_Buc,Audi_Bog,Com,2]
+                                   0             0               
+   496 y_CD_CLI_T[B_Buc,Audi_Bog,Tab,1]
+                                   0             0               
+   497 y_CD_CLI_T[B_Buc,Audi_Bog,Tab,2]
+                                   0             0               
+   498 y_CD_CLI_T[B_Buc,Audi_Bog,Cap,1]
+                                   0             0               
+   499 y_CD_CLI_T[B_Buc,Audi_Bog,Cap,2]
+                                   0             0               
+   500 y_CD_CLI_T[B_Buc,Hos_Nar,Com,1]
+                                   0             0               
+   501 y_CD_CLI_T[B_Buc,Hos_Nar,Com,2]
+                                   0             0               
+   502 y_CD_CLI_T[B_Buc,Hos_Nar,Tab,1]
+                                   0             0               
+   503 y_CD_CLI_T[B_Buc,Hos_Nar,Tab,2]
+                                   0             0               
+   504 y_CD_CLI_T[B_Buc,Hos_Nar,Cap,1]
+                                   0             0               
+   505 y_CD_CLI_T[B_Buc,Hos_Nar,Cap,2]
+                                   0             0               
+   506 y_CD_CLI_T[B_Buc,Cli_Med,Com,1]
+                                   0             0               
+   507 y_CD_CLI_T[B_Buc,Cli_Med,Com,2]
+                                   0             0               
+   508 y_CD_CLI_T[B_Buc,Cli_Med,Tab,1]
+                                   0             0               
+   509 y_CD_CLI_T[B_Buc,Cli_Med,Tab,2]
+                                   0             0               
+   510 y_CD_CLI_T[B_Buc,Cli_Med,Cap,1]
+                                   0             0               
+   511 y_CD_CLI_T[B_Buc,Cli_Med,Cap,2]
+                                   0             0               
+   512 y_CD_CLI_T[B_Pop,Caf_Cu,Com,1]
+                                   0             0               
+   513 y_CD_CLI_T[B_Pop,Caf_Cu,Com,2]
+                                   0             0               
+   514 y_CD_CLI_T[B_Pop,Caf_Cu,Tab,1]
+                                   0             0               
+   515 y_CD_CLI_T[B_Pop,Caf_Cu,Tab,2]
+                                   0             0               
+   516 y_CD_CLI_T[B_Pop,Caf_Cu,Cap,1]
+                                   0             0               
+   517 y_CD_CLI_T[B_Pop,Caf_Cu,Cap,2]
+                                   0             0               
+   518 y_CD_CLI_T[B_Pop,CV_Dui,Com,1]
+                                   0             0               
+   519 y_CD_CLI_T[B_Pop,CV_Dui,Com,2]
+                                   0             0               
+   520 y_CD_CLI_T[B_Pop,CV_Dui,Tab,1]
+                                   0             0               
+   521 y_CD_CLI_T[B_Pop,CV_Dui,Tab,2]
+                                   0             0               
+   522 y_CD_CLI_T[B_Pop,CV_Dui,Cap,1]
+                                   0             0               
+   523 y_CD_CLI_T[B_Pop,CV_Dui,Cap,2]
+                                   0             0               
+   524 y_CD_CLI_T[B_Pop,Caf_Env,Com,1]
+                                   0             0               
+   525 y_CD_CLI_T[B_Pop,Caf_Env,Com,2]
+                                   0             0               
+   526 y_CD_CLI_T[B_Pop,Caf_Env,Tab,1]
+                                   0             0               
+   527 y_CD_CLI_T[B_Pop,Caf_Env,Tab,2]
+                                   0             0               
+   528 y_CD_CLI_T[B_Pop,Caf_Env,Cap,1]
+                                   0             0               
+   529 y_CD_CLI_T[B_Pop,Caf_Env,Cap,2]
+                                   0             0               
+   530 y_CD_CLI_T[B_Pop,San_Med,Com,1]
+                                   0             0               
+   531 y_CD_CLI_T[B_Pop,San_Med,Com,2]
+                                   0             0               
+   532 y_CD_CLI_T[B_Pop,San_Med,Tab,1]
+                                   0             0               
+   533 y_CD_CLI_T[B_Pop,San_Med,Tab,2]
+                                   0             0               
+   534 y_CD_CLI_T[B_Pop,San_Med,Cap,1]
+                                   0             0               
+   535 y_CD_CLI_T[B_Pop,San_Med,Cap,2]
+                                   0             0               
+   536 y_CD_CLI_T[B_Pop,Med_Nei,Com,1]
+                                1900             0               
+   537 y_CD_CLI_T[B_Pop,Med_Nei,Com,2]
+                          0.00138225             0               
+   538 y_CD_CLI_T[B_Pop,Med_Nei,Tab,1]
+                                1800             0               
+   539 y_CD_CLI_T[B_Pop,Med_Nei,Tab,2]
+                          0.00138225             0               
+   540 y_CD_CLI_T[B_Pop,Med_Nei,Cap,1]
+                                2900             0               
+   541 y_CD_CLI_T[B_Pop,Med_Nei,Cap,2]
+                          0.00138225             0               
+   542 y_CD_CLI_T[B_Pop,Audi_Bog,Com,1]
+                                   0             0               
+   543 y_CD_CLI_T[B_Pop,Audi_Bog,Com,2]
+                                   0             0               
+   544 y_CD_CLI_T[B_Pop,Audi_Bog,Tab,1]
+                                   0             0               
+   545 y_CD_CLI_T[B_Pop,Audi_Bog,Tab,2]
+                                   0             0               
+   546 y_CD_CLI_T[B_Pop,Audi_Bog,Cap,1]
+                                   0             0               
+   547 y_CD_CLI_T[B_Pop,Audi_Bog,Cap,2]
+                                   0             0               
+   548 y_CD_CLI_T[B_Pop,Hos_Nar,Com,1]
+                                1900             0               
+   549 y_CD_CLI_T[B_Pop,Hos_Nar,Com,2]
+                          0.00138225             0               
+   550 y_CD_CLI_T[B_Pop,Hos_Nar,Tab,1]
+                                2100             0               
+   551 y_CD_CLI_T[B_Pop,Hos_Nar,Tab,2]
+                          0.00138225             0               
+   552 y_CD_CLI_T[B_Pop,Hos_Nar,Cap,1]
+                                2400             0               
+   553 y_CD_CLI_T[B_Pop,Hos_Nar,Cap,2]
+                          0.00138225             0               
+   554 y_CD_CLI_T[B_Pop,Cli_Med,Com,1]
+                                   0             0               
+   555 y_CD_CLI_T[B_Pop,Cli_Med,Com,2]
+                                   0             0               
+   556 y_CD_CLI_T[B_Pop,Cli_Med,Tab,1]
+                                   0             0               
+   557 y_CD_CLI_T[B_Pop,Cli_Med,Tab,2]
+                                   0             0               
+   558 y_CD_CLI_T[B_Pop,Cli_Med,Cap,1]
+                                   0             0               
+   559 y_CD_CLI_T[B_Pop,Cli_Med,Cap,2]
+                                   0             0               
+   560 y_CD_CLI_T[B_Ib,Caf_Cu,Com,1]
+                                   0             0               
+   561 y_CD_CLI_T[B_Ib,Caf_Cu,Com,2]
+                                   0             0               
+   562 y_CD_CLI_T[B_Ib,Caf_Cu,Tab,1]
+                                   0             0               
+   563 y_CD_CLI_T[B_Ib,Caf_Cu,Tab,2]
+                                   0             0               
+   564 y_CD_CLI_T[B_Ib,Caf_Cu,Cap,1]
+                                   0             0               
+   565 y_CD_CLI_T[B_Ib,Caf_Cu,Cap,2]
+                                   0             0               
+   566 y_CD_CLI_T[B_Ib,CV_Dui,Com,1]
+                                   0             0               
+   567 y_CD_CLI_T[B_Ib,CV_Dui,Com,2]
+                                   0             0               
+   568 y_CD_CLI_T[B_Ib,CV_Dui,Tab,1]
+                                   0             0               
+   569 y_CD_CLI_T[B_Ib,CV_Dui,Tab,2]
+                                   0             0               
+   570 y_CD_CLI_T[B_Ib,CV_Dui,Cap,1]
+                                   0             0               
+   571 y_CD_CLI_T[B_Ib,CV_Dui,Cap,2]
+                                   0             0               
+   572 y_CD_CLI_T[B_Ib,Caf_Env,Com,1]
+                                   0             0               
+   573 y_CD_CLI_T[B_Ib,Caf_Env,Com,2]
+                                1700             0               
+   574 y_CD_CLI_T[B_Ib,Caf_Env,Tab,1]
+                                   0             0               
+   575 y_CD_CLI_T[B_Ib,Caf_Env,Tab,2]
+                                2500             0               
+   576 y_CD_CLI_T[B_Ib,Caf_Env,Cap,1]
+                                   0             0               
+   577 y_CD_CLI_T[B_Ib,Caf_Env,Cap,2]
+                                2100             0               
+   578 y_CD_CLI_T[B_Ib,San_Med,Com,1]
+                                   0             0               
+   579 y_CD_CLI_T[B_Ib,San_Med,Com,2]
+                                   0             0               
+   580 y_CD_CLI_T[B_Ib,San_Med,Tab,1]
+                                   0             0               
+   581 y_CD_CLI_T[B_Ib,San_Med,Tab,2]
+                                   0             0               
+   582 y_CD_CLI_T[B_Ib,San_Med,Cap,1]
+                                   0             0               
+   583 y_CD_CLI_T[B_Ib,San_Med,Cap,2]
+                                   0             0               
+   584 y_CD_CLI_T[B_Ib,Med_Nei,Com,1]
+                                   0             0               
+   585 y_CD_CLI_T[B_Ib,Med_Nei,Com,2]
+                                   0             0               
+   586 y_CD_CLI_T[B_Ib,Med_Nei,Tab,1]
+                                   0             0               
+   587 y_CD_CLI_T[B_Ib,Med_Nei,Tab,2]
+                                   0             0               
+   588 y_CD_CLI_T[B_Ib,Med_Nei,Cap,1]
+                                   0             0               
+   589 y_CD_CLI_T[B_Ib,Med_Nei,Cap,2]
+                                   0             0               
+   590 y_CD_CLI_T[B_Ib,Audi_Bog,Com,1]
+                                   0             0               
+   591 y_CD_CLI_T[B_Ib,Audi_Bog,Com,2]
+                                1900             0               
+   592 y_CD_CLI_T[B_Ib,Audi_Bog,Tab,1]
+                                   0             0               
+   593 y_CD_CLI_T[B_Ib,Audi_Bog,Tab,2]
+                                2200             0               
+   594 y_CD_CLI_T[B_Ib,Audi_Bog,Cap,1]
+                                   0             0               
+   595 y_CD_CLI_T[B_Ib,Audi_Bog,Cap,2]
+                                2900             0               
+   596 y_CD_CLI_T[B_Ib,Hos_Nar,Com,1]
+                                   0             0               
+   597 y_CD_CLI_T[B_Ib,Hos_Nar,Com,2]
+                                   0             0               
+   598 y_CD_CLI_T[B_Ib,Hos_Nar,Tab,1]
+                                   0             0               
+   599 y_CD_CLI_T[B_Ib,Hos_Nar,Tab,2]
+                                   0             0               
+   600 y_CD_CLI_T[B_Ib,Hos_Nar,Cap,1]
+                                   0             0               
+   601 y_CD_CLI_T[B_Ib,Hos_Nar,Cap,2]
+                                   0             0               
+   602 y_CD_CLI_T[B_Ib,Cli_Med,Com,1]
+                                   0             0               
+   603 y_CD_CLI_T[B_Ib,Cli_Med,Com,2]
+                                1900             0               
+   604 y_CD_CLI_T[B_Ib,Cli_Med,Tab,1]
+                                   0             0               
+   605 y_CD_CLI_T[B_Ib,Cli_Med,Tab,2]
+                                2400             0               
+   606 y_CD_CLI_T[B_Ib,Cli_Med,Cap,1]
+                                   0             0               
+   607 y_CD_CLI_T[B_Ib,Cli_Med,Cap,2]
+                                2400             0               
+   608 y_CD_CLI[B_Sib,Caf_Cu,Com]
+                                   0             0               
+   609 y_CD_CLI[B_Sib,Caf_Cu,Tab]
+                                   0             0               
+   610 y_CD_CLI[B_Sib,Caf_Cu,Cap]
+                                   0             0               
+   611 y_CD_CLI[B_Sib,CV_Dui,Com]
+                                   0             0               
+   612 y_CD_CLI[B_Sib,CV_Dui,Tab]
+                                   0             0               
+   613 y_CD_CLI[B_Sib,CV_Dui,Cap]
+                                   0             0               
+   614 y_CD_CLI[B_Sib,Caf_Env,Com]
+                                   0             0               
+   615 y_CD_CLI[B_Sib,Caf_Env,Tab]
+                                   0             0               
+   616 y_CD_CLI[B_Sib,Caf_Env,Cap]
+                                   0             0               
+   617 y_CD_CLI[B_Sib,San_Med,Com]
+                                   0             0               
+   618 y_CD_CLI[B_Sib,San_Med,Tab]
+                                   0             0               
+   619 y_CD_CLI[B_Sib,San_Med,Cap]
+                                   0             0               
+   620 y_CD_CLI[B_Sib,Med_Nei,Com]
+                                   0             0               
+   621 y_CD_CLI[B_Sib,Med_Nei,Tab]
+                                   0             0               
+   622 y_CD_CLI[B_Sib,Med_Nei,Cap]
+                                   0             0               
+   623 y_CD_CLI[B_Sib,Audi_Bog,Com]
+                                   0             0               
+   624 y_CD_CLI[B_Sib,Audi_Bog,Tab]
+                                   0             0               
+   625 y_CD_CLI[B_Sib,Audi_Bog,Cap]
+                                   0             0               
+   626 y_CD_CLI[B_Sib,Hos_Nar,Com]
+                                   0             0               
+   627 y_CD_CLI[B_Sib,Hos_Nar,Tab]
+                                   0             0               
+   628 y_CD_CLI[B_Sib,Hos_Nar,Cap]
+                                   0             0               
+   629 y_CD_CLI[B_Sib,Cli_Med,Com]
+                                   0             0               
+   630 y_CD_CLI[B_Sib,Cli_Med,Tab]
+                                   0             0               
+   631 y_CD_CLI[B_Sib,Cli_Med,Cap]
+                                   0             0               
+   632 y_CD_CLI[B_Man,Caf_Cu,Com]
+                                   0             0               
+   633 y_CD_CLI[B_Man,Caf_Cu,Tab]
+                                   0             0               
+   634 y_CD_CLI[B_Man,Caf_Cu,Cap]
+                                   0             0               
+   635 y_CD_CLI[B_Man,CV_Dui,Com]
+                                   0             0               
+   636 y_CD_CLI[B_Man,CV_Dui,Tab]
+                                   0             0               
+   637 y_CD_CLI[B_Man,CV_Dui,Cap]
+                                   0             0               
+   638 y_CD_CLI[B_Man,Caf_Env,Com]
+                                   0             0               
+   639 y_CD_CLI[B_Man,Caf_Env,Tab]
+                                   0             0               
+   640 y_CD_CLI[B_Man,Caf_Env,Cap]
+                                   0             0               
+   641 y_CD_CLI[B_Man,San_Med,Com]
+                                   0             0               
+   642 y_CD_CLI[B_Man,San_Med,Tab]
+                                   0             0               
+   643 y_CD_CLI[B_Man,San_Med,Cap]
+                                   0             0               
+   644 y_CD_CLI[B_Man,Med_Nei,Com]
+                                   0             0               
+   645 y_CD_CLI[B_Man,Med_Nei,Tab]
+                                   0             0               
+   646 y_CD_CLI[B_Man,Med_Nei,Cap]
+                                   0             0               
+   647 y_CD_CLI[B_Man,Audi_Bog,Com]
+                                   0             0               
+   648 y_CD_CLI[B_Man,Audi_Bog,Tab]
+                                   0             0               
+   649 y_CD_CLI[B_Man,Audi_Bog,Cap]
+                                   0             0               
+   650 y_CD_CLI[B_Man,Hos_Nar,Com]
+                                   0             0               
+   651 y_CD_CLI[B_Man,Hos_Nar,Tab]
+                                   0             0               
+   652 y_CD_CLI[B_Man,Hos_Nar,Cap]
+                                   0             0               
+   653 y_CD_CLI[B_Man,Cli_Med,Com]
+                                   0             0               
+   654 y_CD_CLI[B_Man,Cli_Med,Tab]
+                                   0             0               
+   655 y_CD_CLI[B_Man,Cli_Med,Cap]
+                                   0             0               
+   656 y_CD_CLI[B_Buc,Caf_Cu,Com]
+                                2000             0               
+   657 y_CD_CLI[B_Buc,Caf_Cu,Tab]
+                                2400             0               
+   658 y_CD_CLI[B_Buc,Caf_Cu,Cap]
+                                2100             0               
+   659 y_CD_CLI[B_Buc,CV_Dui,Com]
+                                1700             0               
+   660 y_CD_CLI[B_Buc,CV_Dui,Tab]
+                                2100             0               
+   661 y_CD_CLI[B_Buc,CV_Dui,Cap]
+                                2100             0               
+   662 y_CD_CLI[B_Buc,Caf_Env,Com]
+                                   0             0               
+   663 y_CD_CLI[B_Buc,Caf_Env,Tab]
+                                   0             0               
+   664 y_CD_CLI[B_Buc,Caf_Env,Cap]
+                                   0             0               
+   665 y_CD_CLI[B_Buc,San_Med,Com]
+                                2100             0               
+   666 y_CD_CLI[B_Buc,San_Med,Tab]
+                                2500             0               
+   667 y_CD_CLI[B_Buc,San_Med,Cap]
+                                2100             0               
+   668 y_CD_CLI[B_Buc,Med_Nei,Com]
+                                   0             0               
+   669 y_CD_CLI[B_Buc,Med_Nei,Tab]
+                                   0             0               
+   670 y_CD_CLI[B_Buc,Med_Nei,Cap]
+                                   0             0               
+   671 y_CD_CLI[B_Buc,Audi_Bog,Com]
+                                   0             0               
+   672 y_CD_CLI[B_Buc,Audi_Bog,Tab]
+                                   0             0               
+   673 y_CD_CLI[B_Buc,Audi_Bog,Cap]
+                                   0             0               
+   674 y_CD_CLI[B_Buc,Hos_Nar,Com]
+                                   0             0               
+   675 y_CD_CLI[B_Buc,Hos_Nar,Tab]
+                                   0             0               
+   676 y_CD_CLI[B_Buc,Hos_Nar,Cap]
+                                   0             0               
+   677 y_CD_CLI[B_Buc,Cli_Med,Com]
+                                   0             0               
+   678 y_CD_CLI[B_Buc,Cli_Med,Tab]
+                                   0             0               
+   679 y_CD_CLI[B_Buc,Cli_Med,Cap]
+                                   0             0               
+   680 y_CD_CLI[B_Pop,Caf_Cu,Com]
+                                   0             0               
+   681 y_CD_CLI[B_Pop,Caf_Cu,Tab]
+                                   0             0               
+   682 y_CD_CLI[B_Pop,Caf_Cu,Cap]
+                                   0             0               
+   683 y_CD_CLI[B_Pop,CV_Dui,Com]
+                                   0             0               
+   684 y_CD_CLI[B_Pop,CV_Dui,Tab]
+                                   0             0               
+   685 y_CD_CLI[B_Pop,CV_Dui,Cap]
+                                   0             0               
+   686 y_CD_CLI[B_Pop,Caf_Env,Com]
+                                   0             0               
+   687 y_CD_CLI[B_Pop,Caf_Env,Tab]
+                                   0             0               
+   688 y_CD_CLI[B_Pop,Caf_Env,Cap]
+                                   0             0               
+   689 y_CD_CLI[B_Pop,San_Med,Com]
+                                   0             0               
+   690 y_CD_CLI[B_Pop,San_Med,Tab]
+                                   0             0               
+   691 y_CD_CLI[B_Pop,San_Med,Cap]
+                                   0             0               
+   692 y_CD_CLI[B_Pop,Med_Nei,Com]
+                                1900             0               
+   693 y_CD_CLI[B_Pop,Med_Nei,Tab]
+                                1800             0               
+   694 y_CD_CLI[B_Pop,Med_Nei,Cap]
+                                2900             0               
+   695 y_CD_CLI[B_Pop,Audi_Bog,Com]
+                                   0             0               
+   696 y_CD_CLI[B_Pop,Audi_Bog,Tab]
+                                   0             0               
+   697 y_CD_CLI[B_Pop,Audi_Bog,Cap]
+                                   0             0               
+   698 y_CD_CLI[B_Pop,Hos_Nar,Com]
+                                1900             0               
+   699 y_CD_CLI[B_Pop,Hos_Nar,Tab]
+                                2100             0               
+   700 y_CD_CLI[B_Pop,Hos_Nar,Cap]
+                                2400             0               
+   701 y_CD_CLI[B_Pop,Cli_Med,Com]
+                                   0             0               
+   702 y_CD_CLI[B_Pop,Cli_Med,Tab]
+                                   0             0               
+   703 y_CD_CLI[B_Pop,Cli_Med,Cap]
+                                   0             0               
+   704 y_CD_CLI[B_Ib,Caf_Cu,Com]
+                                   0             0               
+   705 y_CD_CLI[B_Ib,Caf_Cu,Tab]
+                                   0             0               
+   706 y_CD_CLI[B_Ib,Caf_Cu,Cap]
+                                   0             0               
+   707 y_CD_CLI[B_Ib,CV_Dui,Com]
+                                   0             0               
+   708 y_CD_CLI[B_Ib,CV_Dui,Tab]
+                                   0             0               
+   709 y_CD_CLI[B_Ib,CV_Dui,Cap]
+                                   0             0               
+   710 y_CD_CLI[B_Ib,Caf_Env,Com]
+                                1700             0               
+   711 y_CD_CLI[B_Ib,Caf_Env,Tab]
+                                2500             0               
+   712 y_CD_CLI[B_Ib,Caf_Env,Cap]
+                                2100             0               
+   713 y_CD_CLI[B_Ib,San_Med,Com]
+                                   0             0               
+   714 y_CD_CLI[B_Ib,San_Med,Tab]
+                                   0             0               
+   715 y_CD_CLI[B_Ib,San_Med,Cap]
+                                   0             0               
+   716 y_CD_CLI[B_Ib,Med_Nei,Com]
+                                   0             0               
+   717 y_CD_CLI[B_Ib,Med_Nei,Tab]
+                                   0             0               
+   718 y_CD_CLI[B_Ib,Med_Nei,Cap]
+                                   0             0               
+   719 y_CD_CLI[B_Ib,Audi_Bog,Com]
+                                1900             0               
+   720 y_CD_CLI[B_Ib,Audi_Bog,Tab]
+                                2200             0               
+   721 y_CD_CLI[B_Ib,Audi_Bog,Cap]
+                                2900             0               
+   722 y_CD_CLI[B_Ib,Hos_Nar,Com]
+                                   0             0               
+   723 y_CD_CLI[B_Ib,Hos_Nar,Tab]
+                                   0             0               
+   724 y_CD_CLI[B_Ib,Hos_Nar,Cap]
+                                   0             0               
+   725 y_CD_CLI[B_Ib,Cli_Med,Com]
+                                1900             0               
+   726 y_CD_CLI[B_Ib,Cli_Med,Tab]
+                                2400             0               
+   727 y_CD_CLI[B_Ib,Cli_Med,Cap]
+                                2400             0               
+   728 Aux_CD[B_Sib,Com,1]
+                                   0                             
+   729 Aux_CD[B_Sib,Com,2]
+                                   0                             
+   730 Aux_CD[B_Sib,Tab,1]
+                                   0                             
+   731 Aux_CD[B_Sib,Tab,2]
+                                   0                             
+   732 Aux_CD[B_Sib,Cap,1]
+                                   0                             
+   733 Aux_CD[B_Sib,Cap,2]
+                                   0                             
+   734 Aux_CD[B_Man,Com,1]
+                                   0                             
+   735 Aux_CD[B_Man,Com,2]
+                                   0                             
+   736 Aux_CD[B_Man,Tab,1]
+                                   0                             
+   737 Aux_CD[B_Man,Tab,2]
+                                   0                             
+   738 Aux_CD[B_Man,Cap,1]
+                                   0                             
+   739 Aux_CD[B_Man,Cap,2]
+                                   0                             
+   740 Aux_CD[B_Buc,Com,1]
+                                   0                             
+   741 Aux_CD[B_Buc,Com,2]
+                                5800                             
+   742 Aux_CD[B_Buc,Tab,1]
+                                   0                             
+   743 Aux_CD[B_Buc,Tab,2]
+                                7000                             
+   744 Aux_CD[B_Buc,Cap,1]
+                                   0                             
+   745 Aux_CD[B_Buc,Cap,2]
+                                6300                             
+   746 Aux_CD[B_Pop,Com,1]
+                                3800                             
+   747 Aux_CD[B_Pop,Com,2]
+                          0.00276451                             
+   748 Aux_CD[B_Pop,Tab,1]
+                                3900                             
+   749 Aux_CD[B_Pop,Tab,2]
+                          0.00276451                             
+   750 Aux_CD[B_Pop,Cap,1]
+                                5300                             
+   751 Aux_CD[B_Pop,Cap,2]
+                          0.00276451                             
+   752 Aux_CD[B_Ib,Com,1]
+                                   0                             
+   753 Aux_CD[B_Ib,Com,2]
+                                5500                             
+   754 Aux_CD[B_Ib,Tab,1]
+                                   0                             
+   755 Aux_CD[B_Ib,Tab,2]
+                                7100                             
+   756 Aux_CD[B_Ib,Cap,1]
+                                   0                             
+   757 Aux_CD[B_Ib,Cap,2]
+                                7400                             
+   758 Costo_T_MP         1.0015e+08                             
+   759 Costo_T_Ad_LAB
+                           3.873e+08                             
+   760 Costo_T_Prod_LAB
+                          4.0886e+07                             
+   761 Costo_T_Aper_CD
+                          4.3822e+08                             
+   762 Costo_T_No_Aper_CD
+                          3.2146e+07                             
+   763 Costo_T_Emp_CD
+                         1.09905e+07                             
+   764 Costo_T_Transporte
+                         9.05328e+08             0               
+   765 Costo_T_Viaje
+                                   0             0               
+   766 CT1               2.88082e+08                             
+   767 CT2               3.50022e+08                             
+   768 CT3               2.67225e+08                             
+   769 CV1               1.36819e+06                             
+   770 CV2                    904538                             
+   771 CV3               8.71777e+06                             
+   772 NV1[P_Car,Eu]
+                    *              1             0               
+   773 NV1[P_Car,Laf]
+                    *              0             0               
+   774 NV1[P_Car,Aox]
+                    *              0             0               
+   775 NV1[P_Car,L_Del]
+                    *              0             0               
+   776 NV1[P_Buen,Eu]
+                    *              0             0               
+   777 NV1[P_Buen,Laf]
+                    *              0             0               
+   778 NV1[P_Buen,Aox]
+                    *              0             0               
+   779 NV1[P_Buen,L_Del]
+                    *              0             0               
+   780 NV1[A_Dor,Eu]
+                    *              0             0               
+   781 NV1[A_Dor,Laf]
+                    *              5             0               
+   782 NV1[A_Dor,Aox]
+                    *              0             0               
+   783 NV1[A_Dor,L_Del]
+                    *              0             0               
+   784 NV1[Ecar,Eu] *             14             0               
+   785 NV1[Ecar,Laf]
+                    *              0             0               
+   786 NV1[Ecar,Aox]
+                    *              4             0               
+   787 NV1[Ecar,L_Del]
+                    *              0             0               
+   788 NV1[Qui_Va,Eu]
+                    *              1             0               
+   789 NV1[Qui_Va,Laf]
+                    *             79             0               
+   790 NV1[Qui_Va,Aox]
+                    *              1             0               
+   791 NV1[Qui_Va,L_Del]
+                    *              0             0               
+   792 NV1[Discol_T,Eu]
+                    *              0             0               
+   793 NV1[Discol_T,Laf]
+                    *              0             0               
+   794 NV1[Discol_T,Aox]
+                    *             13             0               
+   795 NV1[Discol_T,L_Del]
+                    *              0             0               
+   796 NV2[Eu,B_Sib]
+                    *              0             0               
+   797 NV2[Eu,B_Man]
+                    *              0             0               
+   798 NV2[Eu,B_Buc]
+                    *              0             0               
+   799 NV2[Eu,B_Pop]
+                    *              0             0               
+   800 NV2[Eu,B_Ib] *             14             0               
+   801 NV2[Laf,B_Sib]
+                    *              0             0               
+   802 NV2[Laf,B_Man]
+                    *              0             0               
+   803 NV2[Laf,B_Buc]
+                    *              0             0               
+   804 NV2[Laf,B_Pop]
+                    *             11             0               
+   805 NV2[Laf,B_Ib]
+                    *              8             0               
+   806 NV2[Aox,B_Sib]
+                    *              0             0               
+   807 NV2[Aox,B_Man]
+                    *              0             0               
+   808 NV2[Aox,B_Buc]
+                    *             16             0               
+   809 NV2[Aox,B_Pop]
+                    *              0             0               
+   810 NV2[Aox,B_Ib]
+                    *              0             0               
+   811 NV2[L_Del,B_Sib]
+                    *              0             0               
+   812 NV2[L_Del,B_Man]
+                    *              0             0               
+   813 NV2[L_Del,B_Buc]
+                    *              0             0               
+   814 NV2[L_Del,B_Pop]
+                    *              0             0               
+   815 NV2[L_Del,B_Ib]
+                    *              0             0               
+   816 NV3[B_Sib,Caf_Cu]
+                    *              0             0               
+   817 NV3[B_Sib,CV_Dui]
+                    *              0             0               
+   818 NV3[B_Sib,Caf_Env]
+                    *              0             0               
+   819 NV3[B_Sib,San_Med]
+                    *              0             0               
+   820 NV3[B_Sib,Med_Nei]
+                    *              0             0               
+   821 NV3[B_Sib,Audi_Bog]
+                    *              0             0               
+   822 NV3[B_Sib,Hos_Nar]
+                    *              0             0               
+   823 NV3[B_Sib,Cli_Med]
+                    *              0             0               
+   824 NV3[B_Man,Caf_Cu]
+                    *              0             0               
+   825 NV3[B_Man,CV_Dui]
+                    *              0             0               
+   826 NV3[B_Man,Caf_Env]
+                    *              0             0               
+   827 NV3[B_Man,San_Med]
+                    *              0             0               
+   828 NV3[B_Man,Med_Nei]
+                    *              0             0               
+   829 NV3[B_Man,Audi_Bog]
+                    *              0             0               
+   830 NV3[B_Man,Hos_Nar]
+                    *              0             0               
+   831 NV3[B_Man,Cli_Med]
+                    *              0             0               
+   832 NV3[B_Buc,Caf_Cu]
+                    *              6             0               
+   833 NV3[B_Buc,CV_Dui]
+                    *              5             0               
+   834 NV3[B_Buc,Caf_Env]
+                    *              0             0               
+   835 NV3[B_Buc,San_Med]
+                    *              6             0               
+   836 NV3[B_Buc,Med_Nei]
+                    *              0             0               
+   837 NV3[B_Buc,Audi_Bog]
+                    *              0             0               
+   838 NV3[B_Buc,Hos_Nar]
+                    *              0             0               
+   839 NV3[B_Buc,Cli_Med]
+                    *              0             0               
+   840 NV3[B_Pop,Caf_Cu]
+                    *              0             0               
+   841 NV3[B_Pop,CV_Dui]
+                    *              0             0               
+   842 NV3[B_Pop,Caf_Env]
+                    *              0             0               
+   843 NV3[B_Pop,San_Med]
+                    *              5             0               
+   844 NV3[B_Pop,Med_Nei]
+                    *              6             0               
+   845 NV3[B_Pop,Audi_Bog]
+                    *              0             0               
+   846 NV3[B_Pop,Hos_Nar]
+                    *              6             0               
+   847 NV3[B_Pop,Cli_Med]
+                    *              0             0               
+   848 NV3[B_Ib,Caf_Cu]
+                    *              0             0               
+   849 NV3[B_Ib,CV_Dui]
+                    *              0             0               
+   850 NV3[B_Ib,Caf_Env]
+                    *              6             0               
+   851 NV3[B_Ib,San_Med]
+                    *              5             0               
+   852 NV3[B_Ib,Med_Nei]
+                    *              0             0               
+   853 NV3[B_Ib,Audi_Bog]
+                    *              6             0               
+   854 NV3[B_Ib,Hos_Nar]
+                    *              0             0               
+   855 NV3[B_Ib,Cli_Med]
+                    *          37578             0               
+
+Integer feasibility conditions:
+
+KKT.PE: max.abs.err = 1.42e-14 on row 30
+        max.rel.err = 8.94e-17 on row 30
+        High quality
+
+KKT.PB: max.abs.err = 1.38e-03 on row 699
+        max.rel.err = 1.38e-03 on row 699
+        SOLUTION IS INFEASIBLE
+
+End of output

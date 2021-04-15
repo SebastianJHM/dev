@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Document</title>
+    </head>
+
+    <body>
+        <!-- Display BLOCK usará el 100% del ancho de la pantalla por cada elemento-->
+        <h2>block</h2>
+        <div class="container" id="block">
+            <div class="box" id="one">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus odio
+                maxime eius placeat, asperiores totam nemo praesentium eum et cupiditate
+                unde reprehenderit provident incidunt illo expedita magnam officia
+                mollitia ipsa.
+            </div>
+            <div class="box" id="two">2</div>
+            <div class="box" id="three">3</div>
+            <div class="box" id="four">4</div>
+        </div>
+
+        <!-- Display INLINE ajustará el texto al espacio necesario y si queda espacio en ese renglón colocará la siguiente
+         etiqueta en ese espacio. No se puede cambiar ni el margin ni el paddin de arriba ni abajo de los elementos. Tampo
+         se puede cambiar el width ni el height. La clase box tiene una altura determinada pero INLINE no lo acepta -->
+        <h2>inline</h2>
+        <div class="container" id="inline">
+            <div class="box" id="one">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea nobis
+                architecto neque incidunt qui, adipisci molestiae sunt illo, accusantium
+                fuga saepe dolorem officia nostrum doloribus praesentium aut? Fugiat,
+                neque sequi.
+            </div>
+            <div class="box" id="two">2</div>
+            <div class="box" id="three">3</div>
+            <div class="box" id="four">4</div>
+        </div>
+
+        <!-- Display Inline Block es una fusión  de INLINE Y BLOCK. Se pude editar el top y el bottom de los padding 
+         y de los margin. Es lo mejor de ambos mundos-->
+        <h2>inline-block</h2>
+        <div class="container" id="inline-block">
+            <div class="box" id="one">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique odit
+                modi ipsa placeat rerum voluptas earum nisi maiores dicta quae
+                voluptatibus expedita exercitationem ullam dolores deleniti unde ea, eos
+                veniam.
+            </div>
+            <div class="box" id="two">2</div>
+            <div class="box" id="three">3</div>
+            <div class="box" id="four">4</div>
+        </div>
+    </body>
+</html>
