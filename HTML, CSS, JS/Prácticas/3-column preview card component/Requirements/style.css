@@ -1,0 +1,226 @@
+/* ============== Inicialización CSS ================ */
+/* [box-sizing: border-box] -> widht = padding + border*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* x rem = 10x px*/
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+}
+/* ================================================== */
+:root {
+    --sedans-color: hsl(31, 77%, 52%);
+    --suvs-color: hsl(184, 100%, 22%);
+    --luxury-color: hsl(179, 100%, 13%);
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.not-title {
+    display: none;
+}
+
+.container {
+    padding: 4rem;
+}
+
+.sedans {
+    background-color: var(--sedans-color);
+}
+
+.suvs {
+    background-color: var(--suvs-color);
+}
+
+.luxury {
+    background-color: var(--luxury-color);
+}
+
+.paragraph {
+    font-family: 'Lexend Deca', sans-serif;
+    color: hsl(0, 0%, 95%);
+    font-size: 1.5rem;
+}
+
+.title {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: hsla(0, 0%, 100%, 0.75);
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+button {
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s; /*hover*/
+    outline: none;
+}
+
+button:hover {
+    border: solid hsla(0, 0%, 100%, 0.75);;
+}
+
+.button {
+    border-radius: 3rem;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.5rem;
+    margin-top: 4rem;
+}
+
+.b-sedans {
+    border: solid var(--sedans-color);
+    color: var(--sedans-color);
+}
+
+.b-sedans:hover {
+    background-color: var(--sedans-color);
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+.b-suvs {
+    border: solid var(--suvs-color);
+    color: var(--suvs-color);
+}
+
+.b-suvs:hover {
+    background-color: var(--suvs-color);
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+.b-luxury {
+    border: solid var(--luxury-color);
+    color: var(--luxury-color);
+}
+
+.b-luxury:hover {
+    background-color: var(--luxury-color);
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+
+@media (min-width: 900px){
+    .main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    .cars {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+    }
+
+    .sedans {
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+    }
+    
+    .luxury {
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+    .paragraph {
+        height: 30%;
+    }
+}
+@media (min-width: 720px) and (max-width: 899px){
+    .main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    .cars {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+    }
+
+    .sedans {
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+    }
+    
+    .luxury {
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+    .paragraph {
+        height: 35%;
+    }
+}
+@media (min-width: 650px) and (max-width: 719px){
+    .main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    .cars {
+        display: flex;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sedans {
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+    }
+    
+    .luxury {
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+    .paragraph {
+        height: 40%;
+    }
+}
+
+@media (max-width: 649px){
+    .main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    .cars {
+        margin-top: 7rem;
+        margin-bottom: 7rem;
+        display: flex;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+    }
+    .sedans {
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+    }
+    
+    .luxury {
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+}

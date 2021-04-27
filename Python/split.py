@@ -1,6 +1,6 @@
 import sys
 from dijkstra import Graph
-import Matrices as m
+import SPLIT.Matrices as m
 
 def calcularDistancia(ruta, Distancias):
     d = 0

@@ -58,7 +58,7 @@ stretch: Las líneas se estiran para ajustarse al contenedor. */
     flex-direction: row;
     flex-wrap: wrap;
     /* justify-content: flex-start; */
-    /* justify-content: space-evenly; */
+    justify-content: space-evenly;
 }
 
 .box {
@@ -173,7 +173,6 @@ stretch: Las líneas se estiran para ajustarse al contenedor. */
     border: 0.3rem solid black;
     display: flex;
     flex-wrap: wrap;
-
     width: 90%;
 }
 .d {

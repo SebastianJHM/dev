@@ -30,9 +30,16 @@
             ./assets/sacred-cow-128.webp 2x" alt="la vaca">
         </figure>
         
+        <!-- Esta tecnología es la mas modena. Aunque es experimental la soportan todos los navegadores -->
+        <!-- La imagen de [sacres-cow] la he descargado de flaticon.com en los diferentes formatos -->
+        <!-- Para imágenes que no son iconos en [https://www.iloveimg.com/es] reducimos los tgamños de la imagen -->
         <picture>
-            <source srcset="./assets/sacred-cow-128.webp" media="(max-width:700px)">
-            <img src="./assets/sacred-cow-512.webp" alt="">
+            <!-- Las etiquetas source eswpecifican la imagen que se mostrará según sea el ancho que corresponda -->
+            <source srcset="./assets/sacred-cow-24.webp" media="screen and (max-width:400px)">
+            <source srcset="./assets/sacred-cow-128.webp" media="screen and (min-width: 401px) and (max-width: 700px)">
+            <source srcset="./assets/sacred-cow-512.webp" media="screen and (min-width: 701px)">
+            <!-- Esta es la imagen que se usa por defecto -->
+            <img src="./assets/sacred-cow-24.png" alt="">
         </picture>
     </body>
 </html>
