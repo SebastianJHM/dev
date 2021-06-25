@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
+    <title>Rock - Papper - Scissor</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="title-game">Rock - Papper - Scissor</h1>
+    </header>
+    <main>
+        <section>
+            <div class="user-tag-container">
+                <span class="user-tag-text">USER</span>
+            </div>
+            <div class="cpu-tag-container">
+                <span class="cpu-tag-text">CPU</span>
+            </div>
+            <div class="game-container">
+                <div class="user-result">
+                    <span class="user-result-text" id="user-result-text">0</span>
+                </div>
+                <div class="two-points">
+                    <span class="two-points-text">:</span>
+                </div>
+                <div class="machine-result">
+                    <span class="machine-result-text" id="machine-result-text">0</span>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="options-container">
+            <button class="option-button" id="paper-option"><img src="./assets/paper.png" alt="paper"></button>
+            <button class="option-button" id="rock-option"><img src="./assets/rock.png" alt="paper"></button>
+            <button class="option-button" id="scissor-option"><img src="./assets/scissors.png" alt="paper"></button>
+        </section>
+
+        <button class="reset-button" id="reset-button">RESET GAME</button>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="container-card-modal" id="container-card-modal">
+            <!-- 
+              <div class="card-modal">
+                <h2 class="title-modal draw">It's draw</h2>
+                <p class="selection-user">You choose ${user_choice}</p>
+                <p class="selection-cpu">The cpu choose ${cpu_choice}</p>
+                <button class="button-modal" id="button-modal" onclick="modal.style.display='none'">CLOSE</button>
+              </div>
+             -->
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

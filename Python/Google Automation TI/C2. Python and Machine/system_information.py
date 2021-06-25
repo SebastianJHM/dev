@@ -2,7 +2,6 @@ import sys
 import shutil
 import psutil
 
-
 def check_disk_usage(disk):
     du = shutil.disk_usage(disk)
     free = (du.free / du.total) * 100
@@ -25,9 +24,8 @@ def principal( argv ):
         print("ERROR!")
     else:
         print("EVERYTHING IS OK!")
-#fed
 
 
 if __name__ == "__main__":
     principal( sys.argv )
-#fi
+    print(sys.argv)

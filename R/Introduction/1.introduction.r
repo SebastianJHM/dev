@@ -4,7 +4,7 @@ y <- 3
 print(x+y)
 
 ## Cargar dataset
-mtcars <- read.table("C:/Users/USUARIO/Desktop/Programas/R/Curso/mtcars.csv", header = TRUE,  sep = ",")
+mtcars <- read.table("C:/Users/USUARIO/Desktop/dev/R/Introduction/mtcars.csv", header = TRUE,  sep = ",")
 mtcars
 
 ## Estructura del dataset

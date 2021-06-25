@@ -1,0 +1,239 @@
+/* ============== Inicialización CSS ================ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Londrina Solid', cursive;
+    color: rgb(255, 244, 197);
+}
+:root {
+    --primary-color: rgb(10,25,25);
+    --secondary-color: rgb(23,42,42);
+    --third-color: rgb(30,77,83);
+}
+/* ================================================== */
+h1 {
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 300;
+}
+h2{
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+h3 {
+    margin-top: 1.2rem;
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+header {
+    background-color: var(--primary-color);
+}
+
+main {
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    min-height: 91vh;
+    
+}
+
+header {
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-container {
+    background-color: var(--primary-color);
+    height: 27rem;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1rem;
+}
+
+.choose-container {
+    margin-top: 3rem;
+    background-color: var(--secondary-color);
+    width: 60%;
+    border-radius: 1rem;
+}
+
+.user-game-container {
+    background-color: var(--secondary-color);
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+}
+
+.machine-game-container{
+    background-color: var(--secondary-color);
+    width: 45%;
+    border-radius: 1rem;
+}
+
+.options-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.4rem 3rem;
+    padding-top: 1rem;
+}
+
+.choose-title-container {
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    border-radius: 1rem;
+}
+
+.option-choose {
+    background-color: var(--third-color);
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 14rem;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.option-choose:hover {
+    box-shadow: 0 0 0 10px rgba(30, 77, 83, 0.5);
+    background-color:  rgb(43, 101, 110);
+}
+
+.option-choose:focus {
+    box-shadow: 0 0 0 10px rgba(30, 77, 83, 0.5);
+    background-color:  rgb(43, 101, 110);
+}
+
+
+
+svg.i-rock {
+    fill: rgb(255, 145, 145);
+}
+
+svg.i-papper {
+    fill: rgb(153, 255, 128);
+}
+
+svg.i-scissor {
+    fill: rgb(253, 255, 145);
+}
+
+.container-icon {
+    background-color: inherit;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 1rem;
+    margin-top: -0.2rem;
+}
+
+.container-icon.c-rock.sup, 
+.container-icon.c-papper.sup, 
+.container-icon.c-scissor.sup {
+    display: none;
+}
+
+.container-icon-M.c-rock.supM, 
+.container-icon-M.c-papper.supM, 
+.container-icon-M.c-scissor.supM {
+    display: none;
+}
+
+.container-icon.c-rock,
+.container-icon-M.c-rock {
+    padding-top: 1.2rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.container-icon.c-papper,
+.container-icon-M.c-papper {
+    padding: 1.3rem 1.2rem;
+}
+
+.container-icon.c-scissor,
+.container-icon-M.c-scissor {
+    padding: 1.4rem 1.2rem;
+}
+
+.title-ug-container {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.user-game-selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    background-color: var(--secondary-color);
+    border-radius: 1rem;
+    margin-top: -1rem;
+}
+
+.title-mg-container {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.machine-game-selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    background-color: var(--secondary-color);
+    border-radius: 1rem;
+    margin-top: -1.5rem;
+}
+
+.container-icon.sup,
+.container-icon-M.supM {
+    background-color: rgb(30,77,83);
+    height: 15rem;
+    width: 15rem;
+    border-radius: 1rem;
+}
+
+.vs-container {
+    background-color: rgb(38, 38, 255);
+    height: 6rem;
+    width:6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3rem;
+    margin-top: 11rem;
+}
+
+.vs-text {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: rgb(255, 255, 0);
+}
+
+
+#question {
+    fill: rgb(237, 255, 79);
+    height: 13rem;
+}

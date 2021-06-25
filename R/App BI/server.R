@@ -4,14 +4,14 @@ server <- function(input, output,session) {
   
 
 ##Descargar informacion
-  output$downloadData <- downloadHandler(
-    filename = function() {
-      paste("BASE",".xlsx")
-    },
-    content = function(file) {
-      write_xlsx(BASE, file, col_names = TRUE)
-    }
-  )
+output$downloadData <- downloadHandler(
+  filename = function() {
+    paste("BASE",".xlsx")
+  },
+  content = function(file) {
+    write_xlsx(BASE, file, col_names = TRUE)
+  }
+)
  
   
   

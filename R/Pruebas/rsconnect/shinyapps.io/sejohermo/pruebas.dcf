@@ -1,0 +1,11 @@
+name: pruebas
+title:
+username:
+account: sejohermo
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4220771
+bundleId: 4670875
+url: https://sejohermo.shinyapps.io/pruebas/
+when: 1622680233.84822
+lastSyncTime: 1622680233.84822

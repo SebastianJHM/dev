@@ -1,69 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Styles</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="index" id="indice">
-        <ul class="unorderedlist">
-            <li class="ulelement" id="first">
-                <a href="#indice">The hero editor</a>
-            </li>
-            <li class="ulelement">
-                <a href="#indice">Create the hero component</a>
-            </li>
-            <li class="ulelement" id="ins">
-                <a href="#indice">Add the hero property</a>
-            </li>
-            <li class="ulelement" id="ins">
-                <a href="#indice">Show the hero</a>
-            </li>
-            <li class="ulelement">
-                <a href="#indice">Show the <code>HeroesComponent</code> view</a>
-            </li>
-        </ul>
-    </div>
-    <br>
-    <br>
-    <br>
-    <div class="menu">
-        <h3 class="title"><strong>LISTA DESORDENADA</strong></h3>
-        <ol class="orderedlist">
-            <li class="olelement">Ferrari</li>
-            <li class="olelement">Lamborghini</li>
-            <li class="olelement">Masserati</li>
-        </ol>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Styles</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="index" id="indice">
+            <ul class="unorderedlist">
+                <li class="ulelement" id="first">
+                    <a href="#indice">The hero editor</a>
+                </li>
+                <li class="ulelement">
+                    <a href="#indice">Create the hero component</a>
+                </li>
+                <li class="ulelement" id="ins">
+                    <a href="#indice">Add the hero property</a>
+                </li>
+                <li class="ulelement" id="ins">
+                    <a href="#indice">Show the hero</a>
+                </li>
+                <li class="ulelement">
+                    <a href="#indice">Show the <code>HeroesComponent</code> view</a>
+                </li>
+            </ul>
+        </div>
         <br>
-    </div>
-    <script>
-        var i;
-        elementslist = document.getElementsByClassName("ulelement");
-        for( i=0; i < elementslist.length; i++ ) {
-            elementslist[i].addEventListener('click', seleccionar);
-        }
-        function seleccionar(evento){
-            for( e of elementslist ){
-                e.className = "ulelement"
-                // Para cada elemento, inivialixar la clase de los enlaces con "" para después podelas cambiar
-                e.getElementsByTagName("a")[0].className = "";
+        <br>
+        <br>
+        <div class="menu">
+            <h3 class="title"><strong>LISTA DESORDENADA</strong></h3>
+            <ol class="orderedlist">
+                <li class="olelement">Ferrari</li>
+                <li class="olelement">Lamborghini</li>
+                <li class="olelement">Masserati</li>
+            </ol>
+            <br>
+        </div>
+        <script>
+            var i;
+            elementslist = document.getElementsByClassName("ulelement");
+            for( i=0; i < elementslist.length; i++ ) {
+                elementslist[i].addEventListener('click', seleccionar);
             }
-            // Agregarle Formato tanto a la etiqueta de lista para darle estilo el punto y al enlace para darle color al texto
-            // Este for se hace para evitar problemas con la etiqueta code
-            for( var j=0; j < evento.path.length; j++ ){
-                if ( evento.path[j].localName === "li" ){
-                    evento.path[j].className += " act";
+            function seleccionar(evento){
+                for( e of elementslist ){
+                    e.className = "ulelement"
+                    // Para cada elemento, inivialixar la clase de los enlaces con "" para después podelas cambiar
+                    e.getElementsByTagName("a")[0].className = "";
                 }
-                if ( evento.path[j].localName === "a" ){
-                    evento.path[j].className += "act";
+                // Agregarle Formato tanto a la etiqueta de lista para darle estilo el punto y al enlace para darle color al texto
+                // Este for se hace para evitar problemas con la etiqueta code
+                for( var j=0; j < evento.path.length; j++ ){
+                    if ( evento.path[j].localName === "li" ){
+                        evento.path[j].className += " act";
+                    }
+                    if ( evento.path[j].localName === "a" ){
+                        evento.path[j].className += "act";
+                    }
                 }
+                console.log(evento)
             }
-            console.log(evento)
-        }
-        
-    </script>
-</body>
+            
+        </script>
+    </body>
 </html>
