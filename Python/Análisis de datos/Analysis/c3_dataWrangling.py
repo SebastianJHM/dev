@@ -82,13 +82,13 @@ def principal(argv):
                 if ( str(df["make"][j]) == marca and str(df["price"][j]) != 'nan' ):
                     acum = acum + df["price"][j]
                     cont = cont + 1
-                #fi
-            #rof
+                
+            
             
             mean  = acum / cont
             df.loc[i, "price"] = mean
-        #fi
-    #rof
+        
+    
     
     
     
@@ -121,4 +121,3 @@ def principal(argv):
 
 if __name__ == "__main__":
     principal(sys.argv)
-#fi

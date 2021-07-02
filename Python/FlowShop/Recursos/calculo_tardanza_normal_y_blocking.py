@@ -13,7 +13,7 @@ def calcular_tardanza( secuencia, TP, due_date ):
     for x in secuencia:
         TP_sec.append(TP[x-1])
         due_date_sec.append(due_date[x-1])
-    #rof
+    
     print(due_date_sec)
     ## Calcular matriz mat_t_final: 3 pasos
 
@@ -22,25 +22,25 @@ def calcular_tardanza( secuencia, TP, due_date ):
         acum = 0
         for l in range(0,j+1):
             acum += TP_sec[0][l]
-        #rof
+        
         mat_t_final[0][j] = acum
-    #rof
+    
     
     ## Paso2: LLenar los tiempos de todos lo trabajos en la máquina 1
     for i in range(1,num_trabajos):
         acum = 0
         for l in range(i+1):
             acum += TP_sec[l][0]
-        #rof
+        
         mat_t_final[i][0] = acum
-    #rof
+    
     
     ## Pasao 3: Llenar el resto de la matriz
     for i in range(1,num_trabajos):
         for j in range(1,num_maquinas):
             mat_t_final[i][j] = max(mat_t_final[i-1][j],mat_t_final[i][j-1]) + TP_sec[i][j]
-        #rof
-    #rof
+        
+    
 
     #print(numpy.array(mat_t_final))
     ## Matriz de tiempos finales
@@ -49,12 +49,12 @@ def calcular_tardanza( secuencia, TP, due_date ):
         for j in range(num_maquinas):
             mat_t[i][j][0] = mat_t_final[i][j] - TP_sec[i][j]
             mat_t[i][j][1] = mat_t_final[i][j]
-        #rof
-    #rof
+        
+    
     
     for x in mat_t:
         print(x)
-    #rof
+    
 
     t_final_trabajos = []
     tardanza_trabajos = []
@@ -65,8 +65,8 @@ def calcular_tardanza( secuencia, TP, due_date ):
             tardanza_trabajos.append(y)
         else:
             tardanza_trabajos.append(0)
-        #fi
-    #rof
+        
+    
     print(t_final_trabajos)
     print(tardanza_trabajos, sum(tardanza_trabajos))
     return(sum(tardanza_trabajos))
@@ -85,17 +85,17 @@ def calcular_tardanza_blocking( secuencia, TP, due_date ):
     for x in secuencia:
         TP_sec.append(TP[x-1])
         due_date_sec.append(due_date[x-1])
-    #rof
+    
     print(due_date_sec)
     ## Calcular matriz mat_t_final: máquina 1
     for j in range(num_maquinas):
         acum = 0
         for l in range(0,j+1):
             acum += TP_sec[0][l]
-        #rof
+        
         mat_t_inicial[0][j] = acum - TP_sec[0][j]
         mat_t_final[0][j] = acum
-    #rof
+    
 
     ## Calcular matriz mat_t_final: para el resto de máquinas
     for t in range(1,num_trabajos):
@@ -103,10 +103,10 @@ def calcular_tardanza_blocking( secuencia, TP, due_date ):
             acum = mat_t_final[t-1][-1]
             for l in range(0,j+1):
                 acum += TP_sec[t][l]
-            #rof
+            
             mat_t_inicial[t][j] = acum - TP_sec[t][j]
             mat_t_final[t][j] = acum
-        #rof
+        
         
         diferencias = []
         minimo = 1000000000000
@@ -116,14 +116,14 @@ def calcular_tardanza_blocking( secuencia, TP, due_date ):
             if ( x < minimo ):
                 minimo = x
                 pos_menor = i
-            #fi
-        #rof
+            
+        
 
         for i in range(num_maquinas):
             mat_t_inicial[t][i] -= diferencias[pos_menor]
             mat_t_final[t][i] -= diferencias[pos_menor]
-        #rof
-    #rof
+        
+    
     
     ## Matriz de tiempos finales
     mat_t = [[[0,0] for _ in range(num_maquinas)] for _ in range(num_trabajos)]
@@ -131,12 +131,12 @@ def calcular_tardanza_blocking( secuencia, TP, due_date ):
         for j in range(num_maquinas):
             mat_t[i][j][0] = mat_t_inicial[i][j]
             mat_t[i][j][1] = mat_t_final[i][j]
-        #rof
-    #rof
+        
+    
     
     for x in mat_t:
         print(x)
-    #rof
+    
 
     t_final_trabajos = []
     tardanza_trabajos = []
@@ -147,8 +147,8 @@ def calcular_tardanza_blocking( secuencia, TP, due_date ):
             tardanza_trabajos.append(y)
         else:
             tardanza_trabajos.append(0)
-        #fi
-    #rof
+        
+    
     print(t_final_trabajos)
     print(tardanza_trabajos, sum(tardanza_trabajos))
     return(sum(tardanza_trabajos))
@@ -195,4 +195,3 @@ def principal( argv ):
 
 if __name__ == "__main__":
     principal( sys.argv )
-#fi

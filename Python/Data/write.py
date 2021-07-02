@@ -39,7 +39,7 @@ def principal( argv ):
     with open("write.txt","w") as f:
         for line in Lines:
             f.write(line)
-        #rof
+        
     #htiw
 
     
@@ -62,7 +62,7 @@ def principal( argv ):
     with open("write.txt","a") as f:
         for line in Lines:
             f.write(line)
-        #rof
+        
     #htiw
 
     filepath = 'write.txt'
@@ -86,7 +86,7 @@ def principal( argv ):
     ## This method remove a file of he folder
     if os.path.exists("write2.txt"):
         os.remove("write2.txt")
-    #fi
+    
     
     ## Create new file
     ## The method "a" edit a file if the file exist, an create a new file else
@@ -94,7 +94,7 @@ def principal( argv ):
     with open("write2.txt","a") as f:
         for line in Lines:
             f.write(line)
-        #rof
+        
     #htiw
 
     filepath = 'write2.txt'
@@ -119,7 +119,7 @@ def principal( argv ):
         with open("write3.txt","x") as f:
             for line in Lines:
                 f.write(line)
-            #rof
+            
         #htiw
 
         filepath = 'write3.txt'
@@ -132,7 +132,7 @@ def principal( argv ):
                 cnt += 1
             #elihw
         #htiw
-    #fi
+    
 #fed
 
 
@@ -143,4 +143,3 @@ def principal( argv ):
 
 if __name__ == "__main__":
     principal( sys.argv )
-#fi

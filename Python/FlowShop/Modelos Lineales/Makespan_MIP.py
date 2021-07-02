@@ -83,9 +83,9 @@ def print_results_console( instance ):
         for j in instance.J:
             if ( instance.x[j,p] == 1 ):
                 secuencia.append(j)
-            #fi
-        #rof
-    #rof
+            
+        
+    
     print("Secuencia: ",secuencia)
     
     print("--------------------------")
@@ -96,14 +96,14 @@ def print_results_console( instance ):
         for j in instance.J:
             if ( instance.x[j,p] == 1 ):
                 print("Trabajo: ", j)
-            #fi
-        #rof
+            
+        
         
         for m in instance.M:
             print("Tiempo de inicio: ", round(pyo.value(instance.T_Inicio[p,m])), "--> Tiempo_Final: ", round(pyo.value(instance.T_Final[p,m])))
-        #rof
         
-    #rof
+        
+    
 #fed
 
 def principal( argv ):
@@ -142,4 +142,3 @@ def principal( argv ):
 
 if __name__ == "__main__":
     principal(sys.argv)
-#fi

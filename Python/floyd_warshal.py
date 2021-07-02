@@ -13,10 +13,10 @@ def floyd_warshall(GRAPH):
                 r.append(d[j+1])
             else:
                 r.append("-")
-            #fi
-        #rof
+            
+        
         REC.append(r)
-    #rof
+    
     
     
     for k in range(n):
@@ -26,14 +26,14 @@ def floyd_warshall(GRAPH):
                     if(GRAPH[i][j] > GRAPH[k][j] + GRAPH[i][k]):
                         GRAPH[i][j] = GRAPH[k][j] + GRAPH[i][k]
                         REC[i][j] = d[k+1]
-                    #fi
-                #fi
-            #rof
-        #rof
+                    
+                
+            
+        
         print("------ NODO ", d[k+1], "--------" )
         print(numpy.array(GRAPH))
         print(numpy.array(REC))
-    #rof
+    
     print(numpy.array(GRAPH))
     print(numpy.array(REC))
 #fed

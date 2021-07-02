@@ -12,7 +12,7 @@ def calcular_makespan( secuencia, TP ):
     TP_sec = []
     for x in secuencia:
         TP_sec.append(TP[x-1])
-    #rof
+    
     
     ## Calcular matriz mat_t_final: 3 pasos
 
@@ -21,25 +21,25 @@ def calcular_makespan( secuencia, TP ):
         acum = 0
         for l in range(0,j+1):
             acum += TP_sec[0][l]
-        #rof
+        
         mat_t_final[0][j] = acum
-    #rof
+    
     
     ## Paso2: LLenar los tiempos de todos lo trabajos en la máquina 1
     for i in range(1,num_trabajos):
         acum = 0
         for l in range(i+1):
             acum += TP_sec[l][0]
-        #rof
+        
         mat_t_final[i][0] = acum
-    #rof
+    
     
     ## Pasao 3: Llenar el resto de la matriz
     for i in range(1,num_trabajos):
         for j in range(1,num_maquinas):
             mat_t_final[i][j] = max(mat_t_final[i-1][j],mat_t_final[i][j-1]) + TP_sec[i][j]
-        #rof
-    #rof
+        
+    
 
     # print(numpy.array(mat_t_final))
 
@@ -65,8 +65,8 @@ def johnson( TP ):
         else:
             trabajos_2.append(trabajo)
             sec_2.append( TP.index(trabajo) + 1 )
-        #fi
-    #fi
+        
+    
     # print("Conjunto 1:", trabajos_1, sec_1)
     # print("Conjunto 2:", trabajos_2, sec_2)
     # print("---------------------------------------")
@@ -82,9 +82,9 @@ def johnson( TP ):
                 s = sec_1[i]
                 sec_1[i] = sec_1[j]
                 sec_1[j] = s
-            #fi
-        #rof
-    #rof
+            
+        
+    
     # print("Conjunto ordenado 1: ",trabajos_1, sec_1)
 
     ## Algoritmo de ordenamiento Conjunto 2 ( mayor a menor en máquina 2)
@@ -98,9 +98,9 @@ def johnson( TP ):
                 s = sec_2[i]
                 sec_2[i] = sec_2[j]
                 sec_2[j] = s
-            #fi
-        #rof
-    #rof
+            
+        
+    
     # print("Conjunto ordenado 2: ",trabajos_2, sec_2)
     secuencia = sec_1 + sec_2
     return( secuencia )
@@ -121,19 +121,19 @@ def cds_sets( TP ):
             acum = 0
             for i in range(0,k):
                 acum += x[i]
-            #rof
+            
             aux.append(acum)
 
             ## Segunda suma
             acum = 0
             for i in range(num_maquinas-k,num_maquinas):
                 acum += x[i]
-            #rof
+            
             aux.append(acum)
             conjunto.append(aux)
         #rod
         conjuntos.append(conjunto)
-    #rof
+    
     return conjuntos
 #fed
 
@@ -143,7 +143,7 @@ def cds( TP ):
     # print("----Conjuntos-------")
     # for conjunto in conjuntos:
     #     print("Conjunto", int(conjuntos.index(conjunto))+1,": ", conjunto)
-    # #rof
+    # 
     # print("-------Secuencias--------")
 
     ## Obtener secuencias
@@ -151,12 +151,12 @@ def cds( TP ):
     for conjunto in conjuntos:
         secuencia = johnson(conjunto)
         secuencias.append(secuencia)
-    #rof
+    
     print(secuencias)
     # ## Imprimir secuencias
     # for secuencia in secuencias:
     #     print("Secuencia", int(secuencias.index(secuencia))+1,": ", secuencia)
-    # #rof
+    # 
 
     ## Secuencia final
     minimo = 1000000000000
@@ -165,8 +165,8 @@ def cds( TP ):
         if ( makespan < minimo ):
             minimo = makespan
             pos = int(secuencias.index(secuencia))
-        #fi
-    #rof
+        
+    
 
     secuencia_cds = secuencias[pos]
     makespan_cds = minimo
@@ -200,4 +200,3 @@ def principal( argv ):
 
 if __name__ == "__main__":
     principal( sys.argv )
-#fi

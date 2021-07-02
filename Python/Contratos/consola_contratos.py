@@ -29,7 +29,7 @@ def ejecutar_cargar_datos() -> dict:
         print("El archivo seleccionado no es valido.")
     else:
         print("Se cargo correctamente el archivo.")
-    #fi
+    
     
     return df
 

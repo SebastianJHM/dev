@@ -9,8 +9,8 @@ def johnson( data ):
             trabajos_1.append(trabajo)
         else:
             trabajos_2.append(trabajo)
-        #fi
-    #fi
+        
+    
     # print("Conjunto 1:", trabajos_1)
     # print("Conjunto 2:", trabajos_2)
     # print("---------------------------------------")
@@ -22,9 +22,9 @@ def johnson( data ):
                 aux = trabajos_1[i]
                 trabajos_1[i] = trabajos_1[j]
                 trabajos_1[j] = aux
-            #fi
-        #rof
-    #rof
+            
+        
+    
     # print("Conjunto ordenado 1: ",trabajos_1)
 
     ## Algoritmo de ordenamiento Conjunto 2 ( mayor a menor en máquina 2)
@@ -34,19 +34,19 @@ def johnson( data ):
                 aux = trabajos_2[i]
                 trabajos_2[i] = trabajos_2[j]
                 trabajos_2[j] = aux
-            #fi
-        #rof
-    #rof
+            
+        
+    
     # print("Conjunto ordenado 2: ",trabajos_2)
 
     ## Guardar secuencia final
     secuencia = []
     for x in trabajos_1:
         secuencia.append(x[0])
-    #rof
+    
     for x in trabajos_2:
         secuencia.append(x[0])
-    #rof
+    
     return(secuencia)
 #fed
 
@@ -61,7 +61,7 @@ def cds( data ):
         aux.append(x[1])
         aux.append(x[4])
         data1.append(aux)
-    #rof
+    
     print("Data 1:", data1)
 
     ## Conjunto 2
@@ -72,7 +72,7 @@ def cds( data ):
         aux.append(x[1]+x[2])
         aux.append(x[3]+x[4])
         data2.append(aux)
-    #rof
+    
     print("Data 2: ", data2)
 
     ## Conjunto 3
@@ -83,7 +83,7 @@ def cds( data ):
         aux.append(x[1]+x[2]+x[3])
         aux.append(x[2]+x[3]+x[4])
         data3.append(aux)
-    #rof
+    
     print("Data 3: ", data3)
     return(data1, data2, data3)
 #fed
@@ -106,9 +106,8 @@ def principal( argv ):
         secuencia = johnson(conjunto)
         print("Secuencia", int(conjuntos.index(conjunto))+1,": ", secuencia)
         secuencias.append(secuencia)
-    #rof
+    
 #fed
 
 if __name__ == "__main__":
     principal( sys.argv )
-#fi

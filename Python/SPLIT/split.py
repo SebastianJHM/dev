@@ -9,15 +9,15 @@ def calcularDistancia(ruta, Distancias, orden):
             t.append(orden[y])
         else:
             t.append(0)
-        #fi
-    #rof
+        
+    
 
     d = 0
     for i in range(len(t)-1):
         d += Distancias[t[i]][t[i+1]]
-    #rof
+    
     return round(d,2)
-#fed
+
 
 def obtenerPetalos(GRAFO, RUTAS, sec):
     PETALOS = []
@@ -29,12 +29,12 @@ def obtenerPetalos(GRAFO, RUTAS, sec):
             if( g[0] == x and g[1] == y ):
                 pos = GRAFO.index(g)
                 FO.append(g[2])
-            #fi
-        #rof
+            
+        
         PETALOS.append(RUTAS[pos])
-    #rof
+    
     return(PETALOS, FO)
-#fed
+
 
 def SPLIT(Distancias, Demandas, permutacion, capacidad, orden):
     
@@ -49,7 +49,7 @@ def SPLIT(Distancias, Demandas, permutacion, capacidad, orden):
             for k in range(j,i,-1):
                 r.append(permutacion[k-1])
                 acum = acum + Demandas[permutacion[k-1]]
-            #rof
+            
             r.append(0)
             r.reverse()
             if( acum <= capacidad):
@@ -57,13 +57,13 @@ def SPLIT(Distancias, Demandas, permutacion, capacidad, orden):
                 arco = (i, j, round(d,2))
                 GRAFO.append(arco)
                 RUTAS.append(r)
-            #fi
-        #rof
-    #rof
+            
+        
+    
     print("GRAFO:")
     for i in range(len(GRAFO)):
         print(GRAFO[i], ":",RUTAS[i])
-    #rof
+    
     
     sec = list(Graph(GRAFO).dijkstra(NODOS[0], NODOS[-1]))
     print("Secuencia: ", sec)
@@ -72,7 +72,7 @@ def SPLIT(Distancias, Demandas, permutacion, capacidad, orden):
     print("PETALOS PERMUTACIÓN:")
     print(PETALOS, FO, sum(FO))
     return(PETALOS, FO, sum(FO))
-#fed
+
 
 def principal(argv):
     ## Capacidad del vehículo
@@ -107,7 +107,7 @@ def principal(argv):
     # r = [0, 1, 2, 0]
     # d = calcularDistancia(r, Distancias)
     # print(d)
-#fed
+
 
 if __name__ == "__main__":
     principal(sys.argv)

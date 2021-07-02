@@ -11,10 +11,10 @@ def hanoi(origen,destino,auxiliar,n):
         hanoi(origen,auxiliar,destino,n-1)
         print("Mueva de", origen , " a " ,destino)
         hanoi(auxiliar,destino,origen,n-1)
-    #fi
+    
 
 
-#fed
+
     
             
             
@@ -25,7 +25,7 @@ def main( argv ):
     destino="C"
     auxiliar="B"
     hanoi(origen,destino,auxiliar,n)
-#fed
+
     
 if __name__ == "__main__":
     main( sys.argv )

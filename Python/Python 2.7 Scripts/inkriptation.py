@@ -13,20 +13,20 @@ def main( argv ):
     for i in range ( len(cadena) ):
         if (cadena[i]==" "):
             cadena2+=" "
-        #fi
+        
         for j in range ( len(abc) ):
             if (cadena[i]==abc[j] and j<=12):
                 x=(j)%13+13
                 cadena2+=abc[x]
-            #fi
+            
             if (cadena[i]==abc[j] and j>12):
                 x=j-13
                 cadena2+=abc[x]
-            #fi        
-        #rof
-    #rof
+                    
+        
+    
     print(cadena2)
-#fed
+
 
 
 

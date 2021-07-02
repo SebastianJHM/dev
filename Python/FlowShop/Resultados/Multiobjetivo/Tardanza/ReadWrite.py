@@ -41,9 +41,9 @@ def principal(argv):
             ## Imprimir archivo
             nombre_hoja = "Inst"+str(INSTANCIAS.index(inst)+1)+"(REP"+str(rep+1)+")"
             imprimir_XLSX(workbook, nombre_hoja, secuencia, secuencia_bl, makespan, tardanza, makespan_bl, tardanza_bl, tiempo_funcion, min_makespan)
-        #rof
+        
         workbook.close()
-    #rof
+    
 #fed
 
 def imprimir_XLSX(workbook, nombre_hoja, secuencia, secuencia_bl, makespan, tardanza, makespan_bl, tardanza_bl, tiempo_funcion, min_makespan):
@@ -67,7 +67,7 @@ def imprimir_XLSX(workbook, nombre_hoja, secuencia, secuencia_bl, makespan, tard
     for s in secuencia:
         worksheet.write(row, col, s, cell_format)
         col += 1
-    #rof
+    
     worksheet.write("B4", "Makespan", cell_format_bold)
     worksheet.merge_range("C4:D4", makespan, cell_format)
     
@@ -83,7 +83,7 @@ def imprimir_XLSX(workbook, nombre_hoja, secuencia, secuencia_bl, makespan, tard
     for s in secuencia_bl:
         worksheet.write(row, col, s, cell_format)
         col += 1
-    #rof
+    
     worksheet.write("B9", "Makespan", cell_format_bold)
     worksheet.merge_range("C9:D9", makespan_bl, cell_format)
     
@@ -102,4 +102,3 @@ if __name__ == "__main__":
     ti = time.time()
     principal(sys.argv)
     print("TIEMPO TOTAL DEL PROGRAMA: ", time.time()-ti)
-#fi

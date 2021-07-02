@@ -11,6 +11,8 @@ library(shiny)
 
 # Define UI for application that draws a histogram
 shinyUI(fluidPage(
+    h1(strong("X-Titulo"), uiOutput("text2"), align="center", style="display: flex; align-items: center;"),
+      
     textInput("txt", "Enter the text to display belów:"),
     textOutput("text"),
     verbatimTextOutput("verb"),

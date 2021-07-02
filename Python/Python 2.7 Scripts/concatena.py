@@ -9,7 +9,7 @@ def main( argv ):
         x=x+msg2[i]
 
     print x
-#fed
+
 
     
 if __name__ == "__main__":

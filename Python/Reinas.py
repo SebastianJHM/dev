@@ -9,10 +9,10 @@ def solucionValida(solucion):
             if ( solucion[i] != -1 and solucion[j] != -1 ):
                 if ( solucion[i] == solucion[j] ):
                     decisor1 = False
-                #fi
-            #fi
-        #rof
-    #rof
+                
+            
+        
+    
     
     decisor2 = True
     for i in range(0, len(solucion)):
@@ -22,19 +22,19 @@ def solucionValida(solucion):
                 y = abs( solucion[i] - solucion[j] )
                 if ( x == y ):
                     decisor2 = False
-                #fi
-            #fi
-        #rof
-    #rof
+                
+            
+        
+    
     
     if ( decisor1 == True and decisor2 == True ):
         decisorFinal = True
     else:
         decisorFinal = False
-    #fi
+    
     
     return( decisorFinal )
-#fed
+
 
 def asignarReina(solucion, etapa, n):
     print(etapa)
@@ -47,10 +47,10 @@ def asignarReina(solucion, etapa, n):
             asignarReina(solucion, etapa + 1, n)
         else:
             solucion[etapa] = solucion[etapa] + 1
-        #fi
+        
     #elihw
     return( solucion )
-#fed
+
     
 def principal(argv):
     n = 4
@@ -62,8 +62,7 @@ def principal(argv):
     solucion = [1, -1, -1, -1]
     verifica = solucionValida( solucion )
     print( verifica )
-#fed
+
     
 if __name__ == "__main__":
     principal(sys.argv)
-#fi

@@ -30,8 +30,8 @@ def ejecutar_cargar_datos() -> dict:
         print("Se cargaron los siguientes paises a partir del archivo.")
         for key in paises.keys():
             print(key)
-        #rof
-    #fi
+        
+    
     
     return paises
 

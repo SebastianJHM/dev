@@ -113,9 +113,9 @@ def print_results_console( instance ):
         for j in instance.J:
             if ( instance.x[j,p] == 1 ):
                 secuencia.append(j)
-            #fi
-        #rof
-    #rof
+            
+        
+    
     print("Secuencia: ",secuencia)
     
     print("--------------------------")
@@ -124,16 +124,16 @@ def print_results_console( instance ):
         for j in instance.J:
             if ( instance.x[j,p] == 1 ):
                 print("Trabajo: ", j)
-            #fi
-        #rof
+            
+        
         for m in instance.M:
             print("Tiempo de inicio: ", round(pyo.value(instance.T_Inicio[p,m])), "--> Tiempo_Final: ", round(pyo.value(instance.T_Final[p,m])))
-        #rof
-    #rof
+        
+    
     
     for j in instance.J:
         print("\nTrabajo ", j, ": \nTerminación: ", round(pyo.value(instance.T_Terminacion[j])), " --> Tardanza: ", round(pyo.value(instance.Tardanza[j])))
-    #rof
+    
 #fed
 
 def obtener_resultados(instance):
@@ -142,9 +142,9 @@ def obtener_resultados(instance):
         for j in instance.J:
             if ( instance.x[j,p] == 1 ):
                 secuencia.append(j)
-            #fi
-        #rof
-    #rof
+            
+        
+    
     return(secuencia, round(pyo.value(instance.Makespan)), round(pyo.value(instance.Tardanza_Total)))
 #fed
 
@@ -175,5 +175,5 @@ def modelo_makespan( TP, dd, tl ):
     #     return(secuencia, makespan, tardanza)
     # else:
     #     return([],0,0)
-    # #fi
+    # 
 #fed

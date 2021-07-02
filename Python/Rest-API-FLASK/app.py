@@ -20,7 +20,7 @@ app = Flask(__name__)
 @app.route('/ping', methods=['GET'])
 def ping():
     return jsonify({"message": "pong!"})
-#fed
+
 
 # Función de tipo get
 @app.route('/products', methods=['GET'])
@@ -29,7 +29,7 @@ def function_get():
     # return jsonify(products_list)
     # De esta forma la respuesta es una propiedad
     return jsonify({"prods": products_list, "message": "Product's List"})
-#fed
+
 
 
 # Función de tipo get para obtener solo un elemento de la lista
@@ -39,14 +39,14 @@ def function2_get(product_name):
     for p in products_list:
         if ( p["name"] == product_name ):
             product_found = p
-        #fi
-    #rof
+        
+    
 
     if (product_found == {}):
         return jsonify({"message": "product don't found"})
     else:
         return jsonify({"product": product_found})
-    #fi
+    
 
     # #Esto es una forma alternativa
     # # Esta es una forma en Python de agrgar todo lo que cumpla la condición del ciclo al vector product_found
@@ -55,8 +55,8 @@ def function2_get(product_name):
     #     return jsonify({"product": product_found[0]})
     # else:
     #     return jsonify({"message": "product don't found"})
-    # #fi
-#fed
+    # 
+
 
 
 # Ruta método POST
@@ -71,7 +71,7 @@ def addProducts():
     }
     products_list.append(new_product)
     return jsonify({"message": "Product added succesfully", "products": products_list})
-#fed
+
 
 # Ruta método PUT
 @app.route('/products/<string:product_name>', methods=['PUT'])
@@ -86,8 +86,8 @@ def editProducts(product_name):
             p["price"] = edit_product["price"]
             p["quantity"] = edit_product["quantity"]
             p["appoint"] = edit_product["appoint"]
-        #fi
-    #rof
+        
+    
 
     if (product_found == False):
         return jsonify({"message": "product don't found"})
@@ -96,15 +96,15 @@ def editProducts(product_name):
             "message": "Product updated", 
             "products": products_list
         })
-    #fi
+    
 
 
     # ---------- OTRA VERSION QUE NO ENTIENDO MUY BIEN --------------------
     # for p in products_list:
     #     if ( p["name"] == product_name ):
     #         product_found = p
-    #     #fi
-    # #rof
+    #     
+    # 
 
     # if (product_found == {}):
     #     return jsonify({"message": "product don't found"})
@@ -117,8 +117,8 @@ def editProducts(product_name):
     #         "message": "Product updated", 
     #         "products": products_list
     #     })
-    # #fi
-#fed
+    # 
+
 
 # Ruta método DELETE
 @app.route('/products/<string:product_name>', methods=['DELETE'])
@@ -129,8 +129,8 @@ def deleteProducts(product_name):
     for p in products_list:
         if ( p["name"] == product_name ):
             product_found = p
-        #fi
-    #rof
+        
+    
 
     if (product_found == {}):
         return jsonify({"message": "product don't found"})
@@ -140,10 +140,9 @@ def deleteProducts(product_name):
             "message": "Product deleted", 
             "products": products_list
         })
-    #fi
-#fed
+    
+
 
 
 if __name__ == '__main__':
     app.run(debug = False, port=4000)
-#fi

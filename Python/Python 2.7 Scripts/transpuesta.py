@@ -44,7 +44,7 @@ def main( argv ):
     ImprimirMatriz( A )
     G = transpone( A,n_rows,n_cols )
     ImprimirMatriz( G )
-#fed
+
 
 
 

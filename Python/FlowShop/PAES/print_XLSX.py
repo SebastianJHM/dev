@@ -35,7 +35,7 @@ def print_results_XLSX( workbook, nombre_hoja, arch, tiempo_ejecucion):
             worksheet.write(row, col, s, cell_format)
             worksheet.set_column(col, col, 3) ## Width: set_column(first_col, last_col, width, cell_format, options)
             col += 1
-        #rof
+        
         
         worksheet.set_column(col, col, 3)
         
@@ -59,7 +59,7 @@ def print_results_XLSX( workbook, nombre_hoja, arch, tiempo_ejecucion):
         worksheet.set_column(col, col, 6)
         
         row += 1
-    #rof
+    
         
     
     len(arch[0].secuencia)

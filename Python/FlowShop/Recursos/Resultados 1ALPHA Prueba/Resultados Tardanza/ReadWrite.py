@@ -26,7 +26,7 @@ def principal(argv):
         ## Imprimir archivo
         nombre_hoja = "Inst"+str(INSTANCIAS.index(inst)+1)
         imprimir_XLSX(workbook, nombre_hoja, secuencia, secuencia_bl, makespan, make_mat_i, make_mat_f, tardanza, due_date_sec, tp, dd)
-    #rof
+    
     workbook.close()
 #fed
 
@@ -49,7 +49,7 @@ def imprimir_XLSX(workbook, nombre_hoja, secuencia, secuencia_bl, makespan, make
     for s in secuencia:
         worksheet.write(row, col, s, cell_format)
         col += 1
-    #rof
+    
     worksheet.write("B4", "Tardanza", cell_format_bold)
     worksheet.write("C4", fo_aux.calcular_tardanza_blocking_secuencia(secuencia, tp, dd), cell_format)
     
@@ -67,7 +67,7 @@ def imprimir_XLSX(workbook, nombre_hoja, secuencia, secuencia_bl, makespan, make
     for s in secuencia_bl:
         worksheet.write(row, col, s, cell_format)
         col += 1
-    #rof
+    
     worksheet.write("B9", "Tardanza", cell_format_bold)
     worksheet.write("C9", tardanza, cell_format)
         
@@ -93,13 +93,12 @@ def imprimir_XLSX(workbook, nombre_hoja, secuencia, secuencia_bl, makespan, make
             
             worksheet.write(row, col2, make_mat_f[i][j], cell_format)
             col2 += 1
-        #rof      
+              
         worksheet.merge_range(row, col2+1,row, col2+2, due_date_sec[i], cell_format)
         row += 1
-    #rof
+    
 #fed
 
 
 if __name__ == "__main__":
     principal(sys.argv)
-#fi

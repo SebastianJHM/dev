@@ -36,8 +36,8 @@ def busqueda_local_GRASP( secuencia, TP, t_max ):
                 j = i + 1
             else:
                 i = i + 1
-            #fi
-        #fi
+            
+        
         iteraciones += 1
         t_final = time.time() - t_inicial
     #elihw
@@ -80,13 +80,13 @@ def construccion_GRASP( TP, ALPHA ):
             ## Determinar mínimo makespan
             if ( m < min_mp ):
                 min_mp = m
-            #fi
+            
 
             ## Determinar máximo makespan
             if ( m > max_mp ):
                 max_mp = m
-            #fi
-        #rof
+            
+        
 
         # print("====== Iteración ", it + 1," ======")
         # print("Candidatos: ", candidatos, "Cmax: ", makespan_candidatos, "Min: ", min_mp, "Max: ", max_mp)
@@ -98,9 +98,9 @@ def construccion_GRASP( TP, ALPHA ):
         for m in makespan_candidatos:
             if ( m <= indicador ):                ## Si el makespan es menor que el indicador
                 RCL.append(candidatos[trabajo])      ## guardar el trabajo en RCL
-            #fi
+            
             trabajo += 1
-        #rof
+        
         # print("RCL: ", RCL,"... Menor que: ", indicador)
 
         ## Paso 3: seleccionar aleatoriamente un trabajo del RCL
@@ -113,7 +113,7 @@ def construccion_GRASP( TP, ALPHA ):
         candidatos.remove(seleccion)               ## escogido a solucion_TP y remover el elemento de candidatos
         solucion_TP.append(TP[seleccion-1])        ## agregar los tiempos de procesamiento del trabajo escogido a solucion_TP
         # print("Solucion: ", solucion, "Candidatos: ", candidatos)
-    #rof
+    
     return(solucion, fo.calcular_makespan_blocking( solucion_TP ))
 #fed
  

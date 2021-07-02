@@ -18,11 +18,11 @@ def create_lineal_model_tardiness( model, TP, dd ):
     ## ## ---------------------- PARÁMETROS ----------------------------
     def paramTP(model, j, m):
         return(TP[j-1][m-1])
-    #fed
+    
     model.T_Proc = pyo.Param(model.J,model.M, initialize = paramTP)
     def paramDD(model, j):
         return(dd[j-1])
-    #fed
+    
     model.Due_Dates = pyo.Param(model.J, initialize = paramDD)
     
     ## ---------------------- VARIABLES ----------------------------
@@ -37,69 +37,69 @@ def create_lineal_model_tardiness( model, TP, dd ):
     ## ---------------------- FUNCIÓN OBJETIVO ----------------------------
     def ObjFunc( model ):
         return model.Tardanza_Total
-    #fed
+    
     model.FO = pyo.Objective( rule = ObjFunc )
     
     ## ---------------------- RESTRICCIONES ----------------------------
     def r1( model, j ):
         return sum( model.x[j,p] for p in model.P ) == 1
-    #fed
+    
     model.r1 = pyo.Constraint( model.J, rule = r1 )
     
     def r2( model, p ):
         return sum( model.x[j,p] for j in model.J ) == 1
-    #fed
+    
     model.r2 = pyo.Constraint( model.P, rule = r2 )
     
     def r3( model, p, m ):
         return model.T_Final[p,m] == model.T_Inicio[p,m] + sum( model.x[j,p]*model.T_Proc[j,m] for j in model.J )
-    #fed
+    
     model.r3 = pyo.Constraint( model.P, model.M, rule = r3 )
     
     def r4( model, p, m ):
         if ( m > 1 ):
             return model.T_Inicio[p,m] == model.T_Final[p,m-1]
         return pyo.Constraint.Skip
-    #fed
+    
     model.r4 = pyo.Constraint( model.P, model.M, rule = r4 )
     
     def r5( model, p, m ):
         if ( p > 1 ):
             return model.T_Inicio[p,m] >= model.T_Final[p-1,m]
         return pyo.Constraint.Skip
-    #fed
+    
     model.r5 = pyo.Constraint( model.P, model.M, rule = r5 )
     
     def r6( model ):
         return model.T_Inicio[1,1] == 0
-    #fed
+    
     model.r6 = pyo.Constraint( rule = r6 )
     
     def r7( model ):
         return model.Makespan == model.T_Final[len(model.J), len(model.M)]
-    #fed
+    
     model.r7 = pyo.Constraint( rule = r7 )
     
     def r8( model, j, p ):
         return model.T_Terminacion[j] >= model.T_Final[p, len(model.M)] - 100000*(1-model.x[j,p])
-    #fed
+    
     model.r8 = pyo.Constraint( model.J, model.P, rule = r8 )
     
     def r9( model, j, p ):
         return model.T_Terminacion[j] <= model.T_Final[p, len(model.M)] + 100000*(1-model.x[j,p])
-    #fed
+    
     model.r9 = pyo.Constraint( model.J, model.P, rule = r9 )
     
     def r10( model, j ):
         return model.Tardanza[j] >= model.T_Terminacion[j] - model.Due_Dates[j]
-    #fed
+    
     model.r10 = pyo.Constraint( model.J, rule = r10 )
     
     def r11( model, j, p ):
         return model.Tardanza_Total == sum(model.Tardanza[j] for j in model.J)
-    #fed
+    
     model.r11 = pyo.Constraint( model.J, model.P, rule = r11 )
-#fed
+
 
 def print_results_console( instance ):
     print("\nSOLUCIÓN DEL EJERCICIO")
@@ -111,9 +111,9 @@ def print_results_console( instance ):
         for j in instance.J:
             if ( instance.x[j,p] == 1 ):
                 secuencia.append(j)
-            #fi
-        #rof
-    #rof
+            
+        
+    
     print("Secuencia: ",secuencia)
     
     print("--------------------------")
@@ -122,17 +122,17 @@ def print_results_console( instance ):
         for j in instance.J:
             if ( instance.x[j,p] == 1 ):
                 print("Trabajo: ", j)
-            #fi
-        #rof
+            
+        
         for m in instance.M:
             print("Tiempo de inicio: ", round(pyo.value(instance.T_Inicio[p,m])), "--> Tiempo_Final: ", round(pyo.value(instance.T_Final[p,m])))
-        #rof
-    #rof
+        
+    
     
     for j in instance.J:
         print("\nTrabajo ", j, ": \nTerminación: ", round(pyo.value(instance.T_Terminacion[j])), " --> Tardanza: ", round(pyo.value(instance.Tardanza[j])))
-    #rof
-#fed
+    
+
 
 def principal( argv ):
     ## TP[t][m]: tiempo de procesamiento del trabajo t en la máquina m.
@@ -159,8 +159,7 @@ def principal( argv ):
     #instance.display()
     
     print_results_console( instance )
-#fed
+
 
 if __name__ == "__main__":
     principal(sys.argv)
-#fi

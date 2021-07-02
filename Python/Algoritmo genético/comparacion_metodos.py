@@ -11,7 +11,7 @@ def funcion_objetivo( distancias, ruta ):
     acum = 0
     for k in range(len(ruta)-1):
         acum = acum + distancias[ruta[k]][ruta[k + 1]]
-    #rof
+    
     return( acum )
 #fed
     
@@ -29,7 +29,7 @@ def solucion_aleatoria( orden, distancias, num_it ):
             #elihw
             solucion.append( orden[pos] )
             verifica[pos] = True
-        #rof
+        
         solucion.insert(0, 0)
         solucion.insert(len(solucion), 0)
         
@@ -37,8 +37,8 @@ def solucion_aleatoria( orden, distancias, num_it ):
         if ( fo < minimo ):
             minimo = fo
             solucion_menor = copy.deepcopy( solucion)
-        #fi
-    #rof
+        
+    
     return( solucion_menor, funcion_objetivo( distancias, solucion_menor ) )
 #fed
     
@@ -61,14 +61,14 @@ def incersion( orden, distancias):
                     minimo = fo
                     escogido = ref
                     z = copy.deepcopy( y )
-                #fi
-            #rof
-        #rof
+                
+            
+        
         verifica[escogido-1]  = True
         solucion = copy.deepcopy( z )
         #print("=========================================================")
         #print( solucion, funcion_objetivo( distancias, solucion ))
-    #rof
+    
     return( solucion, funcion_objetivo( distancias, solucion ))
 #fed
 
@@ -83,12 +83,12 @@ def vecino_mas_cercano( orden, distancias):
             if ( distancias[actual][orden[j]] <= minimo and verifica[j] == False ):
                 minimo = distancias[actual][orden[j]]
                 pos = j
-            #fi
-        #rof
+            
+        
         verifica[pos] = True
         actual = orden[pos]
         solucion.append(actual)
-    #rof
+    
     solucion.append(0)
     return(solucion, funcion_objetivo( distancias, solucion ))
 #fed
@@ -127,4 +127,3 @@ def principal( argv ):
 
 if __name__ == "__main__":
     principal( sys.argv )
-#fi

@@ -39,8 +39,8 @@ def busqueda_local_GRASP( secuencia, TP, num_iteraciones ):
                 j = i + 1
             else:
                 i = i + 1
-            #fi
-        #fi
+            
+        
         iteraciones += 1
     #elihw
     return(secuencia, fo.calcular_makespan_blocking_secuencia(secuencia,TP))
@@ -78,7 +78,7 @@ def construccion_GRASP( TP, ALPHA ):
             m = fo.calcular_makespan_blocking(s)    ## Calcular el makespan de ese candidato
             makespan_candidatos.append(m)        ## Guardar el makespan
             suma_makespan += m
-        #rof
+        
         #print(candidatos, makespan_candidatos)
 
         ## Paso 2: ordenar conjunto makespan_candidatos
@@ -92,9 +92,9 @@ def construccion_GRASP( TP, ALPHA ):
                     aux = candidatos[j]
                     candidatos[j] = candidatos[i]
                     candidatos[i] = aux
-                #fi
-            #rof
-        #rof
+                
+            
+        
         #print(candidatos, makespan_candidatos)
 
         ## Paso 3: Determinar el porcentaje para la escogencia
@@ -105,9 +105,9 @@ def construccion_GRASP( TP, ALPHA ):
             acum = 0
             for j in range(i+1):
                 acum += (makespan_candidatos[j])/(suma_makespan)
-            #rof
+            
             porcentajes.append(acum)
-        #rof
+        
         #print(porcentajes)
 
         ## Paso4: Determinar RCL
@@ -115,12 +115,12 @@ def construccion_GRASP( TP, ALPHA ):
         for i in range(len(makespan_candidatos)):
             if ( porcentajes[i] <= ALPHA ):                ## Si el makespan es menor que el ALPHA
                 RCL.append(candidatos[i])                  ## guardar el trabajo en RCL
-            #fi
-        #rof
+            
+        
         ## Si el RCL queda vacío no asignar a nadie
         if ( len(RCL) == 0 ):
             RCL.append(candidatos[0])
-        #fi
+        
         #print(RCL)
 
         ## Paso 5: seleccionar aleatoriamente un trabajo del RCL
@@ -131,7 +131,7 @@ def construccion_GRASP( TP, ALPHA ):
         solucion.append(seleccion)                 ## Agregrar el trabajo escogido a solución
         candidatos.remove(seleccion)               ## escogido a solucion_TP y remover el elemento de candidatos
         solucion_TP.append(TP[seleccion-1])        ## agregar los tiempos de procesamiento del trabajo escogido a solucion_TP
-    #rof
+    
     return(solucion, fo.calcular_makespan_blocking( solucion_TP))
 #fed
 
@@ -182,4 +182,3 @@ def GRASP( argv ):
 
 if __name__ == "__main__":
     GRASP( sys.argv )
-#fi

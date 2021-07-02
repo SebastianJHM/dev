@@ -17,12 +17,12 @@ def busqueda_local_GRASP( secuencia, TP, due_date, num_iteraciones ):
                 if( f < minimo ):
                     minimo = f
                     secuencia_aux = s
-                #fi
-            #rof
-        #rof
+                
+            
+        
         secuencia = copy.deepcopy(secuencia_aux)
         #print(minimo, secuencia_aux)
-    #rof
+    
     return(secuencia, fo.calcular_tardanza_blocking_secuencia( secuencia ,TP, due_date ))
 #fed
 
@@ -45,7 +45,7 @@ def construccion_GRASP( TP, due_date, ALPHA ):
     P = []
     for i in range(num_trabajos):
         P.append(sum(TP[i]))
-    #rof
+    
         
     # print("P: ", P, "Due date: ", due_date)
     
@@ -68,12 +68,12 @@ def construccion_GRASP( TP, due_date, ALPHA ):
             ## Determinar mínimo makespan
             if ( y < min_mdd ):
                 min_mdd = y
-            #fi
+            
             ## Determinar máximo makespan
             if ( y > max_mdd ):
                 max_mdd = y
-            #fi
-        #rof
+            
+        
         
         # print("====== Iteración ", it + 1," ======")
         # print("Candidatos: ", candidatos, "MMD: ", MMD, "Min: ", min_mdd, "Max: ", max_mdd)
@@ -85,9 +85,9 @@ def construccion_GRASP( TP, due_date, ALPHA ):
         for m in MMD:
             if ( m <= indicador ):                ## Si el makespan es menor que el indicador
                 RCL.append(candidatos[trabajo])        ## guardar el trabajo en RCL
-            #fi
+            
             trabajo += 1
-        #rof
+        
         # print("RCL: ", RCL,"... Menor que: ", indicador)
 
         ## Paso 3: seleccionar aleatoriamente un trabajo del RCL
@@ -102,7 +102,7 @@ def construccion_GRASP( TP, due_date, ALPHA ):
         t = fo.calcular_makespan_blocking(solucion_TP)
         # print("Solucion: ", solucion, "Candidatos: ", candidatos)
         # print("t: ", t)
-    #rof
+    
     return(solucion, fo.calcular_tardanza_blocking_secuencia( solucion ,TP, due_date ))
 #fed
 

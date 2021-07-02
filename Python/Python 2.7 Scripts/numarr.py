@@ -17,14 +17,14 @@ def main( argv ):
        S.append((x%m)/n)
        m=m*10
        n=n*10
-    #rof
+    
     for i in range (0,cont,1):
        G.append(S[cont-1-i])
-    #rof
+    
     print G
 
 
-   #fed
+   
 
     
 if __name__ == "__main__":

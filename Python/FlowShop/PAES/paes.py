@@ -41,7 +41,7 @@ def domina(s1, s2, TP, due_date):
     s1_domina_s2 = False
     if(( fo1_s1 <= fo1_s2 and fo2_s1 < fo2_s2 ) or ( fo1_s1 < fo1_s2 and fo2_s1 <= fo2_s2 )):
         s1_domina_s2 = True
-    #fi
+    
     return s1_domina_s2
 #fed
 
@@ -62,7 +62,7 @@ def Graficar_Archivo(arch):
         ax.set_xticks(np.arange(min(x), max(x)+1))
         ax.set_yticks(np.arange(min(y), max(y)+1))
         plt.grid()
-    #fi
+    
         
     ## Graficar
     plt.scatter(x, y)
@@ -75,7 +75,7 @@ def Graficar_Archivo(arch):
     ## Nombre de los puntos
     for i in range(len(x)):
         plt.annotate(str(i)+": ("+str(x[i])+","+str(y[i])+")", (x[i]+.2, y[i]))
-    #rof
+    
         
     plt.show()
 
@@ -94,12 +94,12 @@ def concurrido( arch, c, m ):
         if( a.secuencia == c ):
             makespan_c = a.makespan
             tardanza_c = a.tardanza
-        #fi
+        
         if( a.secuencia == m):
             makespan_m = a.makespan
             tardanza_m = a.tardanza
-        #fi
-    #rof
+        
+    
     
     ## Obtener sup_makespan_c y inf_makespan_c
     if(makespan_c == max(makespan_list)):
@@ -107,8 +107,8 @@ def concurrido( arch, c, m ):
         for a in arch:
             if(a.makespan<makespan_c):
                 menores.append(a.makespan)
-            #fi
-        #rof
+            
+        
         sup_makespan_c = makespan_c
         inf_makespan_c = max(menores)
     elif(makespan_c == min(makespan_list)):
@@ -116,8 +116,8 @@ def concurrido( arch, c, m ):
         for a in arch:
             if(a.makespan>makespan_c):
                 mayores.append(a.makespan)
-            #fi
-        #rof
+            
+        
         sup_makespan_c = min(mayores)
         inf_makespan_c = makespan_c
     else:
@@ -126,14 +126,14 @@ def concurrido( arch, c, m ):
         for a in arch:
             if(a.makespan>makespan_c):
                 mayores.append(a.makespan)
-            #fi
+            
             if(a.makespan<makespan_c):
                 menores.append(a.makespan)
-            #fi
-        #rof
+            
+        
         sup_makespan_c = min(mayores)
         inf_makespan_c = max(menores)
-    #fi
+    
     
     ## Obtener sup_tardanza_c y inf_tardanza_c
     if(tardanza_c == max(tardiness_list)):
@@ -141,8 +141,8 @@ def concurrido( arch, c, m ):
         for a in arch:
             if(a.tardanza<tardanza_c):
                 menores.append(a.tardanza)
-            #fi
-        #rof
+            
+        
         sup_tardanza_c = tardanza_c
         inf_tardanza_c = max(menores)
     elif(tardanza_c == min(tardiness_list)):
@@ -150,8 +150,8 @@ def concurrido( arch, c, m ):
         for a in arch:
             if(a.tardanza>tardanza_c):
                 mayores.append(a.tardanza)
-            #fi
-        #rof
+            
+        
         sup_tardanza_c = min(mayores)
         inf_tardanza_c = tardanza_c
     else:
@@ -160,14 +160,14 @@ def concurrido( arch, c, m ):
         for a in arch:
             if(a.tardanza>tardanza_c):
                 mayores.append(a.tardanza)
-            #fi
+            
             if(a.tardanza<tardanza_c):
                 menores.append(a.tardanza)
-            #fi
-        #rof
+            
+        
         sup_tardanza_c = min(mayores)
         inf_tardanza_c = max(menores)
-    #fi
+    
     
     ## Obtener sup_makespan_m y inf_makespan_m
     if(makespan_m == max(makespan_list)):
@@ -175,8 +175,8 @@ def concurrido( arch, c, m ):
         for a in arch:
             if(a.makespan<makespan_m):
                 menores.append(a.makespan)
-            #fi
-        #rof
+            
+        
         sup_makespan_m = makespan_m
         inf_makespan_m = max(menores)
     elif(makespan_m == min(makespan_list)):
@@ -184,8 +184,8 @@ def concurrido( arch, c, m ):
         for a in arch:
             if(a.makespan>makespan_m):
                 mayores.append(a.makespan)
-            #fi
-        #rof
+            
+        
         sup_makespan_m = min(mayores)
         inf_makespan_m = makespan_m
     else:
@@ -194,14 +194,14 @@ def concurrido( arch, c, m ):
         for a in arch:
             if(a.makespan>makespan_m):
                 mayores.append(a.makespan)
-            #fi
+            
             if(a.makespan<makespan_m):
                 menores.append(a.makespan)
-            #fi
-        #rof
+            
+        
         sup_makespan_m = min(mayores)
         inf_makespan_m = max(menores)
-    #fi
+    
     
     ## Obtener sup_tardanza_m y inf_tardanza_m
     if(tardanza_m == max(tardiness_list)):
@@ -209,8 +209,8 @@ def concurrido( arch, c, m ):
         for a in arch:
             if(a.tardanza<tardanza_m):
                 menores.append(a.tardanza)
-            #fi
-        #rof
+            
+        
         sup_tardanza_m = tardanza_m
         inf_tardanza_m = max(menores)
     elif(tardanza_m == min(tardiness_list)):
@@ -218,8 +218,8 @@ def concurrido( arch, c, m ):
         for a in arch:
             if(a.tardanza>tardanza_m):
                 mayores.append(a.tardanza)
-            #fi
-        #rof
+            
+        
         sup_tardanza_m = min(mayores)
         inf_tardanza_m = tardanza_m
     else:
@@ -228,14 +228,14 @@ def concurrido( arch, c, m ):
         for a in arch:
             if(a.tardanza>tardanza_m):
                 mayores.append(a.tardanza)
-            #fi
+            
             if(a.tardanza<tardanza_m):
                 menores.append(a.tardanza)
-            #fi
-        #rof
+            
+        
         sup_tardanza_m = min(mayores)
         inf_tardanza_m = max(menores)
-    #fi
+    
     
     
     print("c--> make:",makespan_c," tard:", tardanza_c)
@@ -250,7 +250,7 @@ def concurrido( arch, c, m ):
         return(True)
     else:
         return(False)
-    #fi
+    
 #fed
     
 def Dominancia(archivo_paes, TP, due_date):
@@ -262,12 +262,12 @@ def Dominancia(archivo_paes, TP, due_date):
             s2 = x.secuencia
             if( domina(s2, s1, TP, due_date) == True ):
                 queda_s1 = False
-            #fi
-        #rof
+            
+        
         if( queda_s1 == True ):
             frontera_PAES.append(sol)
-        #fi
-    #rof
+        
+    
     return(frontera_PAES)
 #def
 
@@ -275,8 +275,8 @@ def Remover_c(archivo_paes, c):
     for a in archivo_paes:
         if( a.secuencia == c ):
             archivo_paes.remove(a)
-        #fi
-    #rof
+        
+    
     return(archivo_paes)
 #fed
 
@@ -288,16 +288,16 @@ def repeticion_m(archivo_paes,m,TP,due_date):
     for a in archivo_paes:
         if( a.secuencia == m ):
             b1 = True
-        #fi
+        
         if( a.makespan == makespan_m and a.tardanza == tardanza_m):
             b2 = True
-        #fi
-    #rof
+        
+    
     if(b1 == False and b2 == False):
         return(False)
     else:
         return(True)
-    #fi
+    
 #fed
 
 def PAES(TP, due_date, t_max, ALPHA):
@@ -349,8 +349,8 @@ def PAES(TP, due_date, t_max, ALPHA):
                 d = domina(x.secuencia,m,TP,due_date)
                 if( d == True ):
                     arch_domina_m = True
-                #fi
-            #rof
+                
+            
             print("c domina a m?: ",c_domina_m, " ; m domina a c?: ",m_domina_c," ; el archivo domina a m?: ",arch_domina_m)
             
             ## Primera condición: si c domina a m, se descarta m
@@ -382,9 +382,9 @@ def PAES(TP, due_date, t_max, ALPHA):
                     c = m
                     i = 0
                     j = 1
-                #fi
-            #fi
-        #fi
+                
+            
+        
         
         print("------------ Archivo Paes -------------")
         print(np.array(archivo_paes))
@@ -397,8 +397,8 @@ def PAES(TP, due_date, t_max, ALPHA):
                 j = i + 1
             else:
                 i = i + 1
-            #fi
-        #fi
+            
+        
         iteraciones += 1
         t_final = time.time() - t_inicial
     #elihw
@@ -440,9 +440,8 @@ def principal( argv ):
         nombre_hoja = "Inst"+str(INSTANCIAS.index(inst)+1)
         print_results_XLSX( workbook, nombre_hoja, arch, tiempo_ejecucion )
         workbook.close()
-    #rof
+    
 #fed
 
 if __name__ == "__main__":
     principal( sys.argv)
-#fi

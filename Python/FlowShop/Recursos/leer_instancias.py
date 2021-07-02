@@ -37,7 +37,7 @@ def read_data_XLSX():
         due_dates = []
         for i in range(num_trabajos):
             due_dates.append(int(sheet.cell(row = 9 + i, column = 3).value))
-        #rof
+        
         
         ## Obtener tiempos de procesos
         TP = []
@@ -45,13 +45,13 @@ def read_data_XLSX():
             t = []
             for j in range(num_maquinas):
                 t.append(int(sheet.cell(row = 5 + i, column = 6 + j).value))
-            #rof
+            
             TP.append(t)
-        #rof
+        
         
         
         INSTANCIAS.append(Instancia(due_dates,TP))
-    #rof
+    
     print(INSTANCIAS)
 #fed
 
@@ -63,4 +63,3 @@ def principal(argv):
 
 if __name__ == "__main__":
     principal(sys.argv)
-#fi

@@ -83,9 +83,8 @@ def principal( argv ):
     plt.xlabel("Years")
     plt.ylabel("Number of immigrates")
     plt.show()
-#fed
+
 
 
 if __name__ == "__main__":
     principal( sys.argv )
-#fi

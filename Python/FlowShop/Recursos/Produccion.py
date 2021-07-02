@@ -92,10 +92,10 @@ def calcular_makespan(secuencia, tiempo_preparacion_ord, tiempo_fabricacion_ord,
                 tiempo_actual_m1 = tiempo_actual_m1 + timedelta( days = 1 )
                 tiempo_actual_m1 = tiempo_actual_m1 - timedelta( hours = dif )
                 tiempo_actual_m1 = tiempo_actual_m1 + timedelta( hours = t_SETUP )
-            #fi
+            
             print(t_SETUP)
             print(tiempo_actual_m1)
-        #fi
+        
         
         ## MÁQUINA 1
         t1 = tiempo_actual_m1 + timedelta( hours = tiempo_preparacion_ord[trabajo-1] )
@@ -110,7 +110,7 @@ def calcular_makespan(secuencia, tiempo_preparacion_ord, tiempo_fabricacion_ord,
             tiempo_actual_m1 = tiempo_actual_m1 + timedelta( days = 1 )
             tiempo_actual_m1 = tiempo_actual_m1 - timedelta( hours = dif )
             tiempo_actual_m1 = tiempo_actual_m1 + timedelta( hours = tiempo_preparacion_ord[trabajo-1] )
-        #fi
+        
         print(tiempo_actual_m1)
         
         
@@ -129,7 +129,7 @@ def calcular_makespan(secuencia, tiempo_preparacion_ord, tiempo_fabricacion_ord,
             tiempo_actual_m2 = tiempo_actual_m2 + timedelta( days = 1 )
             tiempo_actual_m2 = tiempo_actual_m2 - timedelta( hours = dif )
             tiempo_actual_m2 = tiempo_actual_m2 + timedelta( hours = tiempo_fabricacion_ord[trabajo-1] )
-        #fi
+        
         print(tiempo_actual_m2)
         
         
@@ -148,10 +148,10 @@ def calcular_makespan(secuencia, tiempo_preparacion_ord, tiempo_fabricacion_ord,
             tiempo_actual_m3 = tiempo_actual_m3 + timedelta( days = 1 )
             tiempo_actual_m3 = tiempo_actual_m3 - timedelta( hours = dif )
             tiempo_actual_m3 = tiempo_actual_m3 + timedelta( hours = tiempo_empaque_ord[trabajo-1] )
-        #fi
+        
         print(tiempo_actual_m3)
             
-    #rof
+    
 #fed
 
 def principal(argv):
@@ -175,7 +175,7 @@ def principal(argv):
         tiempo_preparacion_ord.append(int(num_cuadernos[i]/t_prep_ref[referencias[i]-1]))
         tiempo_fabricacion_ord.append(t_fab_ref[referencias[i]-1])
         tiempo_empaque_ord.append(t_emp_ref[referencias[i]-1])
-    #rof
+    
     fecha_inicio_produccion = x = datetime.datetime(2019, 5, 6, 6,0) 
     print(tiempo_preparacion_ord, tiempo_fabricacion_ord, tiempo_empaque_ord)
     ## OBTECIÓN DE LA SECUENCIA
@@ -188,4 +188,3 @@ def principal(argv):
     
 if __name__ == "__main__":
     principal(sys.argv)
-#fi

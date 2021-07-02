@@ -23,7 +23,7 @@ def principal(argv):
         imprimir_XLSX( workbook, nombre_hoja, secuencia, tardanza, makespan )
         
         workbook.close()
-    #rof
+    
     
 #fed
 
@@ -46,7 +46,7 @@ def imprimir_XLSX(workbook, nombre_hoja, secuencia, tardanza, makespan):
     for s in secuencia:
         worksheet.write(row, col, s, cell_format)
         col += 1
-    #rof
+    
     worksheet.write("B4", "Makespan", cell_format_bold)
     worksheet.write("C4", makespan)
     worksheet.write("B5", "Tardanza", cell_format_bold)
@@ -56,4 +56,3 @@ def imprimir_XLSX(workbook, nombre_hoja, secuencia, tardanza, makespan):
 
 if __name__ == "__main__":
     principal(sys.argv)
-#fi

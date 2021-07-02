@@ -7,8 +7,8 @@ def factorial( n ):
         r = 1
         for i in range(1,n+1):
             r = r * i
-        #rof
-    #fi
+        
+    
     return r
 #fed 
 
@@ -22,8 +22,8 @@ def raiz( x ):
         if ( a < minim):
             minim = a
             pos = initial.index(y)
-        #fi
-    #rof
+        
+    
 
     print(pos)
     ## -----------------------------------------
@@ -44,15 +44,15 @@ def raiz( x ):
                 prod = 1/2
                 for j in range(1,i):
                     prod = prod*((2*j-1)/2)
-                #rof
+                
                 signo = ((-1)**(i+1))
                 ev = 1 / (r_center**( 2 * i - 1 ))
                 fact = 1 / factorial( i )
                 acum = acum + signo * prod * ev * fact * ((x-center)**i)
-            #fi
-        #rof
+            
+        
         result = round(acum,10)
-    #fi
+    
     return result
 #fed
 

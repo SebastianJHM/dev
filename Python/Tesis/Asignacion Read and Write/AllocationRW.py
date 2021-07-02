@@ -21,8 +21,8 @@ def read_data_XLSX_Alloc():
     for x in range(len(column)): 
         if (type(column[x].value) != str and column[x].value != None):
             set_REF.append(column[x].value)
-        #fi
-    #rof
+        
+    
     
     ## BOXES WIDTH (param_AnchoCaja)
     lect = []
@@ -30,8 +30,8 @@ def read_data_XLSX_Alloc():
     for x in range(len(column)): 
         if (type(column[x].value) != str and column[x].value != None):
             lect.append(column[x].value)
-        #fi
-    #rof
+        
+    
     param_AnchoCaja = dict(zip(set_REF, lect))
     
     ## IF REFERENCE IS IN ROWS (param_TipoDist)
@@ -40,8 +40,8 @@ def read_data_XLSX_Alloc():
     for x in range(len(column)): 
         if (type(column[x].value) != str and column[x].value != None):
             lect.append(column[x].value)
-        #fi
-    #rof
+        
+    
     param_TipoDist = dict(zip(set_REF, lect))
     
     ## NUMBERS SPACES OF REFERENCE (param_Espacios)
@@ -50,8 +50,8 @@ def read_data_XLSX_Alloc():
     for x in range(len(column)): 
         if (type(column[x].value) != str and column[x].value != None):
             lect.append(column[x].value)
-        #fi
-    #rof
+        
+    
     param_Espacios = dict(zip(set_REF, lect))
     
     ## DEMAND REFERENCE (param_Demanda)
@@ -60,8 +60,8 @@ def read_data_XLSX_Alloc():
     for x in range(len(column)): 
         if (type(column[x].value) != str and column[x].value != None):
             lect.append(column[x].value)
-        #fi
-    #rof
+        
+    
     param_Demanda= dict(zip(set_REF, lect))
     
     ## FREQUENCY REFERENCE (param_Frecuencia)
@@ -70,8 +70,8 @@ def read_data_XLSX_Alloc():
     for x in range(len(column)): 
         if (type(column[x].value) != str and column[x].value != None):
             lect.append(column[x].value)
-        #fi
-    #rof
+        
+    
     param_Frecuencia = dict(zip(set_REF, lect))
     
     ## =======================================================================
@@ -81,8 +81,8 @@ def read_data_XLSX_Alloc():
     for x in range(len(column)): 
         if (type(column[x].value) != str and column[x].value != None):
             set_RACKS.append(column[x].value)
-        #fi
-    #rof
+        
+    
     
     ## IF THE RACK HAVE BACKGROUND (param_TipoRack)
     lect = []
@@ -90,8 +90,8 @@ def read_data_XLSX_Alloc():
     for x in range(len(column)): 
         if (type(column[x].value) != str and column[x].value != None):
             lect.append(column[x].value)
-        #fi
-    #rof
+        
+    
     param_TipoRack = dict(zip(set_RACKS, lect))
     
     ## IF THE RACK IS IN WALL (param_Pared)
@@ -100,8 +100,8 @@ def read_data_XLSX_Alloc():
     for x in range(len(column)): 
         if (type(column[x].value) != str and column[x].value != None):
             lect.append(column[x].value)
-        #fi
-    #rof
+        
+    
     param_Pared = dict(zip(set_RACKS, lect))
     
     ## IF THE RACK IS IN WALL (param_Utilizacion)
@@ -110,8 +110,8 @@ def read_data_XLSX_Alloc():
     for x in range(len(column)): 
         if (type(column[x].value) != str and column[x].value != None):
             lect.append(column[x].value)
-        #fi
-    #rof
+        
+    
     param_Utilizacion = dict(zip(set_RACKS, lect))
     
     ## COST OF ALLOCATE IN THE RACK (param_Costo)
@@ -120,13 +120,13 @@ def read_data_XLSX_Alloc():
     for x in range(len(column)): 
         if (type(column[x].value) != str and column[x].value != None):
             lect.append(column[x].value)
-        #fi
-    #rof
+        
+    
     param_Costo = dict(zip(set_RACKS, lect))
     
     
     return( set_REF , param_AnchoCaja, param_TipoDist, param_Espacios, param_Demanda, param_Frecuencia, set_RACKS, param_TipoRack, param_Pared, param_Utilizacion, param_Costo )
-#fed
+
     
 def create_lineal_model_Alloc( model, set_REF , param_AnchoCaja, param_TipoDist, param_Espacios, param_Demanda, param_Frecuencia, set_RACKS, param_TipoRack, param_Pared, param_Utilizacion, param_Costo ):
     ## --------------------- CONJUNTOS ----------------------------
@@ -152,40 +152,40 @@ def create_lineal_model_Alloc( model, set_REF , param_AnchoCaja, param_TipoDist,
     ## ---------------------- FUNCIÓN OBJETIVO ----------------------------
     def ObjFunc( model ):
         return sum(model.Demanda[ref]*model.Frecuencia[ref]*model.Costo[rack]*model.x[ref,rack] for ref in model.REF for rack in model.RACKS )
-    #fed
+    
     model.FO = pyo.Objective( rule = ObjFunc )
     
     ## ---------------------- RESTRICCIONES ----------------------------
     def r1( model, ref ):
         return sum( model.x[ref,rack] for rack in model.RACKS ) == 1
-    #fed
+    
     model.r1 = pyo.Constraint( model.REF, rule = r1 )
     
     def r2( model, rack ):
         return sum( model.AnchoCaja[ref]*model.x[ref,rack] for ref in model.REF ) <= 250*(1-model.y[rack]) + 750*(model.y[rack])
-    #fed
+    
     model.r2 = pyo.Constraint( model.RACKS, rule = r2)
     
     def r3( model, ref, rack):
         return model.x[ref,rack] <= (model.y[rack]*model.TipoDist[ref]) + ((1-model.y[rack])*(1-model.TipoDist[ref]))
-    #fed
+    
     model.r3 = pyo.Constraint( model.REF, model.RACKS, rule = r3 )
     
     def r6( model, ref, rack ):
         return model.Espacios[ref]*model.x[ref,rack] <= model.TipoRack[rack]
-    #fed
+    
     model.r6 = pyo.Constraint( model.REF, model.RACKS, rule = r6 )
     
     def r8( model, rack ):
         return model.y[rack] <= 1 - model.Pared[rack]
-    #def
+    
     model.r8  = pyo.Constraint( model.RACKS, rule = r8 )
      
     def r9( model, ref, rack ):
         return model.x[ref,rack] <= model.Utilizacion[rack]
-    #def
+    
     model.r9 = pyo.Constraint( model.REF, model.RACKS, rule = r9 )
-#fed
+
 
 
 
@@ -213,7 +213,7 @@ def principal( argv ):
     workbook = xlsxwriter.Workbook('Results_Allocation.xlsx')
     print_results_XLSX_Alloc( workbook, instance )
     
-#fed
+
 
 def print_results_XLSX_Alloc( workbook, instance ):
     ## -------------------------- SAVE RESULTS IN EXCEL FILE -------------------------------------
@@ -248,10 +248,10 @@ def print_results_XLSX_Alloc( workbook, instance ):
                 worksheet.write(row, 1, ref, cell_format)
                 worksheet.write(row, 2, "en el rack", cell_format)
                 worksheet.write(row, 3, rack, cell_format)
-            #fi
-        #rof
+            
+        
         row = row + 1
-    #rof
+    
     
     
     
@@ -281,19 +281,19 @@ def print_results_XLSX_Alloc( workbook, instance ):
                     worksheet2.write(row, 2, "si", cell_format)
                 else:
                     worksheet2.write(row, 2, "no", cell_format)
-                #fi
+                
                 row = row + 1
                 ind = True
-            #fi
-        #rof
+            
+        
         if ind == True:
             row = row + 1
-        #fi
-    #rof
+        
+    
     
     ## CLOSE THE BOOK
     workbook.close()
-#fed
+
 
 
 def print_results_in_console_Alloc( instance ):
@@ -307,11 +307,10 @@ def print_results_in_console_Alloc( instance ):
         for rack in instance.RACKS:
             if ( instance.x[ref,rack] == 1 ):
                 print("La referencia ", ref ," en el rack", rack)
-            #fi
-        #rof
-    #rof
-#fed
+            
+        
+    
+
 
 if __name__ == "__main__":
     principal( sys.argv )
-#fi

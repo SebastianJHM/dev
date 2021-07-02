@@ -13,20 +13,20 @@ def verifica(R):
                 for k in range (8) :
                     if (R[i][k]==1):
                         cont1=cont1+1
-                    #fi
-                #rof      
+                    
+                      
                 cont2=-1        
                 for l in range (8) :
                     if (R[l][j]==1):
                         cont2=cont2+1
-                    #fi
+                    
                 #rofn=1
                 n=1
                 cont3=0
                 while (i+n<=7 and i+n>=0 and j+n<=7 and j+n>=0):
                     if (R[i+n][j+n]==1):
                         cont3=cont3+1
-                    #fi
+                    
                     n=n+1
                 #elihw
                 n=1
@@ -34,7 +34,7 @@ def verifica(R):
                 while (i-n<=7 and i-n>=0 and j+n<=7 and j+n>=0):
                     if (R[i-n][j+n]==1):
                         cont4=cont4+1
-                    #fi
+                    
                     n=n+1
                 #elihw
                 n=1
@@ -42,7 +42,7 @@ def verifica(R):
                 while (i+n<=7 and i+n>=0 and j-n<=7 and j-n>=0):
                     if (R[i+n][j-n]==1):
                         cont5=cont5+1
-                    #fi
+                    
                     n=n+1
                 #elihw
                 n=1
@@ -50,18 +50,18 @@ def verifica(R):
                 while (i-n<=7 and i-n>=0 and j-n<=7 and j-n>=0):
                     if (R[i-n][j-n]==1):
                         cont6=cont6+1
-                    #fi
+                    
                     n=n+1
                 #elihw
                 if (cont1!=0 or cont2!=0 or cont3!=0 or cont4!=0 or cont5!=0 or cont6!=0 ):
                     x=2
-                #fi
-            #fi      
-        #rof
-    #rof
+                
+                  
+        
+    
     return x
                     
-#fed
+
 
 def genera( C ):
     y=0
@@ -87,17 +87,17 @@ def genera( C ):
                                        cont=cont+1
                                        ImprimirMatriz( C )
                                        print cont
-                                    #fi
+                                    
                                     C=[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]
                                       ,[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]
-                                #rof
-                            #rof   
-                        #rof
-                    #rof   
-                #rof
-            #rof
-        #rof
-    #rof   
+                                
+                               
+                        
+                       
+                
+            
+        
+       
                     
 # fed
 
@@ -127,7 +127,7 @@ def main( argv ):
     #y=verifica(A)
     genera(A)
     #print y
-#fed
+
     
 if __name__ == "__main__":
     main( sys.argv )

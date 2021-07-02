@@ -7,11 +7,11 @@ def main( argv ):
     nreinas=8
     for i in range (nreinas):
         reinas.append(-1)
-    #rof
+    
     print reinas
 
 
-#fed
+
 
 
     

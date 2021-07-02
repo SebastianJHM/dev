@@ -33,9 +33,9 @@ def principal(argv):
         rows = []
         for col in list(df.columns):
             rows.append(df[col][row])
-        #rof
+        
         data_matrix.append(rows)
-    #rof
+    
     print("\n\n============ PRINT MATRIX OF DATA ============")
     print(np.array(data_matrix))
 
@@ -51,4 +51,3 @@ def principal(argv):
 
 if __name__ == "__main__":
     principal(sys.argv)
-#fi

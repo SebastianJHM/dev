@@ -15,7 +15,7 @@ def principal( argv ):
             importe = float(importe_str)
             importe_total = importe_total + importe
             cont = cont + 1
-        #rof
+        
         print('El promedio es ', importe_total/cont)
     #htiw
 
@@ -31,8 +31,8 @@ def principal( argv ):
                 contMenos1 = contMenos1 + 1
             else:
                 contOtro = contOtro + 1
-            #fi
-        #rof
+            
+        
         print("La cantidad de elemnto con id -1 es:", contMenos1)
         print("La cantidad de elemnto con otro id es:", contOtro)
     #htiw
@@ -46,4 +46,3 @@ def principal( argv ):
 
 if __name__ == "__main__":
     principal( sys.argv )
-#fi

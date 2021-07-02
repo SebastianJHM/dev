@@ -4,7 +4,7 @@ class Person:
     def __init__(self, name, age):
         self.name = name
         self.age = age
-    #fed
+    
     
 
 #ssalc
@@ -13,7 +13,7 @@ class Person2:
     def __init__(self, name="", age=None):
         self.name = name
         self.age = age
-    #fed
+    
 #ssalc 
     
 def principal( argv ):
@@ -35,11 +35,10 @@ def principal( argv ):
     print(p2.age)
     
     print("-------------------")
-#fed
+
 
 
 
 
 if __name__ == "__main__":
     principal( sys.argv )
-#fi

@@ -11,11 +11,13 @@ library(shiny)
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
-    output$text <- renderText({ input$txt })
-    output$verb <- renderText({ input$txt })
+    
     
     titulo <- "HOla"
     observeEvent(input$button, {
+        output$text <- renderText({ input$txt })
+        output$verb <- renderText({ input$txt })
+        output$text2 <- renderText({ as.character(icon("fas fa-check-circle", lib = "font-awesome", style="color: #2c5486; font-size: 16px; margin-left: 5px; margin-bottom: 12px")) })
         output$moreControls <- renderUI({
             fluidPage(
                 h1(paste(titulo, "jajaj"), align="center"),

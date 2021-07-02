@@ -18,8 +18,8 @@ def johnson( data ):
         else:
             trabajos_2.append(trabajo)
             sec_2.append( data.index(trabajo) + 1 )
-        #fi
-    #fi
+        
+    
     print("Conjunto 1:", trabajos_1, sec_1)
     print("Conjunto 2:", trabajos_2, sec_2)
     print("---------------------------------------")
@@ -35,9 +35,9 @@ def johnson( data ):
                 s = sec_1[i]
                 sec_1[i] = sec_1[j]
                 sec_1[j] = s
-            #fi
-        #rof
-    #rof
+            
+        
+    
     print("Conjunto ordenado 1: ",trabajos_1, sec_1)
 
     ## Algoritmo de ordenamiento Conjunto 2 ( mayor a menor en máquina 2)
@@ -51,9 +51,9 @@ def johnson( data ):
                 s = sec_2[i]
                 sec_2[i] = sec_2[j]
                 sec_2[j] = s
-            #fi
-        #rof
-    #rof
+            
+        
+    
     print("Conjunto ordenado 2: ",trabajos_2, sec_2)
     secuencia = sec_1 + sec_2
     return( secuencia )
@@ -88,4 +88,3 @@ def principal( argv ):
 
 if __name__ == "__main__":
     principal( sys.argv )
-#fi

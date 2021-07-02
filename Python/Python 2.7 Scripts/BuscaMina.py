@@ -8,7 +8,7 @@ def ImprimirMatriz( M ):
     for i in range(len(M)):
         for j in range(len(M[i])):
             print(M[i][j],end=' ')
-        #rof
+        
         print()
     # rof
     print("-------------------------------------")
@@ -23,7 +23,7 @@ def genera( M,k ):
             y=random.randint( 0, len(M[0])-1-1 )
         #eliwh    
         M[x][y]=1
-    #rof
+    
     return M
 # fed
 
@@ -40,40 +40,40 @@ def juega(M,k):
         if (M[n][m]==0):
             if (n-1>=0  and n-1<=len(M)-1 and m-1>=0 and m-1<=len(M[0])-1 and M[n-1][m-1]==1):
                 cont=cont+1   
-            #fi
+            
             if (n-1>=0  and n-1<=len(M)-1 and m>=0 and m<=len(M[0])-1 and M[n-1][m]==1):
                 cont=cont+1 
-            #fi
+            
             if (n-1>=0  and n-1<=len(M)-1 and m+1>=0 and m+1<=len(M[0])-1 and M[n-1][m+1]==1):
                 cont=cont+1
-            #fi
+            
             if (n>=0  and n<=len(M)-1 and m-1>=0 and m-1<=len(M[0])-1 and M[n][m-1]==1):
                 cont=cont+1
-            #fi
+            
             if (n>=0  and n<=len(M)-1 and m+1>=0 and m+1<=len(M[0])-1 and M[n][m+1]==1):
                 cont=cont+1
-            #fi
+            
             if (n+1>=0 and n+1<=len(M)-1 and m-1>=0 and m-1<=len(M[0])-1 and M[n+1][m-1]==1):
                 cont=cont+1
-            #fi
+            
             if (n+1>=0 and n+1<=len(M)-1 and m>=0 and m<=len(M[0])-1 and M[n+1][m]==1):
                 cont=cont+1
-            #fi
+            
             if (n+1>=0  and n+1<=len(M)-1 and m+1>=0 and m+1<=len(M[0])-1 and M[n+1][m+1]==1):
                 cont=cont+1
-            #fi
+            
             cont2=cont2+1
             G[n][m]=cont
             ImprimirMatriz(G)
-        #fi   
+           
         if (M[n][m]==1):
             print("Perdiste")
             x=False
-        #fi
+        
         if (cont2==(y-k)):
             print("Felicidades. Ganaste")
             cont2=cont2+1
-        #fi 
+         
     #elihw
 # fed
 
@@ -86,7 +86,7 @@ def main( argv ):
     A = [ [ 0 for x in range( n_cols ) ] for y in range( n_rows ) ]
     B=genera(A,k)
     juega(B,k)
-#fed
+
 
 
 

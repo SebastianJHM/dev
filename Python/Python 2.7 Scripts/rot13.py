@@ -79,7 +79,7 @@ def main( argv ):
     print ("Mensaje original :", msg)
     print ("Encriptado       :", enc)
     print ("Mensaje          :", msg2)
-#fed
+
 
 if __name__ == "__main__":
     main( sys.argv )

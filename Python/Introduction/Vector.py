@@ -139,7 +139,7 @@ def principal( argv ):
     b = [10,5,6]
     for i in range(0,len(a)):
         jsonList.append({"country" : a[i], "wins" : b[i]})
-    #rof
+    
     print(json.dumps(jsonList, indent = 1))
 #fed
 

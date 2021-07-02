@@ -5,7 +5,7 @@ def funcion_objetivo( distancias, ruta ):
     acum = 0
     for k in range(len(ruta)-1):
         acum = acum + distancias[ruta[k]][ruta[k + 1]]
-    #rof
+    
     
     return( acum )
 #fed
@@ -29,14 +29,14 @@ def incersion_orden( orden, distancias):
                     minimo = fo
                     escogido = ref
                     z = copy.deepcopy( y )
-                #fi
-            #rof
-        #rof
+                
+            
+        
         verifica[escogido-1]  = True
         solucion = copy.deepcopy( z )
         #print("=========================================================")
         #print( solucion, funcion_objetivo( distancias, solucion ))
-    #rof
+    
     return( solucion, funcion_objetivo( distancias, solucion ))
 #fed
 
@@ -60,14 +60,14 @@ def incersion(distancias):
                     minimo = fo
                     escogido = ref
                     z = copy.deepcopy( y )
-                #fi
-            #rof
-        #rof
+                
+            
+        
         verifica[escogido-1]  = True
         solucion = copy.deepcopy( z )
         #print("=========================================================")
         #print( solucion, funcion_objetivo( distancias, solucion ))
-    #rof
+    
     return( solucion, funcion_objetivo( distancias, solucion ))
 #fed
 
@@ -112,4 +112,3 @@ def principal( argv ):
 
 if __name__ == "__main__":
     principal( sys.argv )
-#fi

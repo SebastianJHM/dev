@@ -14,7 +14,7 @@ def solucion_aleatoria( n ):
         #elihw
         sol.append(x)
         verifica[x-1] = True
-    #rof
+    
     return(sol)
 #fed
 
@@ -32,7 +32,7 @@ def principal(argv):
         ## Imprimir archivo
         nombre_hoja = "Inst"+str(INSTANCIAS.index(inst)+1)
         imprimir_XLSX(workbook, nombre_hoja, secuencia, makespan, make_mat_i, make_mat_f, tardanza, due_date_sec)
-    #rof
+    
     workbook.close()
 #fed
 
@@ -65,7 +65,7 @@ def imprimir_XLSX(workbook, nombre_hoja, secuencia, makespan, make_mat_i, make_m
     for s in secuencia:
         worksheet.write(row, col, s, cell_format)
         col += 1
-    #rof
+    
         
     row += 2
     col = 1
@@ -83,14 +83,13 @@ def imprimir_XLSX(workbook, nombre_hoja, secuencia, makespan, make_mat_i, make_m
             
             worksheet.write(row, col2, make_mat_f[i][j], cell_format)
             col2 += 1
-        #rof      
+              
         worksheet.merge_range(row, col2+1,row, col2+2, due_date_sec[i], cell_format)
         row += 1
-    #rof
+    
             
 #fed
 
 
 if __name__ == "__main__":
     principal(sys.argv)
-#fi

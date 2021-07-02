@@ -81,7 +81,7 @@ def main( argv ):
     ## Mostrar los resultados
     print("Adivino en", c, "intentos.")
 
-#fed
+
 if __name__ == "__main__":
     main( sys.argv )
 # fi

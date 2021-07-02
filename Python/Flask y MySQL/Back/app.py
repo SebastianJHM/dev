@@ -37,7 +37,7 @@ def index():
     
     ## Enviar dato al backend
     return render_template('index.html', contactos = data)
-#fed
+
 
 @app.route('/add_contact', methods = ['POST'])
 def add_contact():
@@ -58,8 +58,8 @@ def add_contact():
         ## Redirigir
         print(fullnameReceived, phoneReceived, emailReceived)
         return redirect(url_for('index'))
-    #fi
-#fed
+    
+
 
 
 @app.route('/edit/<int:id>')
@@ -70,7 +70,7 @@ def edit_contact(id):
     data = cur.fetchall() ## En este caso se obtiene el dato que cumpla la condición de arriba
     print(data)
     return render_template('edit-contact.html', contact = data[0])
-#fed
+
 
 
 @app.route('/update/<id>',methods=['POST'])
@@ -89,8 +89,8 @@ def update_contact(id):
         ## Añadir mensaje y redirigir al inicio
         flash('Contact updated succesfully')
         return redirect(url_for('index'))
-    #fi
-#fed
+    
+
 
 @app.route('/delete/<string:id>')
 def delete_contact(id):
@@ -100,8 +100,7 @@ def delete_contact(id):
     mysql.connection.commit()
     flash('Contact Removed Successfully')
     return redirect(url_for('index'))
-#fed
+
 
 if __name__ == "__main__":
     app.run(port = 3000)
-#fi

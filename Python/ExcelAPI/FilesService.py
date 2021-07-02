@@ -90,10 +90,10 @@ def imprimirResultadosConsola( instance ):
             for j in instance.ORDENES[o]:
                 if ( instance.x[o,i,j].value == 1):
                     print("Del nodo ",i," al nodo",j)
-                #fi
-            #rof
-        #rof
-    #rof
+                
+            
+        
+    
 #fed
     
 def guardarRutas( instance ):
@@ -110,11 +110,11 @@ def guardarRutas( instance ):
                 if ( instance.x[o,i,j].value == 1):
                     r = [i, j]
                     nr["recorrido"].append(r)
-                #fi
-            #rof
-        #rof
+                
+            
+        
         Rutas["ruta"].append(nr)
-    #rof
+    
     print(Rutas)
 #fed
 ########################################################################################################    
@@ -139,8 +139,8 @@ def lecturaDatos( receivedFile ):
     for x in range(len(column)): 
         if (type(column[x].value) != str and column[x].value != None):
             param_Nodos.append(column[x].value)
-        #fi
-    #rof
+        
+    
 
     ## Ordenes (param_Ordenes)
     param_Ords = []
@@ -148,8 +148,8 @@ def lecturaDatos( receivedFile ):
     for x in range(len(column)): 
         if (type(column[x].value) != str and column[x].value != None):
             param_Ords.append(column[x].value)
-        #fi
-    #rof
+        
+    
 
 
     ## Referencias (param_Referencias)
@@ -158,8 +158,8 @@ def lecturaDatos( receivedFile ):
     for x in range(len(column)): 
         if (type(column[x].value) != str and column[x].value != None):
             param_Referencias.append(column[x].value)
-        #fi
-    #rof
+        
+    
 
     ## Ubicación de cada referencia (param_NOD_REF)
     lect = []
@@ -167,8 +167,8 @@ def lecturaDatos( receivedFile ):
     for x in range(len(column)): 
         if (type(column[x].value) != str and column[x].value != None):
             lect.append(column[x].value)
-        #fi
-    #rof
+        
+    
     param_NOD_REF = dict(zip(param_Referencias, lect))
 
 
@@ -180,16 +180,16 @@ def lecturaDatos( receivedFile ):
         for x in range(len(column)): 
             if (type(column[x].value) != str and column[x].value != None):
                 orden.append(column[x].value)
-            #fi
-        #rof
+            
+        
         lect.append(orden)
-    #rof
+    
     param_Ordenes = dict(zip(param_Ords, lect))
 
     lectR = copy.deepcopy(lect) ## Esto es demencial
     for x in lectR:
         x.remove(0)
-    #rof
+    
     param_R = dict(zip(param_Ords, lectR))
 
 
@@ -200,9 +200,9 @@ def lecturaDatos( receivedFile ):
         y = []
         for j in range(sheetDistancias.min_column + 1, sheetDistancias.max_column + 1):
             y.append(sheetDistancias.cell(row = i, column = j).value)
-        #rof
+        
         param_Distancia.append(y)
-    #rof
+    
     ## -------------------------------------------------------------------------------
     
     return( param_Nodos, param_Ords, param_Referencias, param_NOD_REF, param_Ordenes, param_R, param_Distancia )
@@ -354,12 +354,12 @@ def imprimirResultadosXLSX( workbook, instance ):
                     worksheet.write(row, col + 1,i, cell_format)
                     worksheet.write(row, col + 2," al nodo", cell_format)
                     worksheet.write(row, col + 3,j, cell_format)
-                #fi
-            #rof
+                
+            
             row += 1
-        #rof
+        
         row += 1
-    #rof
+    
         
         
     # Hay que incluir workbook.close()
@@ -372,4 +372,4 @@ def imprimirResultadosXLSX( workbook, instance ):
     
 if __name__ == '__main__':
     app.run(debug = False, port=5000)
-#fi
+

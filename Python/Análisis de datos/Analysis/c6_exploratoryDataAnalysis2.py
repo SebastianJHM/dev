@@ -152,12 +152,12 @@ def principal(argv):
                     pearson_coef, p_value = stats.pearsonr(df[col1], df[col2])
                     c.append(pearson_coef)
                     p.append(p_value)
-                #fi
-            #rof
+                
+            
             matrix_pearson_coef.append(c)
             matrix_p_value.append(p)
-        #fi
-    #rof
+        
+    
     
     ## Plot of colors measure the correlation between two variables
     plt.pcolor(matrix_pearson_coef, cmap="Reds")
@@ -178,4 +178,3 @@ def principal(argv):
     
 if __name__ == "__main__":
     principal(sys.argv)
-#fi

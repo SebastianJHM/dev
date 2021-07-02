@@ -9,9 +9,8 @@ def main(argv):
         src = path + filename 
         dst = path + nombre
         os.rename(src, dst)
-    #rof
-#fed
+    
+
 
 if __name__ == '__main__': 
     main(sys.argv)
-#fi

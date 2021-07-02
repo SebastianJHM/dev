@@ -15,17 +15,17 @@ def calcular_makespan_blocking( secuencia, TP ):
     TP_sec = []
     for x in secuencia:
         TP_sec.append(TP[x-1])
-    #rof
+    
 
     ## Calcular matriz mat_t_final: máquina 1
     for j in range(num_maquinas):
         acum = 0
         for l in range(0,j+1):
             acum += TP_sec[0][l]
-        #rof
+        
         mat_t_inicial[0][j] = acum - TP_sec[0][j]
         mat_t_final[0][j] = acum
-    #rof
+    
 
     ## Calcular matriz mat_t_final: para el resto de máquinas
     for t in range(1,num_trabajos):
@@ -33,10 +33,10 @@ def calcular_makespan_blocking( secuencia, TP ):
             acum = mat_t_final[t-1][-1]
             for l in range(0,j+1):
                 acum += TP_sec[t][l]
-            #rof
+            
             mat_t_inicial[t][j] = acum - TP_sec[t][j]
             mat_t_final[t][j] = acum
-        #rof
+        
         
         diferencias = []
         minimo = 1000000000000
@@ -46,14 +46,14 @@ def calcular_makespan_blocking( secuencia, TP ):
             if ( x < minimo ):
                 minimo = x
                 pos_menor = i
-            #fi
-        #rof
+            
+        
 
         for i in range(num_maquinas):
             mat_t_inicial[t][i] -= diferencias[pos_menor]
             mat_t_final[t][i] -= diferencias[pos_menor]
-        #rof
-    #rof
+        
+    
     
     ## Matriz de tiempos finales
     mat_t = [[[0,0] for _ in range(num_maquinas)] for _ in range(num_trabajos)]
@@ -61,12 +61,12 @@ def calcular_makespan_blocking( secuencia, TP ):
         for j in range(num_maquinas):
             mat_t[i][j][0] = mat_t_inicial[i][j]
             mat_t[i][j][1] = mat_t_final[i][j]
-        #rof
-    #rof
+        
+    
     
     # for x in mat_t:
     #     print(x)
-    # #rof
+    # 
     return(mat_t_final[-1][-1])
 #fed
     
@@ -88,8 +88,8 @@ def johnson( TP ):
         else:
             trabajos_2.append(trabajo)
             sec_2.append( TP.index(trabajo) + 1 )
-        #fi
-    #fi
+        
+    
     # print("Conjunto 1:", trabajos_1, sec_1)
     # print("Conjunto 2:", trabajos_2, sec_2)
     # print("---------------------------------------")
@@ -105,9 +105,9 @@ def johnson( TP ):
                 s = sec_1[i]
                 sec_1[i] = sec_1[j]
                 sec_1[j] = s
-            #fi
-        #rof
-    #rof
+            
+        
+    
     # print("Conjunto ordenado 1: ",trabajos_1, sec_1)
 
     ## Algoritmo de ordenamiento Conjunto 2 ( mayor a menor en máquina 2)
@@ -121,9 +121,9 @@ def johnson( TP ):
                 s = sec_2[i]
                 sec_2[i] = sec_2[j]
                 sec_2[j] = s
-            #fi
-        #rof
-    #rof
+            
+        
+    
     # print("Conjunto ordenado 2: ",trabajos_2, sec_2)
     secuencia = sec_1 + sec_2
     return( secuencia )
@@ -144,19 +144,19 @@ def cds_sets( TP ):
             acum = 0
             for i in range(0,k):
                 acum += x[i]
-            #rof
+            
             aux.append(acum)
 
             ## Segunda suma
             acum = 0
             for i in range(num_maquinas-k,num_maquinas):
                 acum += x[i]
-            #rof
+            
             aux.append(acum)
             conjunto.append(aux)
         #rod
         conjuntos.append(conjunto)
-    #rof
+    
     return conjuntos
 #fed
 
@@ -166,7 +166,7 @@ def cds( TP ):
     # print("----Conjuntos-------")
     # for conjunto in conjuntos:
     #     print("Conjunto", int(conjuntos.index(conjunto))+1,": ", conjunto)
-    # #rof
+    # 
     # print("-------Secuencias--------")
 
     ## Obtener secuencias
@@ -174,12 +174,12 @@ def cds( TP ):
     for conjunto in conjuntos:
         secuencia = johnson(conjunto)
         secuencias.append(secuencia)
-    #rof
+    
     print(secuencias)
     # ## Imprimir secuencias
     # for secuencia in secuencias:
     #     print("Secuencia", int(secuencias.index(secuencia))+1,": ", secuencia)
-    # #rof
+    # 
 
     ## Secuencia final
     minimo = 1000000000000
@@ -188,8 +188,8 @@ def cds( TP ):
         if ( makespan < minimo ):
             minimo = makespan
             pos = int(secuencias.index(secuencia))
-        #fi
-    #rof
+        
+    
 
     secuencia_cds = secuencias[pos]
     makespan_cds = minimo
@@ -223,4 +223,3 @@ def principal( argv ):
 
 if __name__ == "__main__":
     principal( sys.argv )
-#fi

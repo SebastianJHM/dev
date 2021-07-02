@@ -20,7 +20,7 @@ def busqueda_local_GRASP( secuencia, TP, num_iteraciones ):
             aux = s[x]
             s[x] = s[y]
             s[y] = aux
-        #rof
+        
         #print(s, calcular_makespan_blocking_secuencia(s,TP)) 
         
         f = fo.calcular_makespan_blocking_secuencia(s,TP)
@@ -28,8 +28,8 @@ def busqueda_local_GRASP( secuencia, TP, num_iteraciones ):
             minimo = f
             secuencia = s
             # print(s)
-        #fi
-    #rof
+        
+    
     return(secuencia, fo.calcular_makespan_blocking_secuencia(secuencia,TP))
 #fed
 
@@ -70,13 +70,13 @@ def construccion_GRASP( TP, ALPHA ):
             ## Determinar mínimo makespan
             if ( m < min_mp ):
                 min_mp = m
-            #fi
+            
 
             ## Determinar máximo makespan
             if ( m > max_mp ):
                 max_mp = m
-            #fi
-        #rof
+            
+        
 
         # print("====== Iteración ", it + 1," ======")
         # print("Candidatos: ", candidatos, "Cmax: ", makespan_candidatos, "Min: ", min_mp, "Max: ", max_mp)
@@ -88,9 +88,9 @@ def construccion_GRASP( TP, ALPHA ):
         for m in makespan_candidatos:
             if ( m <= indicador ):                ## Si el makespan es menor que el indicador
                 RCL.append(candidatos[trabajo])      ## guardar el trabajo en RCL
-            #fi
+            
             trabajo += 1
-        #rof
+        
         # print("RCL: ", RCL,"... Menor que: ", indicador)
 
         ## Paso 3: seleccionar aleatoriamente un trabajo del RCL
@@ -103,7 +103,7 @@ def construccion_GRASP( TP, ALPHA ):
         candidatos.remove(seleccion)               ## escogido a solucion_TP y remover el elemento de candidatos
         solucion_TP.append(TP[seleccion-1])        ## agregar los tiempos de procesamiento del trabajo escogido a solucion_TP
         # print("Solucion: ", solucion, "Candidatos: ", candidatos)
-    #rof
+    
     return(solucion, fo.calcular_makespan_blocking( solucion_TP ))
 #fed
  
@@ -129,4 +129,3 @@ def GRASP( argv ):
 
 if __name__ == "__main__":
     GRASP( sys.argv )
-#fi
