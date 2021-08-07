@@ -1,0 +1,8 @@
+// >> node-sass -w scss/styles.scss -o css/
+// Con esta línea compilamos el archico scss/styles.scss a la carpeta css/ en la que se 
+// creará un archivo "styles.css" por defecto.
+// Lo ideal es que el archivo style.scss importe todos los módulos que estén llamando.
+// Los módulos deber comenzar por _ pero deben importarse sin ello
+@import "./components/init";
+@import "./components/header";
+@import "./components/main"

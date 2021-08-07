@@ -1,0 +1,49 @@
+/* ============== Inicialización CSS ================ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+    font-family: arial,sans-serif;
+}
+/* ================================================== */
+
+.container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: blue;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.container::-webkit-scrollbar {
+    height: 10px;
+}
+
+/* Track */
+.container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 0;
+}
+
+/* Handle */
+.container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 0;
+}
+
+/* Handle on hover */
+.container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    border-radius: 0;
+}
+
+.element {
+    width: auto;
+    height: 400px;
+    min-width: 600px;
+    background-color: red;
+}

@@ -1,0 +1,109 @@
+.main {
+    margin-top: 8rem;
+}
+
+
+.main_search_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_search_title {
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.main_search_bar {
+    border: solid rgb(255, 255, 255) 2px;
+    background-color: rgba(184, 130, 255, 0.459);
+    width: 80%;
+    max-width: 700px;
+    height: 4rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.main_search_text {
+    width: 94%;
+    background-color: transparent;
+    outline: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.4rem;
+    border: none;
+
+    &::placeholder {
+        color: rgb(255, 255, 255);
+        font-weight: 700;
+    }
+}
+
+.main_peliculas {
+    margin-top: 3rem;
+    padding: 3rem;
+}
+
+.main_peliculas_title {
+    font-size: 2rem;
+    color:rgb(255, 255, 255);
+}
+
+
+.main_peliculas_lista {
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+    height: 36rem;
+    margin-top: 1rem;
+    align-items: center;
+        
+    &::-webkit-scrollbar {
+        height: 10px;
+    }
+    
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 5px;
+    }
+    
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 5px;
+    }
+    
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+        border-radius: 5px;
+    }
+}
+
+
+.main_peliculas_img {
+    min-width: 20rem;
+    height: 30rem;
+    background: linear-gradient(0deg, rgb(240, 211, 47) 12%, rgb(47, 192, 255) 84%);
+    border-radius: 1rem;
+    cursor: pointer;
+    &:not(:first-child):not(:last-child) {
+        margin: 0 1rem;
+    }
+    &:first-child {
+        margin-right: 1rem;
+        &:hover {
+            margin-left: 1rem;
+        }
+    }
+    &:last-child {
+        margin-left: 1rem;
+        &:hover {
+            margin-right: 1rem;
+        }
+    }
+}
