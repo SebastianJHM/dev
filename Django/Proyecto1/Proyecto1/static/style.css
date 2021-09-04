@@ -1,0 +1,9 @@
+nav {
+    background-color: rgb(244, 255, 144);
+    margin-top: 0;
+    height: 50px;
+}
+
+nav ul li{
+    display: inline-block;
+}

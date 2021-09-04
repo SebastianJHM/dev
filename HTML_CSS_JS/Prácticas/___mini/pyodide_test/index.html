@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <script src="https://cdn.jsdelivr.net/pyodide/v0.18.0/full/pyodide.js"></script>
+    </head>
+
+    <body>
+        <h1 id="myTitle">Soy el titulo</h1>
+        Pyodide test page <br>
+        Open your browser console to see Pyodide output
+        <script type="text/javascript">
+            async function main() {
+                let pyodide = await loadPyodide({
+                    indexURL: "https://cdn.jsdelivr.net/pyodide/v0.18.0/full/"
+                });
+
+                console.log(pyodide.runPython(`
+                    import sys
+                    sys.version
+                `));
+
+                console.log(pyodide.runPython(`
+                    print(1 + 2)
+                    print(2+3)
+                    print(type([1,2]))
+                `));
+
+                let c = pyodide.runPython(`
+                    def myFunction(y):
+                        y["A"][0] += 5
+                        return y
+
+                    x = {"A": [1, 2], "B": {"atr1": 1, "atr2": "2"}}
+                    y = myFunction(x)
+                    str(y)
+                `);
+                d = c.replaceAll("'", '"');
+                e = JSON.parse(d);
+                console.log(c, d, e);
+
+                pyodide.runPython(`
+                    import js
+
+                    div = js.document.createElement("div")
+                    div.innerHTML = "<h2>This element was created from Python</h2>"
+                    js.document.body.append(div)
+
+                    js.document.getElementById("myTitle").innerHTML = "Soy el título modificado con Pyodide"
+                `);
+
+                await pyodide.loadPackage("numpy");
+                f = pyodide.runPython(`
+                    import numpy
+                    x=numpy.array([3,4])
+                    str(list(x))
+                `);
+                console.log(f);
+                console.log(JSON.parse(f));
+
+                await pyodide.loadPackage("scipy");
+                g = pyodide.runPython(`
+                    import scipy.stats
+                    x=scipy.stats.norm.cdf(50, 52, 3)
+                    
+                    from scipy.optimize import fsolve
+                    import numpy as np
+                    def func(x):
+                        return [x[0] * np.cos(x[1]) - 4,
+                                x[1] * x[0] - x[1] - 5]
+                    root = fsolve(func, [1, 1])
+
+                    str(list(root))
+                `);
+                console.log(g);
+                console.log(JSON.parse(g));
+                
+            }
+            main();
+        </script>
+    </body>
+
+</html>

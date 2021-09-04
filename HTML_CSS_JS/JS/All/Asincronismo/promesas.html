@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const users = [{id: 1, name: "Dorian"}, {id: 2, name: 'Laura'}, {id: 3, name: 'Carlos'}]
+            const emails = [{id: 1, email: 'dorian@gmail.com'}, {id: 2,email: 'laura@gmail.com'}]
+
+            // PROMESA: una promesa es un objeto con 2 calbacks
+            function getUser(id) {
+                const user = users.find( (u) => (u.id == id));
+                const promise = new Promise(function(resolve, reject) {
+                    if (user) {
+                        resolve(user)
+                    } else {
+                        reject(`No exite un usaurio con id ${id}`)
+                    }
+                })
+                return promise;
+            }
+
+            function getEmail(user) {
+                const email_founded = emails.find(function(e) {
+                    return (e.id == user.id)
+                })
+
+                const promise = new Promise((resolve, reject) => {
+                    if(email_founded) {
+                        resolve(`El email del usuario ${user.name} es ${email_founded.email}`);
+                    } else {
+                        reject(`El usuario ${user.name} no tiene email`);
+                    }
+                })
+
+                return promise;
+
+            }
+
+            getUser(1).then((user) => {
+                console.log("RESOLVE: ", user);
+                getEmail(user).then( response => {
+                    console.log(response);
+                }).catch( error => {
+                    console.log(error);
+                });
+            }).catch((error) => {
+                console.log(`REJECT: ${error}`)}
+            );
+
+            getUser(3)
+                .then(user => getEmail(user))
+                .then((response) => console.log(response))
+                .catch((error) => console.log(`REJECT: ${error}`));
+        </script>       
+    </body>
+</html>

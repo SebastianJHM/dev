@@ -1,0 +1,20 @@
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+} */
+
+nav {
+    background-color: rgb(212, 212, 212);
+    margin-top: 0;
+    height: 50px;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul {
+    float: left;
+}

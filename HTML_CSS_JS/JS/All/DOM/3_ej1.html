@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aguacates</title>
+
+        <style>
+            h1 {
+                text-align: center;
+                margin-bottom: 12px;
+                font-weight: bolder;
+            }
+
+            h2 {
+                font-size: 20px;
+                margin-bottom: 0;
+                margin-top: 5px;
+            }
+
+            body {
+                font-family: "Segoe UI";
+            }
+
+            .myConatiner {
+                background-color: rgb(219, 219, 219);
+                margin-bottom: 20px;
+                width: 30%;
+                margin-left: 15px;
+                margin-right: 15px;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                border-radius: 10px;
+                height: 130px;
+
+            }
+
+            #app {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 0 50px;
+            }
+
+            img {
+                float: left;
+                margin-right: 20px;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                height: 100%;
+            }
+
+            #slogan {
+                text-align: center;
+                font-weight: bolder;
+                color: rgb(122, 122, 122);
+                display: block;
+                margin-bottom: 40px;
+            }
+
+            .price {
+                background-color: rgb(58, 92, 19);
+                padding: 2px 5px;
+                color: rgb(224, 224, 224);
+                font-weight: bolder;
+                font-size: 12px;
+                border-radius: 5px;
+                box-shadow: rgba(26, 99, 36, 0.35) 0px 1px 5px;
+                
+            }
+
+            .description {
+                margin-top: 7px;
+                font-size: 15px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 3; /* number of lines to show */
+                -webkit-box-orient: vertical;
+
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Tienda de aguacates</h1>
+        <span id="slogan">to be defined ...</span>
+        <div id="app"></div>
+
+        <script>
+            async function service(url) {
+                const response = await fetch(url);
+                const response_data = await response.json();
+                return response_data.data;
+            }
+
+            function formatPrice(price) {
+                const newPrice = new window.Intl.NumberFormat("es", {
+                    style: "currency",
+                    currency: "COP",
+                }).format(price);
+
+                return newPrice;
+            }
+
+            async function main() {
+                const url = "https://platzi-avo.vercel.app/api/avo";
+                const url_image = "https://platzi-avo.vercel.app";
+                const data = await service(url);
+                console.log(data);
+                let allItems = [];
+
+                data.forEach((item) => {
+                    // create image
+                    const image = document.createElement("img");
+                    image.src = `${url_image}${item.image}`;
+                   
+
+                    const title = document.createElement("h2");
+                    title.textContent = `${item.name}`
+
+                    // create price
+                    const price = document.createElement("span");
+                    price.setAttribute("class", "price")
+                    price.textContent = `${formatPrice(item.price)}`
+
+                    // create price
+                    const description = document.createElement("p");
+                    description.setAttribute("class", "description");
+                    description.textContent = `${item.attributes.description}`
+
+                    const container = document.createElement("div");
+                    container.className = "myConatiner";
+                    container.append(image, title, price, description);
+
+                    allItems.push(container);
+                });
+                const appNode = document.querySelector("#app");
+                appNode.append(...allItems)
+            }
+
+            main();
+        </script>
+    </body>
+</html>

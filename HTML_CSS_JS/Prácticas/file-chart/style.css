@@ -1,0 +1,33 @@
+#input-file {
+    display: none;
+}
+
+#label-input-file {
+    display: inline-block;
+    background-color: rgb(197, 197, 197);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: solid black 5px;
+}
+
+#label-input-file:hover {
+    display: inline-block;
+    background-color: rgb(177, 177, 177);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container-input-file {
+    width: 40%;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -9,8 +9,8 @@ var articulos = [
 
 //filter Genera un nuevo array
 var articulosFiltrados = articulos.filter(function(articulo) {
-	return articulo.precio <= 500;
-});
+	return articulo.precio <= 500 && articulo.precio >=80;
+}).l;
 console.log(articulosFiltrados);
 
 //map Ayuda a mapear ciertos elementos de los articulos, es necesario generar nuevo array

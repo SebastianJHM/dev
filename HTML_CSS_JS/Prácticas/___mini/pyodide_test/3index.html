@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.18.0/full/pyodide.js"></script>
+</head>
+
+<body>
+    <button onclick="evaluatePython()">Run</button>
+    <p id="output"></p>
+    <script type="text/javascript">
+        const output = document.getElementById("output");
+
+        async function main() {
+            let pyodide = await loadPyodide({
+                indexURL: "https://cdn.jsdelivr.net/pyodide/v0.18.0/full/",
+            });
+            await pyodide.loadPackage("scipy");
+            pyodide.runPython("import scipy.stats");
+            return pyodide;
+        }
+
+        let pyodideReadyPromise = main();
+
+        async function evaluatePython() {
+            let pyodide = await pyodideReadyPromise;
+            g = pyodide.runPython(`
+                import scipy.stats
+                import random
+                y = random.randint(40,60)
+                x=scipy.stats.norm.cdf(y, 52, 3)
+                str(x)
+            `);
+            console.log(g);
+            output.innerText = g;
+
+            const url1 = 'https://raw.githubusercontent.com/SebastianJHM/dev/main/Python/dijkstra.py'
+            const response = await fetch(url1);
+            const code_text = await response.text();
+            console.log(code_text);
+            pyodide.runPython(code_text);
+            h = pyodide.runPython(`
+                graph = Graph([
+                    ("a", "b", 90),  ("a", "c", 138),  ("a", "d", 348),
+                    ("b", "c", 84),  ("b", "e", 66),
+                    ("c", "d", 156), ("c", "f", 90),
+                    ("d", "g", 48),
+                    ("e", "i", 84),
+                    ("f", "g", 132), ("f", "h", 60),
+                    ("g", "h", 48), ("g", "j", 150),
+                    ("h", "i", 132), ("h", "j", 126),
+                    ("i", "j", 126)
+                ])
+                x = graph.dijkstra("a", "j")
+                str(list(x))
+            `)
+            console.log(h)
+
+            
+        }
+        
+    </script>
+</body>
+
+</html>

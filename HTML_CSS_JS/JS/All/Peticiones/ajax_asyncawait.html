@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            // direccion de la API
+            let url_api = 'https://rickandmortyapi.com/api/character/';
+
+            // funcion principal
+            function fetchData(url_api) {
+                let xhttp = new XMLHttpRequest();
+                const promise = new Promise((resolve, reject) => {
+                    // instanciamos la conexion
+                    // abrir una conexion con el metodo, la ruta y si es asincrono
+                    xhttp.open('GET', url_api, true);
+                    
+                    
+                    // validacion del llamado
+                    xhttp.onreadystatechange = () => {
+                        if (xhttp.readyState === 4) {
+                            if (xhttp.status === 200) {
+                                resolve(JSON.parse(xhttp.responseText));
+                            } else {
+                                reject("Se rechaza la solicitud");
+                            }
+                        }
+                    }
+
+                    xhttp.send();
+                })
+                
+                return promise;
+                
+            }
+            
+            async function main(url_api) {
+                try {
+                    received_data_1 = await fetchData(url_api);
+                    console.log(received_data_1);
+                    const url_rick= url_api + received_data_1.results[0].id;
+                    console.log(url_rick);
+    
+                    received_data_2 = await fetchData(url_rick);
+                    console.log(received_data_2);
+                    url_origin_rick = received_data_2.origin.url;
+                    console.log(url_origin_rick);
+    
+                    received_data_3 = await fetchData(url_origin_rick);
+                    console.log(received_data_3);
+                    console.log(`Número de no sé que: ${received_data_1.info.count}`);
+                    console.log(`Nombre completo de Rick: ${received_data_2.name}`);
+                    console.log(`Diménsion de donde habita rick${received_data_3.dimension}`);
+                } catch (error) {
+                    console.log(error);
+                }
+            }
+
+            main(url_api);
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <header>
+            <h1>Title</h1>
+            <h2>Subtitle</h2>
+
+            <div id="section">
+                <span>soy el el span en el div</span>
+            </div>
+        </header>
+        <div id="container">
+            <div class="element" id="e1">e1</div>
+            <div class="element" id="e2">e2</div>
+            <div class="element" id="e3">e3</div>
+            <div class="element" id="e4">e4</div>
+            <div class="element" id="e5">e5</div>
+        </div>
+
+        <script>
+            // Solo se ha creado, aún no se agrega al DOM
+            const etiquetaH3 = document.createElement("h3");
+            const texto = document.createTextNode("Hola!");
+
+            // Agregando el texto de la etiqueta
+            etiquetaH3.append(texto);
+
+            const myDiv = document.querySelector("#section");
+            // Agregando el h3 al div
+            myDiv.append(etiquetaH3);
+
+            const referencia = document.querySelector("section > span");
+            const nodo = document.createElement("span");
+            nodo.append(document.createTextNode("nuevo span"));
+
+            myDiv.insertBefore(nodo, referencia);
+
+
+            // beforebegin: Lo inserta arriba
+            // afterbegin: Lo inserta dentro al comienzo
+            // beforeend: Lo inserta debajo
+            // afterend: Lo inserta dentro al final
+            const referencia2 = document.querySelector("#section > h3");
+            const section = document.createElement("section");
+            section.textContent = "texto sección";
+            referencia2.insertAdjacentElement("afterbegin", section);
+
+
+            // OUTERHTML Y INNERHTML
+            const titulo = document.querySelector("header > h1");
+            console.log("Outer: " + titulo.outerHTML);
+            console.log("Inner: " + titulo.innerHTML);
+
+
+            const padre = document.querySelector("#container");
+            const hijo3 = document.querySelector("#container > #e3");
+            padre.removeChild(hijo3);
+
+            const subtitulo = document.querySelector("header > h2");
+            subtitulo.remove();
+
+
+        </script>
+    </body>
+</html>

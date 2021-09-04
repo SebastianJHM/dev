@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            // await no funciona si lo que se devuelve no es una promesa
+            function conAsyncAwait() {
+                return new Promise(resolve => {
+                    setTimeout(() => {
+                      resolve('Promesa resulta');
+                    }, 2000);
+                });
+            }
+
+            function sinAsyncAwait() {
+                return new Promise(resolve => {
+                    setTimeout(() => {
+                      resolve('LeCrackent13');
+                    }, 2000);
+                });
+            }
+
+
+            async function main() {
+                const p1 = sinAsyncAwait();
+                const p2 = await conAsyncAwait();
+
+                console.log(`sin async ${p1}`);
+                console.log(`con async ${p2}`);
+
+                return `Hola ${p2}`;
+            }
+
+            main().then(function (response) {
+                console.log(response);
+            }).catch(function (error) {
+                console.log(error);
+            });
+        </script>
+    </body>
+
+</html>

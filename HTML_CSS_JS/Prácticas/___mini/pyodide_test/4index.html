@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <script src="https://cdn.jsdelivr.net/pyodide/v0.18.0/full/pyodide.js"></script>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            async function main() {
+                let pyodide = await loadPyodide({
+                    indexURL: "https://cdn.jsdelivr.net/pyodide/v0.18.0/full/"
+                });
+                
+                t = "miTexto"
+                code_text = `print('${t}')`;
+                console.log(code_text)
+                pyodide.runPython(code_text);
+
+                num = 5
+                a = pyodide.runPython(`
+                    import math
+                    x = int('${num}')
+                    x+math.exp(x)
+                `);
+                console.log(a);
+
+                arr = [5, 8, 100];
+                b = pyodide.runPython(`
+                    import math
+                    import ast
+                    x = ast.literal_eval('${arr}')
+                    y = {v: v+1 for v in x}
+                    str(y)
+                `);
+                console.log(b);
+
+                obj = {"A": [1, 2], "B": {"atr1": 1, "atr2": "2"}}
+                c = pyodide.runPython(`
+                    import math
+                    import ast
+                    import json
+                    o1 = ast.literal_eval('${JSON.stringify(obj)}')
+                    o2 = json.loads('${JSON.stringify(obj)}')
+                    str({"o1": o1, "o2": o2})
+                `);
+                console.log(c);
+                console.log(JSON.parse(c.replaceAll("'", '"')));
+
+            }
+            main();
+        </script>
+    </body>
+
+</html>

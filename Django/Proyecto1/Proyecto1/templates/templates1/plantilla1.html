@@ -1,0 +1,73 @@
+{% load static %}
+<html>
+    <head>
+        <title>Probando Plantilla</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'barra.css' %}">
+    </head>
+    <body>
+
+        {% include "templates1/barra.html" %}
+
+        <h1>Chao {{nombre_usuario|upper}} {{apellido_usuario|upper}}</h1>
+        <p>Estamos en: {{fecha_actual.year}} / {{fecha_actual.month}} / {{fecha_actual.day}}</p>
+        <p>Lista: {{textos_html}} <strong>{{textos_html.0}}</strong></p>
+        <p>JSON: {{json_html}} <strong>{{json_html.b.1.at2}}</strong></p>
+        {% if nombre_usuario != "x" %}
+            <p>el nombre es diferente a x</p>
+        {% endif %}
+        <h3>Lista desordenada de elemento</h3>
+        {% if textos_html %}
+            <ul>
+                {% for t in textos_html %}
+                    <li class="el">{{t}}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No hay elementos</p>
+        {% endif %}
+        <script>
+            // NÚMEROS
+            const array_numeros = {{numeros}};
+            console.log("Array de números directos: ", array_numeros);
+
+            const numeros_string = "{{numeros}}";
+            const numeros_parseados = JSON.parse(numeros_string);
+            console.log("Números con JSON parse", numeros_parseados);
+
+            const reemp_numeros = numeros_string.replace("[", "").replace("]", "").replaceAll(" ","");
+            const conv_array_numeros = reemp_numeros.split(",");
+            const conv_to_number_numeros = conv_array_numeros.map(Number)
+            console.log(reemp_numeros, ">>>",  conv_array_numeros, ">>>", conv_to_number_numeros)
+            
+
+
+            // TEXTOS
+            const array_textos = {{textos_js|safe}};
+            console.log("Array de textos directos: ", array_textos);
+            
+            const textos_string = "{{textos_html}}";
+            const reemp_textos = textos_string.replaceAll("&#x27;", '"');
+            const textos_parseados = JSON.parse(reemp_textos);
+            console.log(textos_string, ">>>", reemp_textos, ">>>", textos_parseados);
+
+            const textos_reemp = textos_string.replaceAll("&#x27;", "").replace("[", "").replace("]", "").replaceAll(" ","");
+            const conv_array_textos = textos_reemp.split(",");
+            console.log(textos_string, ">>>", textos_reemp, ">>>", conv_array_textos);
+
+
+            // OBJETOS(JSON)
+            const obj1 = {{json_js|safe}};
+            console.log(obj1);
+
+            const obj2 = "{{json_js}}"
+            const obj2_reemp = obj2.replaceAll("&quot;", '"')
+            const obj2_parseado = JSON.parse(obj2_reemp)
+            console.log(obj2, ">>>", obj2_reemp, ">>>", obj2_parseado)
+
+            var obj3 = "{{json_html}}"
+            const obj3_reemp = obj3.replaceAll("&#x27;", '"')
+            const obj3_parseado = JSON.parse(obj3_reemp)
+            console.log(obj3, ">>>", obj3_reemp, ">>>", obj3_parseado)
+        </script>
+    </body>
+</html>

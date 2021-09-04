@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>AJAX</h1>
+        <button id="mybutton">te lo pido</button>
+        <ul id="list"></ul>
+        <script>
+            const button = document.getElementById("mybutton");
+
+            function init_loading() {
+                // Crear elemento cargando...
+                const el = document.createElement("div");
+                el.id = "loading";
+                el.innerHTML = "Loading...";
+                el.style.cssText = "color:red;font-family:'Segoe UI';font-weight: bolder;";
+                button.parentNode.insertBefore(el, button.nextSibling);               
+            } 
+            
+            function finish_loading() {
+                // Quitar elemento cargando ...
+                document.getElementById("loading").remove();
+            }
+
+
+            button.addEventListener("click", (event) => {
+                
+                init_loading();
+
+
+                let xhr;
+                // Lo primero es verificar que el navegador cuente con XMLHttpRequest
+                if (window.XMLHttpRequest) {
+                    xhr = new XMLHttpRequest();
+                } else {
+                    xhr = new ActiveXObject("Micrsoft.XMLHTTP")
+                }
+
+                // ABRIR LA CONEXIÓN
+                xhr.open("GET", "https://jsonplaceholder.typicode.com/users");
+
+                xhr.addEventListener("load", (receivedData) => {
+                    const dataJSON = JSON.parse(receivedData.target.response);
+                    console.log(dataJSON);
+
+                    const list = document.getElementById("list");
+                    list.innerHTML = "";
+                    for (const userInfo of dataJSON) {
+                        const listItem = document.createElement("LI");
+                        listItem.textContent = `${userInfo.id} --- ${userInfo.name}`;
+                        list.appendChild(listItem);                 
+                    }
+                    finish_loading();
+                })
+
+                // CERRAR LA CONEXIÖN
+                xhr.send();
+                
+            })
+        </script>
+    </body>
+</html>

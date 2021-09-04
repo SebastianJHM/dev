@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            // CALLBACKS: un callback es una función que se ejecuta a travéz de otra función
+            // Los callbacks no son asincronos
+
+            // EJEMPLO 1
+            // function saludar(nombre) {
+            //     console.log('Hola ' + nombre);
+            // }
+            // function procesarEntradaUsuario(callback) {
+            //     var nombre = prompt('Por favor ingresa tu nombre.');
+            //     callback(nombre);
+            // }
+            // procesarEntradaUsuario(saludar);
+
+
+            
+            const users = [{id: 1, name: "Dorian"}, {id: 2, name: 'Laura'}, {id: 3, name: 'Carlos'}]
+            const emails = [{id: 1, email: 'dorian@gmail.com'}, {id: 2,email: 'laura@gmail.com'}]
+
+            function getEmail(error_message, user) {
+                if (error_message) {
+                    console.log(error_message);
+                } else {
+                    const email = emails.find( e => (e.id == user.id));
+                    if (email===undefined) {
+                        console.log(`El usuario ${user.name} no tiene email`);
+                    } else {
+                        console.log(`El email del usuario ${user.name} es ${email.email}`)
+                    }
+                }
+
+            }
+
+            function getUser(id, callback) {
+                const user = users.find( u => (u.id == id));
+                if (user === undefined) {
+                    callback(`No exite un usaurio con id ${id}`, null);
+                } else {
+                    callback(null, user)
+                }
+            }
+
+
+            getUser(1, getEmail);
+
+
+        </script>
+    </body>
+
+</html>
