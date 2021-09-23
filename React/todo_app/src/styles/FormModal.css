@@ -1,0 +1,63 @@
+.modal-container {
+    background-color: #242526;
+    width: 500px;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.a-open-modal {
+    animation: mymove 0.5s;
+}
+
+@keyframes mymove {
+    0%   {top: -50px;}
+    100% {top: 0px;}
+}
+
+.new-todo-input {
+    width: 100%;
+    height: 100px;
+    background-color: #242526;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 25px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: "IBM Plex Sans", sans-serif;
+    color: #B0B3B8;
+    margin-top: 10px;
+    resize: none;
+}
+
+.new-todo-input:focus {
+    outline: none;
+}
+
+.new-todo-button {
+    color: rgb(0, 137, 250);
+    background-color: rgba(0, 137, 250, 0.15);
+    padding: 6px 10px;
+    font-family: inherit;
+    border: none;
+    font-size: 18px;
+    font-weight: bolder;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0 6px;
+}
+
+.buttons-container {
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+
+h3 span {
+    font-weight: bolder;
+    font-size: 24px;
+    color: rgb(255, 151, 15);
+    padding: 1px 4px;
+    border-radius: 3px;
+}

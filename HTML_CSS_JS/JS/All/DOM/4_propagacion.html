@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .c1 {
+                font-size: 20px;
+                display: inline;
+            }
+            .c2 {
+                background-color: rgb(150, 150, 236);
+            }
+            .c3 {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            .c4 {
+                color: brown;
+                padding: 5px;
+            }
+
+            #myDIV {
+                margin-top: 20px;
+            }
+
+            /* Style the buttons */
+            .btn {
+                border: none;
+                outline: none;
+                padding: 10px 16px;
+                background-color: #f1f1f1;
+                cursor: pointer;
+            }
+            
+            .btn:hover {
+                background-color: rgb(204, 79, 79);
+                color: rgb(29, 172, 255);
+                
+            }
+
+            /* Style the active class (and buttons on mouse-over) */
+            .active {
+                background-color: #666;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="c1 c2">Título</h1>
+
+        <div id="myDIV">
+            <button class="btn">1</button>
+            <button class="btn active">2</button>
+            <button class="btn">3</button>
+            <button class="btn">4</button>
+            <button class="btn">5</button>
+        </div>
+
+        <script>
+            const titulo = document.querySelector("h1");
+            titulo.addEventListener("click", function(ev) {
+                console.log(ev);
+                console.log(ev.target);
+                console.log(ev.target.classList);
+                
+                // Add and remove class from element
+                if (ev.target.classList.contains("c3") == true) {
+                    ev.target.classList.remove("c3");
+                } else {
+                    ev.target.classList.add("c3")
+                }
+
+                // Toggle replace the last function
+                ev.target.classList.toggle("c4");
+            })
+
+            const barra = document.getElementById("myDIV");
+            
+            // Con este codi es posible, pero está mas optimizado con el de abajo
+            /*barra.childNodes.forEach((elemento) => {
+                elemento.addEventListener("click", (ev) => {
+                    console.log(ev);
+                    document.querySelector("#myDIV > button.active").classList.remove("active");
+                    ev.target.classList.toggle("active");
+                })
+            })*/
+
+            barra.addEventListener("click", function(ev) {
+                if (ev.target && ev.target.tagName == "BUTTON") {
+                    document.querySelector("div#myDIV > button.active").classList.remove("active");
+                    ev.target.classList.toggle("active");
+                }
+            })
+            
+            
+        </script>
+    </body>
+</html>

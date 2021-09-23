@@ -3,9 +3,9 @@
     width: 100%; /* ocupar toda la pantalla */
     height: 100%; /* ocupar toda la pantalla */
     background-color: rgba(26, 5, 21, 0.5);
-    position: fixed; /* lo psicion debe mantenerse fija en toda la pantalla */
-    left: 0; /* lo psicion debe mantenerse fija en toda la pantalla */
-    top: 0; /* lo psicion debe mantenerse fija en toda la pantalla */
+    position: fixed; /* lo posicion debe mantenerse fija en toda la pantalla */
+    left: 0; /* la pantalla debe comenzar en la esquina superior derecha */
+    top: 0; /* la pantalla debe comenzar en la esquina superior derecha */
     z-index: 1; /* el modal debe ser lo superior en el eje z de la pantalla */
 }
 

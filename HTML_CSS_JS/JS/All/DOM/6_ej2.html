@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <title>Document</title>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family: 'IBM Plex Sans KR', sans-serif;
+                box-sizing: border-box;
+                
+            }
+            h1 {
+                font-weight: 700;
+                text-align: center;
+                margin-top: 10px;
+            }
+            .imgfox {
+                width: 300px;
+                margin-top: 20px;
+            }
+
+            #app {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            #button-add {
+                display: table;
+                margin: auto;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Lazy Images</h1>
+        <button id="button-add">Agregar</button>
+
+        <div id="app" data-x="yz"></div>
+
+        <script>
+            function generateRandom(a, b) {
+                return Math.floor(a + Math.random()*(b - a + 1))
+            }
+
+            function generateImage() {
+                const random = generateRandom(1, 123);
+                const myFoxImage = document.createElement("img");
+                myFoxImage.src = `https://randomfox.ca/images/${random}.jpg`;
+                myFoxImage.className = "imgfox";
+
+                const container = document.createElement("div");
+                container.className = "container-image";
+                container.id = "img_" + String(Number(document.querySelectorAll(".container-image").length) + 1);
+                container.append(myFoxImage);
+                
+                return container;
+            }
+
+            const observer = new IntersectionObserver(
+                function(entries) {
+                    for(const entry of entries) {
+                        if (entry.isIntersecting == true) {
+                            console.log(entry.target.id.slice(4,) + " -> Cargar imágen");
+                            const myImage = generateImage();
+                            myApp.append(myImage);
+
+                            
+                            /*if (Number(entry.target.id.slice(4,)) > Number(document.querySelectorAll(".container-image").length)-2) {
+                                console.log(entry.target.id.slice(4,) + " -> Cargar imágen");
+                                const myImage = generateImage();
+                                myApp.append(myImage);
+                                }*/
+                            
+                        }
+                    }
+                }
+            );
+
+            async function initImages(n) {
+                for(let i=0;i<n;i++) {
+                    const myImage = generateImage();
+                    myApp.append(myImage);
+                }
+            }
+            
+            function addObserverInitImages() {
+                for (const img of document.querySelectorAll(".container-image")) {
+                    observer.observe(img);
+                }
+            }
+
+    
+                
+            const myApp = document.querySelector("#app");
+            const addButton = document.getElementById("button-add");
+            addButton.addEventListener("click", () => {
+                const myImage = generateImage();
+                myApp.append(myImage);
+                
+            })
+        
+
+            initImages(5);
+            window.onload = function() {
+                addObserverInitImages();
+
+                // Cuando se inserte un elemento en div#myApp
+                myApp.addEventListener("DOMNodeInserted", function(ev) {
+                    const myImages = document.querySelectorAll(".container-image");
+                    // Quitar el observador a todos
+                    for (let img of [...myImages]) {
+                        observer.unobserve(img);
+                    }
+                    // Añadir observador a los dos últimos
+                    for (let img of [...myImages].slice(-2)) {
+                        observer.observe(img);
+                    }
+                });
+            };
+        </script>
+    </body>
+</html>

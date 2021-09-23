@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <script src="https://cdn.jsdelivr.net/pyodide/v0.18.0/full/pyodide.js"></script>
+    </head>
+
+    <body>
+
+        <script>
+            async function loadPyodideLibrary() {
+                let pyodide = await loadPyodide({
+                    indexURL: "https://cdn.jsdelivr.net/pyodide/v0.18.0/full/",
+                });
+                await pyodide.loadPackage("scipy");
+                return pyodide;
+            }
+
+            async function imporMEASUREMENTS(pyodide) {
+                const url = 'https://raw.githubusercontent.com/SebastianJHM/X-FITTER/main/continious/measurements__.py'
+                const response = await fetch(url);
+                const code_text = await response.text();
+                pyodide.runPython(code_text);
+            }
+
+            async function importDISTcontinious(pyodide, dist) {
+                const url = `https://raw.githubusercontent.com/SebastianJHM/X-FITTER/main/continious/distributions/${dist}.py`
+                const response = await fetch(url);
+                const code_text = await response.text();
+                pyodide.runPython(code_text);
+            }
+
+            async function importDISTdiscrete(pyodide, dist) {
+                const url = `https://raw.githubusercontent.com/SebastianJHM/X-FITTER/main/discrete/distributions/${dist}.py`
+                const response = await fetch(url);
+                const code_text = await response.text();
+                pyodide.runPython(code_text);
+            }
+
+            async function importDATAcontinious(dist) {
+                const url = `https://raw.githubusercontent.com/SebastianJHM/X-FITTER/main/continious/data/data_${dist}.txt`;
+                const response = await fetch(url);
+                const file = await response.text();
+                const array_number = file.split("\n").map((r) => {
+                    return Number(r.replace(",", "."));
+                });
+                return array_number;
+            }
+
+            async function importDATAdiscrete(dist) {
+                const url = `https://raw.githubusercontent.com/SebastianJHM/X-FITTER/main/discrete/data/data_${dist}.txt`;
+                const response = await fetch(url);
+                const file = await response.text();
+                const array_number = file.split("\n").map((r) => {
+                    return Number(r.replace(",", "."));
+                });
+                return array_number;
+            }
+
+            async function discreteD(pyodide) {
+                distributions = [
+                    "bernoulli", "binomial", "geometric", "hypergeometric", "logarithmic",
+                    "negative_binomial", "poisson", "uniform"
+                ]
+
+                for (dist of distributions) {
+                    const data = await importDATAdiscrete(dist);
+                    await importDISTdiscrete(pyodide, dist);
+                    try {
+                        console.log(dist.toUpperCase());
+                        await pyodide.runPython(`
+                            import scipy.stats
+                            import numpy as np
+                            import math
+
+                            class MEASUREMENTS:
+                                def __init__(self, data):
+                                    self.data = data
+                                    self.length = len(data)
+                                    self.min = min(data)
+                                    self.max = max(data)
+                                    self.mean = np.mean(data)
+                                    self.variance = np.var(data, ddof=1)
+                                    self.std = np.std(data, ddof=1)
+                                    self.skewness = scipy.stats.moment(data, 3) / pow(self.std, 3)
+                                    self.kurtosis = scipy.stats.moment(data, 4) / pow(self.std, 4)
+                                    self.median = np.median(data)
+                                    self.mode = self.calculate_mode()
+                                    self.num_bins = self.danoes_formula()
+                                    
+                                def frequencies(self, data):
+                                    f = {}
+                                    for x in data:
+                                        if x in f:
+                                            f[x] += 1
+                                        else:
+                                            f[x] = 1
+                                    return({k: v for k, v in sorted(f.items(), key=lambda item: item[0])})
+                        
+                        
+                            import ast
+                            data = ast.literal_eval('${data}')
+                            measurements = MEASUREMENTS(data)
+                           
+                            
+                            distribution = eval('${dist.toUpperCase()}')(measurements)
+                            print(distribution.get_parameters(measurements))
+                            print(distribution.cdf(measurements.mean))     
+                            
+                        `);
+                    } catch (error) {
+                        console.log(error);
+                        console.log("nada");
+                    }
+                }
+            }
+
+            async function continiousD(pyodide) {
+
+                imporMEASUREMENTS(pyodide);
+                
+                const distributions = [
+                    "beta", "burr", "burr_4p", "cauchy", "chi_square_3p", "chi_square", 
+                    "dagum", "dagum_4p","erlang", "erlang_3p", "error_function", "exponential",
+                    "exponential_2p", "f", "fatigue_life", "frechet", "gamma", "gamma_3p", 
+                    "generalized_extreme_value", "generalized_gamma", "generalized_gamma_4p",
+                    "generalized_logistic", "generalized_normal", "gumbel_left", "gumbel_right",
+                    "hyperbolic_secant", "inverse_gamma", "inverse_gamma_3p", "inverse_gaussian",
+                    "inverse_gaussian_3p", "johnson_sb", "johnson_su", "kumaraswamy", "laplace",
+                    "levy", "loggamma", "logistic", "loglogistic", "loglogistic_3p", "lognormal",
+                    "nakagami", "normal", "pareto_first_kind", "pareto_second_kind", "pearson_type_6",
+                    "pearson_type_6_4p", "pert", "power_function", "rayleigh","reciprocal", "rice",
+                    "t", "trapezoidal", "triangular", "uniform", "weibull", "weibull_3p"
+                ]
+    
+                distributions.forEach(async function(dist) {
+                    const data = await importDATAcontinious(dist);
+                    await importDISTcontinious(pyodide, dist);
+                    try {
+                        console.log(dist.toUpperCase());
+                        await pyodide.runPython(`
+                            import ast
+                            data = ast.literal_eval('${data}')
+                            measurements = MEASUREMENTS(data)
+                           
+                            
+                            distribution = eval('${dist.toUpperCase()}')(measurements)
+                            print(distribution.get_parameters(measurements))
+                            print(distribution.cdf(measurements.mean))     
+                            
+                        `);
+                    } catch (error) {
+                        console.log(error);
+                        console.log("nada");
+                    }
+                })
+            }
+
+            async function main() {
+                const pyodide = await loadPyodideLibrary();
+                // continiousD(pyodide);
+                discreteD(pyodide);
+            }
+
+            main();
+            
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,28 @@
+body {
+    box-sizing: border-box;
+    font-family: "Oswald";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+#screen1 {
+    min-height: 100vh;
+    background-color: rgb(0, 0, 0);
+    color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bolder;
+    text-shadow: 0 0 50px yellow;
+}
+
+#screen2 {
+    background-color: yellow;
+    height: 100vh;
+    padding: 20px;
+}

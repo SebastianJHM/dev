@@ -1,0 +1,13 @@
+.button-add {
+    color: rgb(0, 137, 250);
+    background-color: rgba(0, 137, 250, 0.15);
+    padding: 8px 16px;
+    font-family: inherit;
+    border: none;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
