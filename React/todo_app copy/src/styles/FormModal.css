@@ -42,10 +42,9 @@
     border: none;
     font-size: 18px;
     font-weight: bolder;
-    border-radius: 15px;
+    border-radius: 6px;
     cursor: pointer;
     margin: 0 6px;
-    padding: 10px;
 }
 
 .buttons-container {

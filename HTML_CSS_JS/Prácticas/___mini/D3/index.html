@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            height: 300px;
+            width: 500px;
+            background-color: rgb(192, 192, 192);
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+        }
+
+        .bar {
+            background-color: blue;
+            flex-grow: 1;
+            margin: 0 2px;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+        }
+
+        .gb_Xe {
+            width: 100px;
+            position: absolute;
+            top: 150;
+            left: 150;
+        }
+
+        #container2 {
+            height: 300px;
+            width: 500px;
+            background-color: rgb(192, 192, 192);
+        }
+
+        .line {
+            stroke: red;
+            stroke-width: 1;
+        }
+
+        .line-c5s2 {
+            stroke: rgb(13, 16, 204);
+            stroke-width: 1;
+        }
+
+        #line-p {
+            position: absolute;
+        }
+
+        #container3 {
+            height: 300px;
+            width: 500px;
+            background-color: rgb(192, 192, 192);
+        }
+
+        #container4 {
+            height: 340px;
+            width: 540px;
+            padding: 20px;
+            background-color: rgb(192, 192, 192);
+        }
+
+        #container4>svg>rect {
+            stroke: red;
+            fill: none;
+            stroke-width: 2;
+        }
+
+        #container5 {
+            height: 340px;
+            width: 540px;
+            padding: 20px;
+            background-color: rgb(192, 192, 192);
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #container5>svg>rect {
+            stroke: red;
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .rect {
+            fill: blue;
+        }
+
+        .circle {
+            fill: red;
+        }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@observablehq/stdlib@3.12.0/dist/stdlib.min.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <svg id="line-p" height="100%" width="100%">
+
+        </svg>
+    </div>
+    <div id="container2">
+        <svg id="line" height="100%" width="100%">
+            <line x1="250" y1="0" x2="250" y2="300" style="stroke: green; stroke-width:4" />
+        </svg>
+    </div>
+    <div id="container3">
+        <svg height="100%" width="100%">
+
+        </svg>
+    </div>
+    <div id="container4">
+        <svg height="100%" width="100%">
+            <rect height="100%" width="100%" />
+        </svg>
+    </div>
+    <div id="container5">
+        <svg height="95%" width="10%" id="c5s1">
+            <rect height="100%" width="100%" />
+        </svg>
+        <svg height="95%" width="90%" id="c5s2">
+            <rect height="100%" width="100%" />
+        </svg>
+        <svg height="5%" width="10%">
+            <rect height="100%" width="100%" />
+            <g transform="translate(0, 7.5)">
+                <line x1="0" y1="0" x2="50" y2="0" style="stroke: green; stroke-width:4" />
+            </g>
+        </svg>
+        <svg height="5%" width="90%" id="c5s3">
+            <rect height="100%" width="100%" />
+        </svg>
+    </div>
+    <svg width="85" height="100" viewBox="0 0 85 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 10C0 4.47716 4.47715 0 10 0H30C35.5228 0 40 4.47715 40 10V100H0V10Z" fill="#8A1F1F" />
+        <path d="M0 10C0 4.47716 4.47715 0 10 0H30C35.5228 0 40 4.47715 40 10V100H0V10Z" fill="#8A1F"
+            transform="translate(40, 0) translate(5, 0)" />
+    </svg>
+    <svg width="40" height="120" viewBox="0 0 40 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 10C0 4.47716 4.47715 0 10 0H30C35.5228 0 40 4.47715 40 10V120H0V10Z" fill="#8A1F1F" />
+    </svg>
+
+
+    <script>
+        const container = document.getElementById("container");
+        const data = [2, 3, 6, 9, 14, 7, 5, 6, 2, 1];
+        for (let d of data) {
+            const el = document.createElement("div");
+            el.className = "bar";
+            console.log(Math.max(...data) * 300 / d);
+            el.style.height = `${99 * d / Math.max(...data)}%`;
+            container.appendChild(el);
+        }
+
+        function generateX(startValue, stopValue, cardinality) {
+            const arr = [];
+            const step = (stopValue - startValue) / (cardinality - 1);
+            for (let i = 0; i < cardinality; i++) {
+                arr.push(startValue + (step * i));
+            }
+            return arr;
+        }
+        /*
+       function probabilityDensityCalculation (x, mean, variance) {
+           const m = Math.sqrt(2 * Math.PI * variance);
+           const e = Math.exp(-Math.pow(x - mean, 2) / (2 * variance));
+           return e / m;
+       };
+
+       function generateY(x) {
+           const mean = 5.093617354;
+           const variance = 8.784942421;
+           const arr = [];
+           for (let i = 0; i < x.length; i++) {
+               arr.push(probabilityDensityCalculation(x[i], mean, variance));
+           }
+           return arr;
+       }
+       */
+
+        function generateY(x) {
+            const arr = [];
+            for (let i = 0; i < x.length; i++) {
+                arr.push(jStat.gamma.pdf(x[i], 2, 0.5));
+            }
+            return arr;
+        }
+
+        const x = generateX(0.002142542, 5.7546, 100);
+        const y = generateY(x);
+        console.log(x, y);
+
+        const max_x = Math.max(...x);
+        const min_x = Math.min(...x);
+        const max_y = Math.max(...y);
+
+        const line = document.getElementById("line");
+        let l = "";
+        for (let i = 0; i < x.length - 1; i++) {
+            const x1 = 500 * (x[i] - min_x) / (max_x - min_x);
+            const y1 = 300 - 300 * (y[i] / max_y);
+            const x2 = 500 * (x[i + 1] - min_x) / (max_x - min_x);
+            const y2 = 300 - 300 * (y[i + 1] / max_y);
+            l += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" class="line" />`;
+        }
+        line.innerHTML += l;
+
+        const line_p = document.getElementById("line-p");
+        let p = "";
+        for (let i = 0; i < x.length; i++) {
+            const x_ = 500 * (x[i] - min_x) / (max_x - min_x);
+            const y_ = 300 - 290 * (y[i] / max_y);
+            p += `<circle cx="${x_}" cy="${y_}" r="3" class="circle" />`
+        }
+        line_p.innerHTML += p;
+
+
+        const c3 = document.querySelector("#container3 > svg");
+        const num_bins = 20;
+        const space_width = 2;
+        const af_bef = true;
+        const c3_width = 500;
+        const c3_height = 300;
+        let q = "";
+        for (let i = 0; i < num_bins; i++) {
+            const w = ((c3_width - space_width * af_bef) - (num_bins - 1) * space_width) / num_bins;
+            const h = 100 + (300 - 100) * Math.random();
+            const r = 5;
+            const path = `<path d="M0 ${r}C0 ${0.447715 * r} ${0.447715 * r} 0 ${r} 0H${w - r}C${w - 0.447715 * r} 0 ${w} ${0.447715 * r} ${w} ${r}V${h}H0V${r}Z" fill="#8A1F1F" transform="translate(${(w + space_width) * i + space_width * af_bef / 2}, ${c3_height - h})"/>`
+            q += path
+        }
+        console.log(q);
+        c3.innerHTML = q;
+        // c3.innerHTML += l;
+
+        function bar(w, h, r) {
+            const b = `
+                <svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 ${r}C0 ${0.447715 * r} ${0.447715 * r} 0 ${r} 0H${w - r}C${w - 0.447715 * r} 0 ${w} ${0.447715 * r} ${w} ${r}V${h}H0V${r}Z" fill="#8A1F1F" />
+                </svg>
+                `
+            return b;
+        }
+
+
+        document.body.innerHTML += bar(40, 100, 10);
+        document.body.innerHTML += bar(50, 120, 10);
+        document.body.innerHTML += bar(102, 300, 35);
+
+
+
+
+        const c4 = document.querySelector("#container4 > svg");
+        let ny_lines = 10;
+        let nx_lines = 7;
+        let c4_width = 500;
+        let c4_height = 300;
+        let init_separation = 10;
+        let z = "";
+        let w = (c4_width - 2 * init_separation) / (nx_lines - 1);
+        let h = (c4_height - init_separation) / (ny_lines);
+        for (let i = 0; i < nx_lines; i++) {
+            const line = `<line x1="0" y1="0" x2="0" y2="${c4_height}" class="line" transform="translate(${init_separation + w * i}, 0)"/>`
+            z += line
+        }
+        for (let i = 0; i < ny_lines; i++) {
+            const line = `<line x1="0" y1="0" x2="${c4_width}" y2="0" class="line" transform="translate(0, ${init_separation + h * i})"/>`
+            z += line
+        }
+        c4.innerHTML += z;
+
+
+        const c5s2 = document.getElementById("c5s2");
+        console.log(c5s2.getBoundingClientRect().width);
+        ny_lines = 10;
+        nx_lines = 7;
+        c4_width = c5s2.getBoundingClientRect().width;
+        c4_height = c5s2.getBoundingClientRect().height;
+        init_separation = 10;
+        z = "";
+        w = (c4_width - 2 * init_separation) / (nx_lines - 1);
+        h = (c4_height - init_separation) / (ny_lines);
+        for (let i = 0; i < nx_lines; i++) {
+            const line = `<line x1="0" y1="0" x2="0" y2="${c4_height}" class="line-c5s2" transform="translate(${init_separation + w * i}, 0)"/>`
+            z += line
+        }
+        for (let i = 0; i < ny_lines; i++) {
+            const line = `<line x1="0" y1="0" x2="${c4_width}" y2="0" class="line-c5s2" transform="translate(0, ${init_separation + h * i})"/>`
+            z += line
+        }
+        c5s2.innerHTML += z;
+
+        const c5s1 = document.getElementById("c5s1");
+        ny_lines = 10;
+        c4_width = c5s1.getBoundingClientRect().width;
+        c4_height = c5s1.getBoundingClientRect().height;
+        init_separation = 10;
+        z = "";
+        h = (c4_height - init_separation) / (ny_lines);
+        for (let i = 0; i < ny_lines; i++) {
+            const text = `<text text-anchor="end" transform="translate(0, ${2.5+init_separation + h * i})" font-size="10">0.${i}${i}${i}${i}</text>`
+            z += text
+        }
+        c5s1.innerHTML += `<g transform="translate(${c4_width - 3}, 0)">${z}</g>`;
+
+        const c5s3 = document.getElementById("c5s3");
+        nx_lines = 7;
+        c4_width = c5s3.getBoundingClientRect().width;
+        c4_height = c5s3.getBoundingClientRect().height;
+        init_separation = 10;
+        z = "";
+        w = (c4_width - 2 * init_separation) / (nx_lines - 1);
+        for (let i = 0; i < nx_lines; i++) {
+            const text = `<text text-anchor="middle" font-size="10" transform="translate(${init_separation + w * i}, 10)">1E${i}</text>`
+            z += text;
+        }
+        c5s3.innerHTML += z;
+
+        console.log(stdlib)
+    </script>
+</body>
+
+</html>

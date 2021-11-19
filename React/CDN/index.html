@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Add React in One Minute</title>
-  </head>
-  <body>
 
-    <h2>Add React in One Minute</h2>
-    <p>This page demonstrates using React with no build tooling.</p>
-    <p>React is loaded as a script tag.</p>
+<head>
+    <meta charset='UTF-8'>
+    <link rel="stylesheet" href="style.css">
+    <script src='https://unpkg.com/react@16.3.1/umd/react.production.min.js'></script>
+    <script src='https://unpkg.com/react-dom@16.3.1/umd/react-dom.production.min.js'></script>
+    <script src='https://unpkg.com/react-router-dom@5.0.0/umd/react-router-dom.min.js'></script>
+    <script src='https://unpkg.com/babel-standalone@6.26.0/babel.js'></script>
+</head>
 
-    <p>
-      This is the first comment.
-      <!-- We will put our React component inside this div. -->
-      <div class="like_button_container" data-commentid="1"></div>
-    </p>
+<body>
+    <div id='root'></div>
 
-    <p>
-      This is the second comment.
-      <!-- We will put our React component inside this div. -->
-      <div class="like_button_container" data-commentid="2"></div>
-    </p>
+    <script type="text/babel" src="./index.js"></script>
+    <script type='text/babel'>
+        const Link = ReactRouterDOM.Link;
+        const Route = ReactRouterDOM.Route;
 
-    <p>
-      This is the third comment.
-      <!-- We will put our React component inside this div. -->
-      <div class="like_button_container" data-commentid="3"></div>
-    </p>
 
-    <!-- Load React. -->
-    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+        const App = () => (
+            <ReactRouterDOM.HashRouter>
+                <header>
+                    <ul>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/login">Login</Link></li>
+                        <li><Link to="/register">Register</Link></li>
+                    </ul>
+                </header>
 
-    <!-- Load our React component. -->
-    <script src="index.js"></script>
+                <Route path="/" exact component={Home} />
+                <Route path="/login" component={Login} />
+                <Route path="/register" component={Register} />
+            </ReactRouterDOM.HashRouter>
+        )
 
-  </body>
+        const Home = () => <h1>Home</h1>
+        // const Login = () => <h1>Login</h1>
+        const Register = () => <h1>Register</h1>
+
+        ReactDOM.render(<App />, document.querySelector('#root'));
+    </script>
+</body>
+
 </html>

@@ -1,0 +1,68 @@
+li {
+    list-style-type: none;
+}
+
+.todo-container {
+    background-color: #242526;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.s1 {
+    margin-right: 16px;
+}
+
+.todo-title {
+    font-weight: bolder;
+    font-size: 12px;
+    color: rgb(255, 151, 15);
+    background-color: rgba(255, 151, 15, 0.2);
+    padding: 1px 4px;
+    border-radius: 3px;
+}
+
+.todo-completed {
+    text-decoration: line-through;
+}
+
+.todo-text {
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+#cb-completed {
+    float: left;
+}
+
+.delete-icon {
+    fill: #B0B3B8;
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.delete-icon:hover {
+    fill: rgb(255, 151, 15);
+}
+
+.state-icon {
+    height: 20px;
+    width: 20px;
+    cursor: pointer
+}
+
+.gear-icon {
+    fill: #B0B3B8;
+    cursor: pointer
+}
+
+.checked-icon {
+    fill: rgb(0, 137, 250)
+}
