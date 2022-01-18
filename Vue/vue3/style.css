@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --c1: rgba(24, 25, 26, 1);
+    --c2: rgba(59, 59, 59, 0.4);
+    --c3: rgb(66, 66, 66);
+
+    --curve-color-1: red;
+    --curve-color-2: blueviolet;
+    --curve-color-3: rgb(0, 82, 189);
+    --curve-color-4: green;
+    --curve-color-5: yellow;
+    --curve-color-6: rgb(255, 166, 0);
+    --curve-color-7: fuchsia;
+}
+
+body {
+    background-color: var(--c1);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+#app {
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    background-color: rgba(36, 38, 38, 1);
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.border-grid {
+    fill: none;
+    stroke-width: 1.5;
+    stroke: var(--c2);
+}
+
+.xy-axis-line {
+    stroke: var(--c2);
+    stroke-width: 1.5;
+}
+
+.bars {
+    fill: var(--c3);
+}
+
+.rect-bars {
+    fill: var(--c3);
+}
+
+.pdf-circle {
+    animation-name: animation-pdf-circle;
+}
+
+.pdf-line {
+    stroke-width: 3;
+    /* animation: animation-pdf-line 5s infinite; */
+    /* stroke: var(--c5);
+    filter: drop-shadow(0 0 2px var(--c5)); */
+}
+
+.color-circle-red {
+    fill: var(--curve-color-1);
+}
+
+.color-line-red {
+    stroke: var(--curve-color-1);
+    filter: drop-shadow(0 0 2px var(--curve-color-1));
+}
+
+.color-circle-purple {
+    fill: var(--curve-color-2);
+}
+
+.color-line-purple {
+    stroke: var(--curve-color-2);
+    filter: drop-shadow(0 0 2px var(--curve-color-2));
+}
+
+.color-circle-blue {
+    fill: var(--curve-color-3);
+}
+
+.color-line-blue {
+    stroke: var(--curve-color-3);
+    filter: drop-shadow(0 0 2px var(--curve-color-3));
+}
+
+.color-circle-green {
+    fill: var(--curve-color-4);
+}
+
+.color-line-green {
+    stroke: var(--curve-color-4);
+    filter: drop-shadow(0 0 2px var(--curve-color-4));
+}
+
+.color-circle-yellow {
+    fill: var(--curve-color-5);
+}
+
+.color-line-yellow {
+    stroke: var(--curve-color-5);
+    filter: drop-shadow(0 0 2px var(--curve-color-5));
+}
+
+.color-circle-orange {
+    fill: var(--curve-color-6);
+}
+
+.color-line-orange {
+    stroke: var(--curve-color-6);
+    filter: drop-shadow(0 0 2px var(--curve-color-6));
+}
+
+
+
+.color-circle-fuccia {
+    fill: var(--c10);
+}
+
+.color-line-fuccia {
+    stroke: var(--c10);
+    filter: drop-shadow(0 0 2px var(--c10));
+}

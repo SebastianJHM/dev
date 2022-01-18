@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/pyodide/v0.18.0/full/pyodide.js"></script>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            async function main() {
+                let pyodide = await loadPyodide({
+                    indexURL: "https://cdn.jsdelivr.net/pyodide/v0.18.0/full/",
+                });
+
+                t = "miTexto";
+                code_text = `print('${t}')`;
+                console.log(code_text);
+                pyodide.runPython(code_text);
+
+                num = 5;
+                a = pyodide.runPython(`
+                    import math
+                    x = int('${num}')
+                    r1 = x + math.exp(x)
+                    x + math.exp(x)
+                `);
+                console.log(a);
+                console.log(pyodide.globals.get("r1"));
+
+                arr = [5, 8, 100];
+                pyodide.globals.set("myArray", [2,7,9])
+                b = pyodide.runPython(`
+                    import math
+                    import ast
+
+                    ## Method 1: array
+                    print(myArray)
+                    res = str({'azt'+str(v): v+1 for v in myArray})
+
+                    ## Method 2: array
+                    x = ast.literal_eval('${arr}')
+                    y = {'x'+str(v): v+1 for v in x}
+                    str(y)
+                `);
+                console.log(b);
+                console.log(pyodide.globals.get("res"));
+                console.log(JSON.parse(pyodide.globals.get("res").replaceAll("'", '"')));
+
+
+                obj = { A: [1, 2], B: { atr1: 1, atr2: "2" } };
+                c = pyodide.runPython(`
+                    import math
+                    import ast
+                    import json
+                    o1 = ast.literal_eval('${JSON.stringify(obj)}')
+                    o2 = json.loads('${JSON.stringify(obj)}')
+                    z = str({"o1": o1, "o2": o2})
+                    str({"o1": o1, "o2": o2})
+                `);
+                console.log(c);
+                console.log(JSON.parse(c.replaceAll("'", '"')));
+                console.log(pyodide.globals.get("z"));
+            }
+            main();
+        </script>
+    </body>
+</html>

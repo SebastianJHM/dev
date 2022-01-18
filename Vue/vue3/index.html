@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <link rel="stylesheet" href="style.css">
+        <script src="https://unpkg.com/vue@next"></script>
+    </head>
+    <body>
+        <div id="app">
+
+            <!-- <chart
+                v-for="c in homeDistsCharts"
+                :min-data="c.minData"
+                :max-data="c.maxData"
+                :b-h="c.bH"
+                :dist="c.dist"
+                :params="c.params"
+                :dots-curve-pdf="c.dotsCurvePdf"
+                :line-curve-pdf="c.lineCurvePdf"
+            ></chart> -->
+
+            <chart
+                :min-data="homeDistsCharts[indexChart].minData"
+                :max-data="homeDistsCharts[indexChart].maxData"
+                :b-h="homeDistsCharts[indexChart].bH"
+                :dist="homeDistsCharts[indexChart].dist"
+                :params="homeDistsCharts[indexChart].params"
+                :dots-curve-pdf="homeDistsCharts[indexChart].dotsCurvePdf"
+                :line-curve-pdf="homeDistsCharts[indexChart].lineCurvePdf"
+            ></chart>
+        </div>
+        
+        <script src="./staticCharts.js"></script>
+        <script src="./index.js"></script>
+        
+    </body>
+</html>
+

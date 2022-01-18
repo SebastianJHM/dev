@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Document</title>
+    </head>
+
+    <body>
+        <div id="app">
+            <h1>{{ title }}</h1>
+            <button v-on:click="reverseMessage">Reverse Title</button>
+            <hr />
+
+            <div v-bind:title="message1">
+                Hover your mouse over me for a few seconds to see my dynamically
+                bound title!
+            </div>
+            <hr />
+
+            <ul>
+                <li
+                    v-for="(todo, i_) in todos"
+                    v-bind:key="i_"
+                    v-on:mouseover="myFunction($event, i_)"
+                    v-bind:data-index="todo.text"
+                    v-bind:title="titlesLi"
+                >
+                    {{ i_ }}. {{ todo.text }}
+                </li>
+            </ul>
+            <hr />
+
+            <div>Counter: {{ counter }}</div>
+            <div>Date: {{ date }}</div>
+            <hr />
+
+            <div>{{ inputText }}</div>
+            <input type="text" v-model="inputText" />
+            <hr />
+
+            <span
+                v-bind:class="{ 'active': isActive, 'text-danger': hasError }"
+                v-on:mouseover="changeClassName"
+                v-on:mouseout="changeClassName"
+            >
+                Parate sobre mi
+            </span>
+            <br />
+            <span
+                v-bind:class="!hasError ? 'active' : 'active text-danger'"
+                v-on:mouseover="changeClassName"
+                v-on:mouseout="changeClassName"
+            >
+                Parate sobre mi
+            </span>
+            <hr />
+
+            <div>
+                <img v-bind:src="urlBitcoin" class="img-coin" />
+            </div>
+            <hr />
+
+            <div>
+                <span v-if="counterLikes >= 0">{{ counterLikes }}👍</span>
+                <span v-else>{{ counterLikes }}👎</span>
+                <button v-on:click="addLike">Like</button>
+                <button v-on:click="removeLike">Dislike</button>
+            </div>
+            <hr />
+
+            <div>
+                <span v-show="counterLikes >= 0">{{ counterLikes }}🤛</span>
+                <span v-show="counterLikes < 0">{{ counterLikes }}🤜</span>
+                <button v-on:click="addLike">Like</button>
+                <button v-on:click="removeLike">Dislike</button>
+            </div>
+            <hr />
+
+            <h2>Propiedades computadas - Computed</h2>
+            <p>{{ myProperty }}</p>
+            <hr />
+
+            <h2>Watcher</h2>
+            <ul v-if="primosContador.length > 5">
+                <li v-for="pc in primosContador">
+                    El contador ha llegado a un número primo: {{ pc }} 😁
+                </li>
+            </ul>
+            <span v-else>Hay menos de 5 numero primos</span>
+            <hr />
+
+            <div class="map-container">
+                <svg v-bind:width="chart_width" v-bind:height="chart_height">
+                    <g>
+                        <g class="map-layer">
+                            <path
+                                v-for="dep in map"
+                                v-bind:d="dep.d"
+                                v-bind:style="{fill: dep.color}"
+                                vector-effect="non-scaling-stroke"
+                                v-bind:data-label="dep.numDep"
+                                v-on:mouseover="mouseOverDep"
+                                v-on:mouseout="mouseOutDep($event, dep.color)"
+                            />
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            
+        </div>
+
+
+
+        <script src="https://d3js.org/d3.v3.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="./index.js"></script>
+    </body>
+</html>

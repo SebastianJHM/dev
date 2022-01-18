@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="app">
+            <h1>{{ title }}</h1>
+            <my-component></my-component>
+            <element-component
+                v-for="(element, i) in elements"
+                v-bind:key="i"
+                v-bind:my-attribute="element"
+            ></element-component>
+            <evento-hijo 
+                v-on:evento-medida="metodoPadre"
+            ></evento-hijo>
+            <span>{{ rp1 }}</span>
+            <span>{{ rp2 }}</span>
+            <span>{{ rp3 }}</span>
+            <span>{{ rp4 }}</span>
+
+            <slot-component>
+                <template v-slot:title-slot>
+                    <h1>Soy el título del slot</h1>
+                </template>
+                <template v-slot:body-slot>
+                    <p>Soy el cuerpo del slot</p>
+                </template>
+            </slot-component>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+        <script src="./index.js"></script>
+    </body>
+</html>

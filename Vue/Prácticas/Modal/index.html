@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="app">
+            <h1 class="app-h1">Title App</h1>
+            <p class="app-p">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Officiis ad similique soluta quis ex illum, sit vero possimus ea
+                quos suscipit. Aspernatur quisquam quidem natus provident minus,
+                fugiat quam iusto. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Nisi porro, rem iusto vitae eveniet deleniti.
+                Perferendis earum aperiam, maxime, at quis, dolore aut et minus
+                tempora nihil iure magni nam?Lorem ipsum dolor, sit amet
+                consectetur adipisicing elit. Officiis ad similique soluta quis
+                ex illum, sit vero possimus ea quos suscipit. Aspernatur
+                quisquam quidem natus provident minus, fugiat quam iusto. Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Nisi porro,
+                rem iusto vitae eveniet deleniti. Perferendis earum aperiam,
+                maxime, at quis, dolore aut et minus tempora nihil iure magni
+                nam?
+            </p>
+            <button class="button-open-modal" v-on:click="appOpenModal">Abrir Modal</button>
+
+            <modal-container 
+                v-show="stateOpenModal"
+                v-on:close-modal="appCloseModal"
+            >
+                <template v-slot:title-modal>
+                    <h1 class="modal-h1">Título modal</h1>
+                </template>
+                <template v-slot:body-modal>
+                    <p class="modal-p">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Officiis ad similique soluta quis ex illum, sit
+                        vero possimus ea quos suscipit. Aspernatur quisquam
+                        quidem natus provident minus, fugiat quam iusto. Lorem
+                        ipsum dolor sit amet consectetur adipisicing elit. Nisi
+                        porro, rem iusto vitae eveniet deleniti.
+                    </p>
+                </template>
+            </modal-container>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+        <script src="./index.js"></script>
+    </body>
+</html>

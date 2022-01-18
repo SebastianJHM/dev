@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.19.0/full/pyodide.js"></script>
+</head>
+
+<body>
+    <h1 id="myTitle">Soy el titulo</h1>
+    <script type="text/javascript">
+        async function main() {
+            let pyodide = await loadPyodide({
+                indexURL: "https://cdn.jsdelivr.net/pyodide/v0.19.0/full/"
+            });
+
+            console.log(pyodide.runPython(`
+                    import sys
+                    print(sys.version)
+                `));
+
+            let test = pyodide.runPython(`
+                def test(x):
+                    return [n*n for n in x]
+                test
+            `);
+            let result_py = test([1, 2, 3, 4]);
+            console.log(result_py);
+            let result_js = result_py.toJs();
+            console.log(result_js);
+
+
+            obj = { A: [1, 2], B: { atr1: 1, atr2: "2" } };
+            pyodide.globals.set("o3", obj);
+            c = pyodide.runPython(`
+                import math
+                import ast
+                import json
+                o1 = ast.literal_eval('${JSON.stringify(obj)}')
+                o2 = json.loads('${JSON.stringify(obj)}')
+
+                ## Obteniendo el tipo de la conversión
+                print(f"o1: {str(o1)} --- type:{type(o1)}")
+                print("tipo de o2", type(o2))
+
+                ## Modificando los diccionarios
+                o1['A'][0] += 1000
+                o1['B']['atr2'] += "lo que sea" 
+
+                z = {"o1": o1, "o2": o2}
+                str({"o1": o1, "o2": o2})
+            `);
+            console.log(c);
+            console.log(JSON.parse(c.replaceAll("'", '"')));
+            
+            console.log(pyodide.globals.get("z"));
+            console.log(pyodide.globals.get("z").toJs());
+            console.log(Object.fromEntries(pyodide.globals.get("z").toJs()));
+
+            const map = pyodide.globals.get("z").toJs();
+            console.log(map.get("o1"))
+        }
+        main();
+    </script>
+</body>
+
+</html>

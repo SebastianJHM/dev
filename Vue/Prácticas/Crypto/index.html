@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <title>Document</title>
+    </head>
+
+    <body>
+        <div id="app">
+            <h1>Encriptador</h1>
+            <div class="c c1">
+                <label for="inputMensaje">• Mensaje</label>
+                <input type="text" v-model="mensaje" id="inputMensaje" placeholder="mensaje ..." />
+            </div>
+            <div class="c c2">
+                <label for="inputClave">• Clave</label>
+                <input type="text" v-model="clave" id="inputClave" placeholder="clave ..." />
+            </div>
+            <div class="c3">
+                <h2 class="c3-title">•••••• Mensaje Encriptado ••••••</h2>
+                <div class="respuesta" v-if="!mensajeEncriptado" style="color: rgb(92, 92, 92);">Inserte mensaje y clave ... </div>
+                <div class="respuesta" v-else>{{ mensajeEncriptado }}</div>
+            </div>
+            <button v-on:click="copiarMensajeEncriptado">Copiar</button>
+            <p v-show="copiado" class="copiado">{{ copiado }}!!!</p>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+            integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="./index.js"></script>
+    </body>
+</html>

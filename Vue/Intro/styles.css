@@ -1,0 +1,28 @@
+.active {
+    color: red;
+}
+
+.text-danger {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.img-coin {
+    width: 100px;
+}
+
+.map-layer {
+    fill: #fff;
+    stroke: rgb(90, 90, 90);
+    
+}
+
+.label-dep {
+    font-weight: bolder;
+}
+
+.map-container {
+    background-color: rgb(221, 221, 221);
+    width: fit-content;
+    border-radius: 10px;
+}

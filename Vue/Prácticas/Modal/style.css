@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    
+    background-color: rgb(221, 221, 221);
+}
+
+#app {
+    background-color: rgb(255, 255, 144);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.app-h1 {
+    font-size: 3rem;
+}
+
+.app-p {
+    font-size: 1.6rem;
+    width: 60%;
+    margin-top: 2rem;
+}
+
+.button-open-modal {
+    background-color: transparent;
+    border: 2px solid black;
+    padding: 5px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bolder;
+    margin-top: 10px;
+}
+
+.button-open-modal:hover {
+    background-color: black;
+    color: rgb(255, 255, 144);
+}
+
+
+
+.background-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-modal {
+    border: 2px solid black;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 40%;
+    min-width: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    animation: modalMove 0.3s;
+}
+
+@keyframes modalMove {
+    0%   {margin-bottom: 100px;}
+    100% {margin-bottom: 0px;}
+}
+
+.modal-h1 {
+    font-size: 3rem;
+}
+
+.modal-p {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+}
+
+.button-close-modal {
+    background-color: transparent;
+    border: 2px solid rgb(255, 0, 0);
+    color: red;
+    padding: 5px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bolder;
+    margin-top: 10px;
+}
+.button-close-modal:hover {
+    background-color: red;
+    color: white;
+}

@@ -51,7 +51,7 @@ function Bar2() {
     if (!data) {
         return <pre>Loading...</pre>;
     }
-    
+
     const yScale = scaleBand()
         .domain([...data.map(d => d.Country)])
         .range([0, innerHeightBars])
@@ -72,20 +72,20 @@ function Bar2() {
                     <g transform={`translate(${margin.left},${margin.top})`}>
                         {xScale.ticks().map(t => (
                             <g key={t} transform={`translate(${xScale(t)},0)`}>
-                                <line x1={0} y1={0} x2={0} y2={innerHeightBars} stroke="red"/>
-                                <text x={0} y={innerHeightBars+3} dy=".71em" style={{ textAnchor: 'middle', fontSize: "12px", fontWeight: "bolder"}}>{t}</text>
+                                <line x1={0} y1={0} x2={0} y2={innerHeightBars} stroke="red" />
+                                <text x={0} y={innerHeightBars + 3} dy=".71em" style={{ textAnchor: 'middle', fontSize: "12px", fontWeight: "bolder" }}>{t}</text>
                             </g>
                         ))}
                         {yScale.domain().map(d => (
-                            <g key={d} transform={`translate(0,${yScale(d)+yScale.bandwidth()/2})`}>
-                                <line x1={0} y1={0} x2={innerWidthBars} y2={0} stroke="blue"/>
-                                <text x={-3} y={0} dy=".36em" style={{ textAnchor: 'end', fontSize: "12px", fontWeight: "bolder"}}>{d}</text>
+                            <g key={d} transform={`translate(0,${yScale(d) + yScale.bandwidth() / 2})`}>
+                                <line x1={0} y1={0} x2={innerWidthBars} y2={0} stroke="blue" />
+                                <text x={-3} y={0} dy=".36em" style={{ textAnchor: 'end', fontSize: "12px", fontWeight: "bolder" }}>{d}</text>
                             </g>
                         ))}
                         {data.map((d) => (
                             <path key={d.Country} d={roundedRect(0, yScale(d.Country), xScale(d.Population), yScale.bandwidth(), 6, false, true, false, true)} />
                         ))}
-                        
+
                     </g>
                 </svg>
             </div>
